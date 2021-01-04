@@ -3,6 +3,7 @@ package comgalaxyglotech.confirmexperts.generalmarket;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
@@ -51,6 +52,7 @@ public class marketDialog extends AppCompatDialogFragment {
     private Spinner marketTradeFreq,marketPrevTradeDay;
     private RadioButton on, off;
     private TextView activityTitle;
+    private ProgressDialog progressDialog;
     marketDialogListener listener;
     private DatabaseReference databaseReference;
     //   private LocationRequest mLocationRequest;
@@ -85,6 +87,10 @@ public class marketDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Add Market", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        progressDialog = new ProgressDialog(getContext());
+                        progressDialog.setMessage("Adding New Market...");
+                        progressDialog.setCancelable(false);
+                        progressDialog.show();
                         String mktName,  mktDesc,  mktLoc,  mktNxtTradeDay,  mktPrevTradeday, creatorId;
                         boolean isAllowLocation= false;
                         if(on.isChecked()){
@@ -137,12 +143,14 @@ public class marketDialog extends AppCompatDialogFragment {
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     Toast.makeText(context,"Market Created Successfully", Toast.LENGTH_SHORT).show();
                                                 listener.launchStore(id);
+                                                    progressDialog.dismiss();
                                                 }
                                             });
                                             // setMarketList();
                                         }
                                         catch (Exception ex){
-                                            Toast.makeText(context,"Market Not Saved, on GPS", Toast.LENGTH_SHORT).show();
+                                            progressDialog.dismiss();
+                                            Toast.makeText(context,"Market Not Saved, enable GPS", Toast.LENGTH_SHORT).show();
                                         }
 
                                     }
@@ -152,6 +160,7 @@ public class marketDialog extends AppCompatDialogFragment {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         //show message
+                        progressDialog.dismiss();
                         Toast.makeText(context,"Location failed, enable gps and try again!",Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -160,6 +169,7 @@ public class marketDialog extends AppCompatDialogFragment {
         }
         else {
             Toast.makeText(context,"Please Log In", Toast.LENGTH_SHORT).show();
+            progressDialog.dismiss();
         }
         // Toast.makeText(Main2Activity.this,username+" "+password, Toast.LENGTH_SHORT).show();
     }
@@ -219,7 +229,7 @@ public class marketDialog extends AppCompatDialogFragment {
     {
         void launchStore(String mktId);
     }
-   /*@Override
+   @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
@@ -228,5 +238,5 @@ public class marketDialog extends AppCompatDialogFragment {
             throw new ClassCastException(context.toString() +
             "must implement marketDialogListener");
         }
-    }*/
+    }
 }

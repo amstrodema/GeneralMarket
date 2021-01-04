@@ -183,12 +183,15 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
         cancel_action.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                marketPickLayout.setVisibility(View.GONE);
-                profilePanel.setVisibility(View.VISIBLE);
-                bottomPanel.setVisibility(View.VISIBLE);
-                marketName.setText("");
+              cancelPanel();
             }
         });
+    }
+    private void cancelPanel(){
+        marketPickLayout.setVisibility(View.GONE);
+        profilePanel.setVisibility(View.VISIBLE);
+        bottomPanel.setVisibility(View.VISIBLE);
+        marketName.setText("");
     }
     private void basePanelListeners(){
         Button home, account, market, store;
@@ -252,6 +255,12 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
         Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreAdd");
         intent.putExtra("marketId",marketId);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        cancelPanel();
     }
 
     //sets the parameter for the query
