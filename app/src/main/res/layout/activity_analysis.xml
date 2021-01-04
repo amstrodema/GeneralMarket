@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Analysis">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eee"
+        android:layout_above="@id/bottomPanel"
+        android:layout_below="@id/panelTop">
+
+    </ScrollView>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:drawableTop="@drawable/ico_fakegps"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circle_blue"
+        android:layout_marginBottom="5dp"
+        />
+    <RelativeLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#eee"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/bottomPanelMid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/home_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/homeBtn"
+            android:layout_marginLeft="15dp"
+            android:text="HOME"
+            android:textColor="#f00"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/setinBtn"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@id/homeBtn"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/setinBtn"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/homeBtn"
+            android:text="ACCOUNT"
+            android:textColor="#f00"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/homeBtnx"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/homeBtn"
+            android:layout_marginRight="15dp"
+            android:text="TOOLS"
+            android:textColor="#f00"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/setinBtnX"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="22dp"
+            android:layout_toLeftOf="@id/homeBtnx"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/user_grp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/setinBtn"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/homeBtnx"
+            android:text="FAVEY"
+            android:textColor="#f00"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

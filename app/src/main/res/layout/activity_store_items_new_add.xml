@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.StoreItemsNewAdd">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW STORE ITEM"
+        android:textAlignment="center"
+        android:background="#eee"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:padding="10dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:background="#eee"
+                android:textAppearance="?android:textAppearanceMedium"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Item Name"
+                android:id="@+id/newStoreItemName"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:background="#eee"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Describe this Item"
+                android:id="@+id/newStoreItemDesc"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available Quantity"
+                android:background="#eee"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limited"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/newStoreItemLimitedRadio"
+                    android:onClick="hideSpecificQty"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Unlimited"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/newStoreItemUnlimitedRadio"
+                    android:onClick="hideSpecificQty"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Specify"
+                    android:id="@+id/newStoreItemSpecifyRadio"/>
+            </RadioGroup>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="How many of this Item is available?"
+                android:inputType="number"
+                android:id="@+id/newStoreItemSpecifyAvailQty"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Metric"
+                android:background="#eee"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="quantity"
+                    android:inputType="number"
+                    android:id="@+id/newStoreItemMinQty"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" -- "/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="measure"
+                    android:id="@+id/newStoreItemMinQtyMetric"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="e.g. 1 Carton"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price per Metric"
+                android:background="#eee"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="10dp"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_marginTop="5dp"
+                android:text="Click this box if the item price varies"
+                android:id="@+id/newStoreItemPriceRangeCheckBox"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/newStoreItempriceRangeLayout">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Lowest price"
+                    android:id="@+id/newStoreItemPriceLow"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" -- "/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Highest price"
+                    android:id="@+id/newStoreItemPriceHigh"/>
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Cost of minimum quantity sellable"
+                android:id="@+id/newStoreItemPrice"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save New Item"
+                android:id="@+id/newStoreItemSaveBtn"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,179 @@
+<resources>
+    <string name="app_name">General Market</string>
+    <string name="store_owner">General Market - Store Owner</string>
+    <string name="icon1">&#xf23a;</string>
+    <string name="iconSend">&#xf2f6;</string>
+    <string name="channelName">Notify</string>
+    <string name="channelDescription">DirectNotify</string>
+    <string name="freqPrompt">Choose Market Interval</string>
+    <string name="lastTradingPrompt">Select Last Market Day</string>
+    <string name="title_activity_all_commodities_in_tabs">AllCommoditiesInTabs</string>
+    <string name="tab_home">HOME</string>
+    <string name="tab_insight">INSIGHT</string>
+    <string name="tab_trans">TRANSACTIONS</string>
+    <string name="tab_finance">FINANCE</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="banned_title">Display Banned Contents</string>
+    <string name="banned_summary">Allows display of banned contents</string>
+    <string name="pref_header_general">General Configurations</string>
+    <string name="pref_title_social_recommendations">Enable Distance Restriction</string>
+    <string name="pref_description_social_recommendations">Restricts search range of stocks and sellers to
+        a value set by you
+    </string>
+    <string name="pref_title_display_name">Highest GPS Search Distance (km)</string>
+    <string name="pref_default_display_name">1000</string>
+    <string name="pref_default_display_summary">Defines the highest value with which search is delimited to in kilometers</string>
+
+    <!-- Strings related to Settings -->
+    <!-- Banned General settings -->
+    <string name="pref_title_add_friends_to_messages">Show Stocks With Unknown Location</string>
+
+    <string name="pref_title_summary">Display stores and markets with unknown location. If set
+    to NEVER, no market or store will be displayed when your gps is off.</string>
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <string name="pref_header_notifications">Enable Sounds &amp; Notifications</string>
+    <string name="pref_title_new_message_notifications">New notification alert</string>
+    <string name="pref_title_ringtone">Alert Tone</string>
+
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_account_tab">AccountTab</string>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="tab_text_1">Tab 1</string>
+
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="title_activity_tabz_individual">TabzIndividual</string>
+
+    <string name="home_msg">Hi, drop a review to let others know how you feel about this farm</string>
+
+    <string-array name="AppCleanGrant">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="AppAccessGrant">
+        <item>Allow Current Only</item>
+        <item>Allow Min &amp; Notify Update</item>
+        <item>Force Update</item>
+    </string-array>
+
+    <string-array name="advert_location">
+        <item>Archive_Transition</item>
+        <item>Category_List_One</item>
+        <item>Category_List_Two</item>
+        <item>Category_List_Three</item>
+        <item>Category_List_Four</item>
+        <item>Farm_Transition</item>
+        <item>Landing_Page_Full</item>
+        <item>Main_Page</item>
+        <item>Main_Page_Two</item>
+        <item>Market_Transition</item>
+        <item>Recipe_Transition</item>
+        <item>Reg_Page_Adv</item>
+        <item>Store_Transition</item>
+    </string-array>
+
+    <!-- Example settings for Notifications -->
+    <string-array name="categories">
+        <item>Additives and Chemicals</item>
+        <item>Accessories and Clothings</item>
+        <item>Beverages and Drinks</item>
+        <item>Bags and Shoes</item>
+        <item>Beauty Products</item>
+        <item>Books and Stationery</item>
+        <item>Condiments and Garnishes</item>
+        <item>Drugs and Supplements</item>
+        <item>Electronics and Gadgets</item>
+        <item>Food and Snacks</item>
+        <item>Fruits and Vegetables</item>
+        <item>General Foodstuffs</item>
+        <item>Machines and Implements</item>
+        <item>Maternity and Child Care</item>
+        <item>Subscriptions and Tickets</item>
+        <item>Pets and Vet Care</item>
+        <item>Softwares and Games</item>
+        <item>Vehicles and Implements</item>
+        <item>Others(Consumables)</item>
+        <item>Others (Non Consumables)</item>
+    </string-array>
+
+    <string-array name="farm_categories">
+        <item>Farm Products</item>
+    </string-array>
+
+    <string-array name="frequency">
+        <item>Everyday Trading</item>
+        <item>Every Week Trading</item>
+        <item>Every 2 Days Trading</item>
+        <item>Every 3 Days Trading</item>
+        <item>Every 4 Days Trading</item>
+        <item>Every 5 Days Trading</item>
+        <item>Every 6 Days Trading</item>
+    </string-array>
+    <string-array name="lastTrading">
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>2 days ago</item>
+        <item>3 days ago</item>
+        <item>4 days ago</item>
+        <item>5 days ago</item>
+        <item>6 days ago</item>
+    </string-array>
+
+    <string-array name="bool">
+        <item>AVAILABLE</item>
+        <item>NOT AVAILABLE</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="multi_select_list_preference_default_value" />
+
+</resources>

@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.FragStock_picks_store">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:id="@+id/categoryItemsRecyclerView">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data"
+        android:id="@+id/noData"
+        android:background="@android:color/transparent"
+        android:textColor="#000"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"/>
+    <ProgressBar
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:translationZ="1dp"
+        android:id="@+id/progress"/>
+</RelativeLayout>

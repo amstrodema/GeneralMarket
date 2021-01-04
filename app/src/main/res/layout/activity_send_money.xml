@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f60"
+    android:padding="5dp"
+    android:scrollbars="none"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.SendMoney">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#000">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/cancel_action"
+                android:layout_toRightOf="@id/lady"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FUND TRANSFER PANEL"
+                    android:fontFamily="@font/amira"
+                    android:paddingVertical="5dp"
+                    android:textColor="#fff"
+                    style="?android:textAppearanceLarge"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read our wallet policies carefully before you proceed with this transfer."
+                    android:paddingVertical="5dp"
+                    android:textSize="16sp"
+                    android:textColor="#ccc"
+                    android:fontFamily="@font/font_too"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Process Is Not Reversible Once Done"
+                    android:paddingVertical="5dp"
+                    android:textSize="16sp"
+                    android:textColor="#f60"
+                    android:fontFamily="@font/avata"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Wallet Policy"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/gothic"
+                    android:textColor="#f60"
+                    android:background="#fff"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dut"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textAllCaps="true"
+                android:layout_marginTop="5dp"
+                android:text="Recipient ADDRESS"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_border_curve"
+                android:padding="8dp"
+                android:hint="Recipient Wallet Code"
+                android:fontFamily="@font/amira"
+                style="?android:textAppearanceSmall"
+                android:id="@+id/walletCode"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dut"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textAllCaps="true"
+                android:layout_marginTop="5dp"
+                android:text="AMOUNT TO SEND" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/no_border_no_fill"
+                android:padding="8dp"
+                android:hint="0.00"
+                android:fontFamily="@font/amira"
+                android:textColor="#000"
+                android:layout_marginVertical="8dp"
+                style="?android:textAppearanceSmall"
+                android:inputType="numberDecimal"
+                android:id="@+id/amountToSend"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/border_maroon_straight"
+                android:textColor="#b00"
+                android:text="SEND"
+                android:id="@+id/sendMoney"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="1dp"
+                android:paddingBottom="15dp">
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

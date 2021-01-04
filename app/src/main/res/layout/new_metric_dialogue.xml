@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dp">
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/metricQuantity"/>
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/metricMeasure"
+        android:layout_toRightOf="@id/metricQuantity"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:hint="Quantity: 1"
+    android:paddingLeft="5dp"
+    android:layout_below="@id/metricQuantity"
+    android:id="@+id/newMetricLabel1"/>
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="Measure: Bag"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/metricQuantity"
+        android:id="@+id/newMetricLabel1_2"
+        android:layout_toRightOf="@id/newMetricLabel1"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Examples"
+        android:layout_marginTop="30dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_below="@id/newMetricLabel1"
+        android:id="@+id/newMetricLabel2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tubers, Kg, Congo, Derica, Cup, Painter, Custard Can, Loaves, Pieces, Keg, Bag, Sachet, Log, etc."
+        android:padding="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/newMetricLabel2"/>
+</RelativeLayout>

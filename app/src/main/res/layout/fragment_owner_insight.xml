@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_gradient2"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.OwnerInsightFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="250dp"
+                android:src="@drawable/insite"
+                android:id="@+id/lady"
+                android:background="#fff"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/lady"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="With Great Power Comes Great Responsibilities"
+                    android:fontFamily="@font/gothic"
+                    android:padding="5dp"
+                    android:textColor="#ffff"
+                    android:lineSpacingExtra="5dp"
+                    style="?android:textAppearanceMedium"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Review your growth and improvement constantly, adjust your scheme, and grow."
+                    android:textColor="#eee"
+                    android:fontFamily="@font/dut"
+                    android:padding="5dp"
+                    android:layout_marginVertical="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INSIGHT IS PROWESS"
+                    android:paddingVertical="8dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/amira"
+                    android:textAlignment="center"
+                    android:background="#f88"
+                    android:textColor="#000"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="8dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#fff"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amira"
+            android:padding="5dp"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_marginTop="50dp"
+            android:text="NO DATA"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerTrades">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomPanel"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/blue_gradient2"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/atm_beta">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="250dp"
+                    android:id="@+id/lady"
+                    android:paddingTop="25dp"
+                    android:visibility="invisible"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/lady"
+                    android:background="@drawable/back_wite_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="Optimized Sales Transaction"
+                        android:fontFamily="@font/gothic"
+                        android:padding="5dp"
+                        android:textAllCaps="true"
+                        android:background="@drawable/back_wite_small"
+                        android:lineSpacingExtra="5dp"
+                        style="?android:textAppearanceMedium"
+                        android:textColor="#000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confirm or Cancel Purchase Request"
+                        android:textColor="#000"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:background="#f5f5f5"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DISCOVERY IS KEY"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/amira"
+                        android:textAlignment="center"
+                        android:background="#fff"
+                        android:textColor="#f60"
+                        android:padding="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothic"
+                        android:padding="5dp"
+                        android:textAllCaps="true"
+                        android:visibility="gone"
+                        android:textColor="#fff"
+                        android:layout_marginTop="8dp"
+                        android:text="Verify Transaction" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/amira"
+                            android:background="@drawable/gray_border"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:layout_marginRight="5dp"
+                            android:hint="Confirmation Code"
+                            style="?android:textAppearanceSmall"
+                            android:layout_weight="3"/>
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:text="Verify"
+                            android:textAllCaps="false"
+                            android:background="#f60"
+                            android:textColor="#fff"
+                            android:id="@+id/verifyCode"
+                            android:fontFamily="@font/amira"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dut"
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:text="PENDING TRANSACTIONS"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dut"
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:padding="5dp"
+                android:text="TRANSACTION HISTORY"
+                android:textSize="15sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/transHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/light_gray_border_filled"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/home_floor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/click_home"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Home"
+            android:fontFamily="@font/amira"/>
+        <Button
+            android:id="@+id/home_store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/farm_floor"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Farm"
+            android:fontFamily="@font/amira" />
+
+        <Button
+            android:id="@+id/account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/trade"
+            android:singleLine="true"
+            android:textColor="#003"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Trades"
+            android:fontFamily="@font/amira"/>
+
+        <Button
+            android:id="@+id/gps"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:textColor="#ccc"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/notification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/wallet2"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Wallet"
+            android:fontFamily="@font/amira"/>
+
+        <Button
+            android:id="@+id/setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/more2"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Insight"
+            android:fontFamily="@font/amira" />
+
+
+    </LinearLayout>
+</RelativeLayout>

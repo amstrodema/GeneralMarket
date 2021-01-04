@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:padding="5dp"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Stocks">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomPanel"
+        android:paddingBottom="5dp"
+        android:background="@drawable/back_black_square">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Store Items"
+                android:drawableTop="@drawable/itemicon"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="5dp"
+                android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:hint="All"
+                android:paddingVertical="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Farm Products"
+                    android:drawableTop="@drawable/watch"
+                    android:textAlignment="center"
+                    android:onClick="farmListeners"
+                    android:hint="Farm Products"
+                    android:layout_marginRight="3dp"
+                    android:textColor="#000"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="General Foodstuffs"
+                    android:drawableTop="@drawable/cup"
+                    android:textAlignment="center"
+                    android:id="@+id/catGeneralFoodstuff"
+                    android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="General Foodstuffs"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/advert1"
+                android:paddingVertical="10dp"
+                android:layout_marginVertical="15dp"
+                android:src="@drawable/stor12"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fff"/>    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#fff"/>    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#fff"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="94dp"
+                android:text="Additives and Chemicals"
+                android:drawableTop="@drawable/hospital"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square_plain"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:hint="Additives and Chemicals"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="94dp"
+                android:text="Accessories and Clothings"
+                android:drawableTop="@drawable/hospital"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:padding="15dp"
+                android:background="@drawable/btn_effect_curved_square_plain" android:drawablePadding="10dp"
+                android:hint="Accessories and Clothings"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fff"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="94dp"
+                android:text="Beverages and Drinks"
+                android:drawableTop="@drawable/cup"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:hint="Beverages and Drinks"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square_plain"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="94dp"
+                android:text="Bags and Shoes"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:hint="Bags and Shoes"
+                android:drawableTop="@drawable/basket"
+                android:textAlignment="center"
+                android:layout_marginRight="3dp"
+                android:textColor="#fff"
+                android:paddingVertical="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square_plain"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Beauty Products"
+                android:drawableTop="@drawable/rest2"
+                android:textAlignment="center"
+                android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:hint="Beauty Products"
+                android:paddingVertical="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Books and Stationery"
+                android:drawableTop="@drawable/hospital"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:padding="15dp"
+                android:background="@drawable/btn_effect_curved_square"
+                android:drawablePadding="10dp"
+                android:hint="Books and Stationery"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/basket"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                android:hint="Condiments and Garnishes"
+                android:layout_marginLeft="3dp"
+                android:text="Condiments and Garnishes"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Drugs and Supplements"
+                android:drawableTop="@drawable/hospital"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                
+                android:hint="Drugs and Supplements"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:id="@+id/advert2"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/item4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fff"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="94dp"
+                    android:text="Electronics and Gadgets"
+                    android:drawableTop="@drawable/hospital"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:padding="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square_plain"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Electronics and Gadgets"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Food and Snacks"
+                    android:drawableTop="@drawable/rest2"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Food and Snacks"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square_plain"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fff"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits and Vegetables"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    
+                    android:hint="Fruits and Vegetables"
+                    android:background="@drawable/btn_effect_curved_square_plain"
+                    android:drawableTop="@drawable/grain"
+                    android:textAlignment="center"
+                    android:layout_marginRight="3dp"
+                    android:textColor="#fff"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="94dp"
+                    android:text="Machines and Implements"
+                    android:drawableTop="@drawable/hospital"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:padding="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square_plain"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Machines and Implements"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Maternity and Child Care"
+                    android:drawableTop="@drawable/child_care"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Maternity and Child Care"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Subscriptions and Tickets"
+                    android:drawableTop="@drawable/plant"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Subscriptions and Tickets"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pets and Vet Care"
+                    android:drawableTop="@drawable/pets"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Pets and Vet Care"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Softwares and Games"
+                    android:drawableTop="@drawable/plant"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Softwares and Games"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:id="@+id/advert3"
+                android:paddingVertical="10dp"
+                android:src="@drawable/item3"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicles and Implements"
+                    android:drawableTop="@drawable/plant"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Vehicles and Implements"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Others(Consumables)"
+                    android:drawableTop="@drawable/pets"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:onClick="listeners"
+                    android:singleLine="true"
+                    android:hint="Others(Consumables)"
+                    android:paddingVertical="15dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/btn_effect_curved_square"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Others (Non Consumables)"
+                android:drawableTop="@drawable/stock"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:onClick="listeners"
+                android:singleLine="true"
+                android:hint="Others (Non Consumables)"
+                android:paddingVertical="15dp"
+                android:drawablePadding="10dp"
+                android:background="@drawable/btn_effect_curved_square"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/advert4"
+                android:background="@drawable/blue_gradient2"
+                android:paddingVertical="10dp"
+                android:src="@drawable/item2"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/light_gray_border_filled"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="5dp">
+
+        <Button
+            android:id="@+id/home_floor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/account_floor"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/click_home" />
+
+        <Button
+            android:id="@+id/account_floor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/gps"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/click_farm"/>
+
+        <Button
+            android:id="@+id/gps"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/store_floor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/gps"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/click_market"/>
+
+        <Button
+            android:id="@+id/store_ll_floor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/store_floor"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/click_store"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>

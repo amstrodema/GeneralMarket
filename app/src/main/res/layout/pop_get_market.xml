@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eef"
+            android:paddingBottom="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete_canvas"
+                android:layout_margin="10dp"
+                android:id="@+id/cancel_action"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/cancel_action"
+                android:layout_toRightOf="@id/lady"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT YOUR MARKET"
+                    android:fontFamily="@font/font_one"
+                    android:paddingVertical="5dp"
+                    style="?android:textAppearanceLarge"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If your market name does not appear as you type, check your spellings carefully or quickly visit the market portal to verify that it exists."
+                    android:paddingVertical="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/font_too"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If it does not exist, check that your spellings are correct and then proceed"
+                    android:paddingVertical="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/font_too"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read our market policies carefully before you proceed with this step"
+                    android:paddingVertical="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/font_too"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zero Market Charges"
+                    android:paddingVertical="5dp"
+                    android:fontFamily="@font/font_one"
+                    android:textSize="18sp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Market Policy"
+                    android:textAllCaps="false"
+                    android:textColor="#aaf"
+                    android:background="#fff"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_marginTop="0.5dp"
+                android:padding="14dp">
+                <AutoCompleteTextView
+                    android:id="@+id/marketAuto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_border"
+                    android:padding="8dp"
+                    android:hint="Type Market Name Here"
+                    android:completionThreshold="1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:layout_marginTop="1dp"
+                android:paddingBottom="15dp">
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEW ITEM NAME"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:background="#eee"
+        android:layout_below="@id/newItem"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newItem"
+        android:hint="Item Name Only"
+        android:background="@drawable/gray_border"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"
+        android:singleLine="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yam, Beans, Rice, Semolina, Crayfish, Potatoes etc."
+        android:padding="5dp"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SELECT ITEM CATEGORY"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:background="#eee"
+        android:layout_below="@id/newItem"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newItemClass"
+        android:entries="@array/categories"
+        android:background="@drawable/gray_border"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do not duplicate items."
+            android:textStyle="bold"
+            android:paddingHorizontal="5dp"
+            android:padding="5dp"
+            android:background="#eee"
+            android:textColor="#000"
+            android:textAllCaps="true"
+            android:lineSpacingExtra="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If item exists, post your stock alongside sales variations from your store. Note that items with differing types should be added just once. For Instance: Salamon and Croaker Fishes are regarded as an item (fish). However, they can both be regarded as two different types of stocks if a store owner so wishes."
+            android:paddingHorizontal="5dp"
+            android:padding="5dp"
+            android:textColor="#555"
+            android:lineSpacingExtra="5dp"
+            android:id="@+id/newItemInst"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ITEM: Novel"
+                android:paddingHorizontal="5dp"
+                android:padding="5dp"
+                android:textColor="#555"
+                android:lineSpacingExtra="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="STOCK: Perfidy"
+                android:paddingHorizontal="5dp"
+                android:padding="5dp"
+                android:textColor="#555"
+                android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ITEM: Noodles"
+                android:paddingHorizontal="5dp"
+                android:padding="5dp"
+                android:textColor="#555"
+                android:lineSpacingExtra="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="STOCK: Marabel Instant Noodles"
+                android:paddingHorizontal="5dp"
+                android:padding="5dp"
+                android:textColor="#555"
+                android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ITEM: Textbook"
+                android:paddingHorizontal="5dp"
+                android:padding="5dp"
+                android:textColor="#555"
+                android:lineSpacingExtra="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="STOCK: Brighter Grammar"
+                android:paddingHorizontal="5dp"
+                android:padding="5dp"
+                android:textColor="#555"
+                android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms and conditions apply"
+            android:textStyle="bold"
+            android:paddingHorizontal="5dp"
+            android:padding="5dp"
+            android:textColor="#aaa"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5dp"/>
+    </LinearLayout>
+</ScrollView>

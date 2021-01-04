@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_gradient2"
+    android:padding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/store_order2"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/back_wite">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activityTitle"
+                android:text="Add New Market"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="20dp"
+                android:background="#333"
+                android:textAlignment="center"
+                style="?android:textAppearanceMedium"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/back_wite"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Market Name Display"
+                    android:id="@+id/newMarketNameLabel"
+                    android:fontFamily="@font/font_one"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000"
+                    android:padding="5dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Market Name"
+                    android:id="@+id/newMarketName"
+                    style="?android:textAppearanceSmall"
+                    android:fontFamily="@font/castle"
+                    android:textColor="#000"
+                    android:enabled="false"
+                    android:background="@drawable/gray_border"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Market Description"
+                    android:id="@+id/newMarketDescriptionLabel"
+                    android:fontFamily="@font/font_one"
+                    android:textColor="#000"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tell us about this market"
+                    style="?android:textAppearanceSmall"
+                    android:fontFamily="@font/castle"
+                    android:textColor="#000"
+                    android:id="@+id/newMarketDescription"
+                    android:background="@drawable/gray_border"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Market Location"
+                    android:id="@+id/newMarketLocationLabel"
+                    android:fontFamily="@font/font_one"
+                    android:textColor="#000"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Help others find this market"
+                    style="?android:textAppearanceSmall"
+                    android:id="@+id/newMarketLocation"
+                    android:fontFamily="@font/castle"
+                    android:textColor="#000"
+                    android:background="@drawable/gray_border"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trade Frequency"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/marketFreqSpinnerLabel"
+                    android:fontFamily="@font/font_one"
+                    android:textColor="#000"
+                    android:padding="5dp"/>
+                <Spinner
+                    android:id="@+id/marketFreqSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/frequency"
+                    android:prompt="@string/freqPrompt"
+                    android:background="@drawable/gray_border"
+                    android:paddingVertical="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Trade Day"
+                    android:id="@+id/lastMarketDaySpinnerLabel"
+                    android:fontFamily="@font/font_one"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000"
+                    android:padding="5dp"/>
+                <Spinner
+                    android:id="@+id/lastMarketDaySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/lastTrading"
+                    android:fontFamily="@font/castle"
+                    android:textColor="#000"
+                    android:prompt="@string/lastTradingPrompt"
+                    android:background="@drawable/gray_border"
+                    android:paddingVertical="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Are you within this Market?"
+                    android:textColor="#000"
+                    android:fontFamily="@font/font_one"
+                    android:padding="5dp"
+                    android:id="@+id/inMarketLabel"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="YES"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/locationYes"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NO"
+                            android:checked="true"
+                            android:id="@+id/locationNo"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+   
+
+</RelativeLayout>

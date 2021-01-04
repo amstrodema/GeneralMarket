@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homebottom_"
+        android:title="HOME"
+        android:icon="@drawable/home_icon"></item>
+    <item
+        android:id="@+id/profilebottom_"
+        android:title="PROFILE"
+        android:icon="@drawable/home_icon"></item>
+    <item
+        android:id="@+id/locbottom_"
+        android:title="PROFILE"
+        android:icon="@drawable/home_icon"></item>
+    <item
+        android:id="@+id/faveybottom_"
+        android:title="FAVEY"
+        android:icon="@drawable/home_icon"></item>
+    <item
+        android:id="@+id/toolsbottom_"
+        android:title="TOOLS"
+        android:icon="@drawable/home_icon"></item>
+</menu>

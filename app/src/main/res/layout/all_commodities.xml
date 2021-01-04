@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/allCommodityItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text="Fish Oil"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/allCommodityMarketOrStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allCommodityItemName"
+            android:layout_marginLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Bodija Market, Ibadan"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#52D" />
+
+        <TextView
+            android:id="@+id/allCommodityPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:text="8"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#0B6623"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/allCommodityPriceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(price)"
+            android:textColor="#ccc"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/allCommodityPrice"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/allCommodityMetrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allCommodityItemName"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#7C0A02"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/allCommodityMetricsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/allCommodityMetrics"
+            android:layout_below="@id/allCommodityItemName"
+            android:paddingRight="5dp"
+            android:text="Metrics"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#7C0A02"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allCommodityMarketOrStore"
+            android:layout_marginTop="5dp"
+            android:background="#CCC"
+            android:textSize="1dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

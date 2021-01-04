@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "284994103317",
+    "firebase_url": "https://gm-project-2e19d.firebaseio.com",
+    "project_id": "gm-project-2e19d",
+    "storage_bucket": "gm-project-2e19d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284994103317:android:1d4335298739b225",
+        "android_client_info": {
+          "package_name": "comgalaxyglotech.confirmexperts.generalmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284994103317-q9uc458hc7vcdbie9e3k99e5p13cdpd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4I9WM_E9IpDFDfugbzl3SsxlE78U5hxI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.CleaningInProgress">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:layout_margin="10dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_border_no_fill"
+            android:id="@+id/click"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/globe1"
+                android:scaleType="center"
+                android:id="@+id/overrideBtn"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MARKET SANITATION IN PROGRESS"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                style="?android:textAppearanceLarge"
+                android:fontFamily="@font/dut"
+                android:lineSpacingExtra="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/dut"
+                android:lineSpacingExtra="5dp"
+                android:id="@+id/timerDisplay"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Countdown To Opening"
+                android:textAlignment="center"
+                android:fontFamily="@font/amira"
+                android:lineSpacingExtra="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Overriding Sanitation..."
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/gothic"
+                android:lineSpacingExtra="5dp"
+                android:visibility="gone"
+                android:id="@+id/override"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

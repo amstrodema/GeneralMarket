@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/blue_gradient2"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEW ITEM QTY"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:id="@+id/stockQuantityLbl"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dut"
+        android:layout_below="@id/newItem"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stockQuantity"
+        android:hint="Type Purchase Quantity Here"
+        android:padding="15dp"
+        android:textColorHint="#aaa"
+        android:text="0000000"
+        android:textColor="#fff"
+        android:fontFamily="@font/avata"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:background="@drawable/gray_border"
+        android:singleLine="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="5dp"
+        android:id="@+id/stockQuantityCost"
+        android:textColor="#aaa"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:fontFamily="@font/amira"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</ScrollView>

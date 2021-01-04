@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp">
+        <TextView
+            android:id="@+id/storeItemItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text="Fish Oil"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/storeItemPrice"
+            android:text="(price)"
+            android:textColor="#ccc" />
+
+        <TextView
+            android:id="@+id/storeItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="2500 - 5000"
+            android:textColor="#0B6623" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/storeItemItemName"
+            android:id="@+id/layer1">
+            <TextView
+                android:id="@+id/storeItemAvailableLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Available Quantity:"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#ccc" />
+            <TextView
+                android:id="@+id/storeItemAvailableValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/storeItemAvailableLabel"
+                android:paddingRight="5dp"
+                android:text="Limited"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#52D" />
+            <TextView
+                android:id="@+id/storeItemMetricsQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/storeItemMetrics"
+                android:text="1"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+            <TextView
+                android:id="@+id/storeItemMetrics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:text="Bottle"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layer1"
+            android:visibility="gone"
+            android:id="@+id/layer2">
+            <TextView
+                android:id="@+id/storeItemAvailableLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Available Quantity:"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#ccc" />
+            <TextView
+                android:id="@+id/storeItemAvailableValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/storeItemAvailableLabel2"
+                android:paddingRight="5dp"
+                android:text="Limited"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#52D" />
+            <TextView
+                android:id="@+id/storeItemMetricsQty2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/storeItemMetrics2"
+                android:text="1"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+            <TextView
+                android:id="@+id/storeItemMetrics2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:text="Bottle"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layer2"
+            android:visibility="gone"
+            android:id="@+id/layer3">
+            <TextView
+                android:id="@+id/storeItemAvailableLabel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Available Quantity:"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#ccc" />
+            <TextView
+                android:id="@+id/storeItemAvailableValue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/storeItemAvailableLabel3"
+                android:paddingRight="5dp"
+                android:text="Limited"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#52D" />
+            <TextView
+                android:id="@+id/storeItemMetricsQty3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/storeItemMetrics3"
+                android:text="1"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+            <TextView
+                android:id="@+id/storeItemMetrics3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:text="Bottle"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layer3"
+            android:visibility="gone"
+            android:id="@+id/layer4">
+            <TextView
+                android:id="@+id/storeItemAvailableLabel4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Available Quantity:"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#ccc" />
+            <TextView
+                android:id="@+id/storeItemAvailableValue4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/storeItemAvailableLabel4"
+                android:paddingRight="5dp"
+                android:text="Limited"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#52D" />
+            <TextView
+                android:id="@+id/storeItemMetricsQty4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/storeItemMetrics4"
+                android:text="1"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+            <TextView
+                android:id="@+id/storeItemMetrics4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:text="Bottle"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#7C0A02" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

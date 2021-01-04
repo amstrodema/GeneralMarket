@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swiper"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Trade">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottomPanel"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:background="#f5f5f5"
+            android:padding="5dp">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_gradient3">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/atm_beta">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="250dp"
+                            android:id="@+id/lady"
+                            android:paddingTop="25dp"
+                            android:visibility="invisible"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/lady"
+                            android:background="@drawable/back_wite_small"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:text="Unlimited Cashless Transactions"
+                                android:fontFamily="@font/gothic"
+                                android:padding="5dp"
+                                android:textAllCaps="true"
+                                android:background="@drawable/back_wite_small"
+                                android:lineSpacingExtra="5dp"
+                                style="?android:textAppearanceMedium"
+                                android:textColor="#000"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Controlled Environment For Secure Transactions"
+                                android:textColor="#000"
+                                android:paddingHorizontal="5dp"
+                                android:paddingVertical="10dp"
+                                android:background="#f5f5f5"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="AVAILABLE TO EVERYONE"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/amira"
+                                android:textAlignment="center"
+                                android:background="#fff"
+                                android:textColor="#f60"
+                                android:padding="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic"
+                                android:padding="5dp"
+                                android:textAllCaps="true"
+                                android:visibility="gone"
+                                android:textColor="#fff"
+                                android:layout_marginTop="8dp"
+                                android:text="Verify Transaction" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#fff"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/amira"
+                                    android:background="@drawable/gray_border"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:layout_marginRight="5dp"
+                                    android:hint="Confirmation Code"
+                                    style="?android:textAppearanceSmall"
+                                    android:layout_weight="3"/>
+                                <Button
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:text="Verify"
+                                    android:textAllCaps="false"
+                                    android:background="#f60"
+                                    android:textColor="#fff"
+                                    android:id="@+id/verifyCode"
+                                    android:fontFamily="@font/amira"
+                                    android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothic"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:text="INVOICE TRANSACTIONS"
+                        android:textColor="#fff"
+                        android:background="@drawable/blue_gradient3"
+                        android:textSize="15sp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ProgressBar
+                            android:id="@+id/invoiceBar"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:theme="@style/MyRateBar"
+                            android:translationZ="1dp"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/invoice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:translationZ="9dp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="1.5dp"
+                       android:background="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothic"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:text="PENDING TRANSACTIONS"
+                        android:textColor="#fff"
+                        android:background="@drawable/blue_gradient3"
+                        android:textSize="15sp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ProgressBar
+                            android:id="@+id/pending"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:theme="@style/MyRateBar"
+                            android:translationZ="1dp"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/trans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:translationZ="9dp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#fff"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/blue_gradient3"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gothic"
+                            android:layout_marginTop="5dp"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="10dp"
+                            android:textColor="#fff"
+                            android:layout_weight="3"
+                            android:text="TRANSACTION HISTORY"
+                            android:textSize="15sp" />
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/delete2"
+                            android:background="@drawable/circle_wite"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/clearHistory"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ProgressBar
+                            android:id="@+id/history"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:theme="@style/MyRateBar"
+                            android:translationZ="1dp"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/transHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:translationZ="9dp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomPanel"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginBottom="-20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/light_gray_border_filled"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingHorizontal="5dp">
+
+            <Button
+                android:id="@+id/home_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/account"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/click_home"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/gps"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/click_account"
+                android:singleLine="true"
+                android:textColor="#ccc"/>
+
+            <Button
+                android:id="@+id/gps"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="5dp"
+                android:background="@android:color/transparent"
+                android:singleLine="true"
+                android:textColor="#ccc"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/gps"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/wallet2"
+                android:singleLine="true"
+                android:textColor="#ccc"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/notification"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/trade"
+                android:singleLine="true"
+                android:textColor="#ccc"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

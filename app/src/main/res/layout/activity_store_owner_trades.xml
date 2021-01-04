@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.StoreOwnerTrades">
+    <fragment
+        android:name="comgalaxyglotech.confirmexperts.generalmarket.OwnerTradeFragment"
+        android:id="@+id/fragWallet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomPanel"
+        tools:layout="@layout/fragment_owner_trade">
+
+    </fragment>
+    <LinearLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/light_gray_border_filled"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/home_floor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/click_home"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Home"
+            android:fontFamily="@font/amira"/>
+        <Button
+            android:id="@+id/home_store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/cart_view2"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Store"
+            android:fontFamily="@font/amira" />
+
+        <Button
+            android:id="@+id/account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/trade"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="#003"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Trades"
+            android:fontFamily="@font/amira"/>
+
+        <Button
+            android:id="@+id/gps"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:textColor="#ccc"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/notification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/wallet2"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Wallet"
+            android:fontFamily="@font/amira"/>
+
+        <Button
+            android:id="@+id/setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/more2"
+            android:singleLine="true"
+            android:textColor="#a8a8a8"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="Insight"
+            android:fontFamily="@font/amira" />
+
+
+    </LinearLayout>
+</RelativeLayout>

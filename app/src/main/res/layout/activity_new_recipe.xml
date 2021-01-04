@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.NewRecipe">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="NEW RECIPE"
+    android:textAlignment="center"
+    android:paddingVertical="15dp"
+    style="?android:textAppearanceLarge"
+    android:background="#fff"
+    android:textColor="#000"
+    android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="25dp"
+               android:paddingVertical="5dp"
+               android:layout_marginHorizontal="5dp"
+               android:layout_marginBottom="10dp"
+               android:background="#eee">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Recipe Display"
+                   android:layout_centerInParent="true"/>
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="252dp"
+                   android:layout_margin="5dp"
+                   android:layout_centerInParent="true"
+                   android:id="@+id/imageView"/>
+           </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RECIPE NAME"
+                android:background="#eee"
+                android:padding="5dp"
+                android:textColor="#000"
+                  />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_border"
+                android:paddingVertical="10dp"
+                style="?android:textAppearanceSmall"
+                android:hint="Name of recipe"
+                android:singleLine="true"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/recipeName"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RECIPE DESCRIPTION"
+                android:background="#eee"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_border"
+                android:paddingVertical="10dp"
+                style="?android:textAppearanceSmall"
+                android:hint="Describe this recipe briefly"
+                android:singleLine="true"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/recipeDesc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELECT INGREDIENT ITEMS"
+                android:background="#eee"
+                android:textColor="#003"
+                android:padding="5dp"/>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select an item type"
+                android:completionThreshold="1"
+                android:id="@+id/itemPicker"
+                style="?android:textAppearanceSmall"
+                android:background="@drawable/gray_border"
+                android:padding="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/categoryHolder">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT ITEM CATEGORY"
+                    android:background="#eee"
+                    android:textColor="#003"
+                    android:padding="5dp"
+                    android:id="@+id/spinnerLabel"
+                    android:layout_marginTop="10dp"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/newItemClass"
+                    android:entries="@array/categories"
+                    android:background="@drawable/gray_border"
+                    android:paddingVertical="10dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#003"
+                android:text="INGREDIENT QUANTITY"
+                android:background="#eee"
+                android:padding="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/gray_border"
+                android:paddingVertical="10dp"
+                  
+                android:hint="Ingredient Quantity (15 grams)"
+                android:singleLine="true"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/itemQuantity"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#003"
+                android:text="INGREDIENTS TABLE"
+                android:background="#eee"
+                android:padding="5dp"/>
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#003"
+                android:padding="5dp"
+            android:id="@+id/ingredientShow"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eee"
+                android:layout_marginTop="-10dp">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:text="add to list"
+                    android:background="@drawable/btn_fff_none_eee_curved"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@id/clearList"
+                    android:paddingHorizontal="5dp"
+                    android:id="@+id/adToList"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_alignParentRight="true"
+                    android:text="clear list"
+                    android:background="@drawable/btn_fff_none_eee_curved"
+                    android:layout_margin="5dp"
+                    android:paddingHorizontal="5dp"
+                    android:id="@+id/clearList"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:text="New Item"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_tiny_straight_blue"
+                    android:id="@+id/newListItem"
+                    android:layout_toLeftOf="@id/clearList"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ONLINE REFERENCE LINK (E.G. YOUTUBE CHANNEL)"
+                android:textColor="#000"
+                android:background="#eee"
+                android:padding="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_border"
+                android:paddingVertical="10dp"
+                  
+                android:singleLine="true"
+                android:hint="Link your recipe to a youtube video"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/recipeLink"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RECIPE PROCEDURE"
+                android:textColor="#000"
+                android:background="#eee"
+                android:padding="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="500dp"
+                android:background="@drawable/gray_border"
+                android:paddingVertical="10dp"
+                  
+                android:hint="Recipe Procedure"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/recipeProcedure"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPLOAD IMAGE (OPTIONAL)"
+                 
+                android:background="#eee"
+                android:textColor="#000"
+                android:padding="5dp"/>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="39dp"
+                   android:background="@drawable/gray_border"
+                   android:paddingVertical="10dp"
+                     
+                   android:hint="Include a recipe image "
+                   android:singleLine="true"
+                   android:id="@+id/showUploadPicker"
+                   android:paddingHorizontal="5dp"/>
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="39dp"
+                   android:text="SELECT"
+                   android:background="@drawable/circle_half_gray_white_fill"
+                   android:id="@+id/uploadPicker"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="5dp"/>
+           </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIGNATURE"
+                 
+                android:textColor="#000"
+                android:background="#eee"
+                android:padding="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_border"
+                android:paddingVertical="10dp"
+                  
+                android:hint="Personal or company signature"
+                android:singleLine="true"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/recipeSignature"/>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="39dp"
+                   android:text="SAVE RECIPE"
+                   android:background="@drawable/btn_effect_curved_square"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="5dp"
+                   android:paddingHorizontal="7dp"
+                   android:layout_marginVertical="8dp"
+                   android:textColor="#003"
+                   android:id="@+id/saveRecipe"/>
+           </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
