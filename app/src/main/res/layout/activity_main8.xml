@@ -619,7 +619,8 @@
                         android:layout_width="120dp"
                         android:layout_height="73dp"
                         android:background="@drawable/back_black"
-                        android:layout_marginHorizontal="8dp">
+                        android:layout_marginHorizontal="8dp"
+                        android:visibility="gone">
                         <TextView
                             android:id="@+id/faveyLbl"
                             android:layout_width="match_parent"

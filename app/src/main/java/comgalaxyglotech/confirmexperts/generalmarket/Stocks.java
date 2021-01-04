@@ -65,11 +65,10 @@ private ImageView advert1,advert2,advert3,advert4;
     public void listeners(View v){
         //listens to onclick events from buttons on stock
         final TextView generalBtn = (TextView) v;
-        progressDialog.show();
         String cat = generalBtn.getHint().toString();
         Intent intent = new Intent(Stocks.this, StockLanding.class);
         intent.putExtra("category",cat);
-        dataModel.getDoubleData(progressDialog,context,intent);
+        startActivity(intent);
     }
     public void farmListeners(View v){
         //listens to onclick events from buttons on farmstock
@@ -81,7 +80,8 @@ private ImageView advert1,advert2,advert3,advert4;
         dataModel.getDoubleFarmData(progressDialog,context,intent);*/
         Intent intent = new Intent(context, FarmItems.class);
         intent.putExtra("farmId","");
-        dataModel.getDoubleFarmData(progressDialog, context,intent);
+        startActivity(intent);
+       // dataModel.getDoubleFarmData(progressDialog, context,intent);
     }
     private void setUI(){
         advert1 = findViewById(R.id.advert1);

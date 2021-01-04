@@ -12,6 +12,7 @@ public class FarmOwnerHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farm_owner_home);
+        basePanelListeners();
     }
     private void basePanelListeners(){
         Button home, store, trades, wallet, insight;

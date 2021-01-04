@@ -312,7 +312,14 @@ public class FragStockStore extends Fragment{
         super.onStart();
         getStoreData();
     }
+    public void  getData(){
+        modelClass.readData(new ModelClass.FirebaseCallback(){
+            @Override
+            public void onCallback(ArrayList<A_Settings> settings) {
 
+            }
+        },"","","");
+    }
     private void adapterOp(){
         mAdapter = new NewStock_StoreAdapter(storeList);
         mRecyclerView.setAdapter(mAdapter);

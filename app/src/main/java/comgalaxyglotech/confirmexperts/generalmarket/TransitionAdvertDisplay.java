@@ -65,8 +65,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if(location.equals("Store_Transition")){
-                    DataStock dataStock = new DataStock();
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreActivity");
+                    Intent intent = new Intent(new Intent(TransitionAdvertDisplay.this,StoreActivity.class));
                     intent.putExtra("marketId","");
                     StopThisActivity=activity;
                     startActivity(intent);

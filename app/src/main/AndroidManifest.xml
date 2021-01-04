@@ -107,7 +107,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="comgalaxyglotech.confirmexperts.generalmarket.Main9Activity" />
+                <action android:name="comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerHome" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

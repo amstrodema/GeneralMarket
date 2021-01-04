@@ -21,30 +21,7 @@ public class FarmView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
-        creator =intent.getStringExtra("creator") ;
-        farmId = intent.getStringExtra("storeId");
-        if(modelClass.userLoggedIn()){
-            String userId =modelClass.getCurrentUserId();
-            if(userId.equals(creator)){
-                //send user to store owner page
-             /*   Intent intenta = new Intent("comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerHome");
-                intenta.putExtra("storeId",farmId);
-                intenta.putExtra("creator",creator);
-                startActivity(intent);*/
-                setContentView(R.layout.activity_farm_owner_home);
-                basePanelListeners();
-
-            }
-            else {
-                //send user to public page
-                setContentView(R.layout.activity_farm_view);
-            }
-        }
-        else{
-            //send user to public page
-            setContentView(R.layout.activity_farm_view);
-        }
+        setContentView(R.layout.activity_farm_view);
     }
     private void basePanelListeners(){
         Button home, store, trades, wallet, insight;

@@ -145,7 +145,7 @@ public class DataModel {
 
     }
     //get records of farms
-    private void readFarmData(final FirebaseFarmCallback firebaseCallback, String reference, String OrderBy, String id){
+    public void readFarmData(final FirebaseFarmCallback firebaseCallback, String reference, String OrderBy, String id){
         ValueEventListener valueEventListener = new ValueEventListener() {
             // String name;
             @Override

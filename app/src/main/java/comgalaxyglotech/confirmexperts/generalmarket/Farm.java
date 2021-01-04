@@ -357,12 +357,20 @@ public class Farm extends AppCompatActivity{
         mAdapter.setOnItemClickListener(new FarmAdapter.OnAllCommoditiesItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Intent intent = new Intent(Farm.this, FarmView.class);
-                //storeId is only an identifier for farmId here, used to ensure easy flow btw store and farm wallets
-                intent.putExtra("storeId",marketList.get(position).getId());
-                intent.putExtra("creator",marketList.get(position).getCreator());
 
-                startActivity(intent);
+
+                if(modelClass.userLoggedIn() && marketList.get(position).getCreator().equals(modelClass.getCurrentUserId())){
+                    Intent intent = new Intent(Farm.this, FarmOwnerHome.class);
+                    //storeId is only an identifier for farmId here, used to ensure easy flow btw store and farm wallets
+                    intent.putExtra("storeId",marketList.get(position).getId());
+                    intent.putExtra("creator",marketList.get(position).getCreator());
+                      startActivity(intent);
+                }
+                else{
+                    Intent intent = new Intent(Farm.this, FarmView.class);
+                    startActivity(intent);
+                }
+
             }
         });
         searchOperandi();

@@ -35,7 +35,7 @@ public class FarmOwnerInsight extends AppCompatActivity {
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.FarmView");
+                Intent intent = new Intent(FarmOwnerInsight.this, FarmOwnerHome.class);
                 intent.putExtra("storeId",storeId);
                 intent.putExtra("creator",creatorId);
                 startActivity(intent);

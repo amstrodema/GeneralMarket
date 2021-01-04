@@ -37,6 +37,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 
 /**
@@ -264,9 +265,18 @@ public class FragStockFarm extends Fragment{
     @Override
     public void onStart() {
         super.onStart();
-        loadFav();
+        getFarmData();
     }
-
+    DataModel dataModel = new DataModel();
+    public void getFarmData(){
+        dataModel.readFarmData(new DataModel.FirebaseFarmCallback() {
+            @Override
+            public void onCallback(Map<String, FarmMainModel> list) {
+                DataModel.displayEntireFarmData=list;
+                loadFav();
+            }
+        },"AllFarms","farmName","");
+    }
     private void adapterOp(){
         mAdapter = new NewStock_FarmAdapter(storeList);
         mRecyclerView.setAdapter(mAdapter);

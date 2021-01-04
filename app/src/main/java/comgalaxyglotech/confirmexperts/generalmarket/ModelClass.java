@@ -233,7 +233,7 @@ public class ModelClass {
     //for copying text to clipboard
     public void copyToClipboard(Context context, String value, String label){
         ClipboardManager clipboardManager = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clipData = ClipData.newPlainText("Copy Text",value);
+        ClipData clipData = ClipData.newPlainText(" Copy",value);
         assert clipboardManager != null;
         clipboardManager.setPrimaryClip(clipData);
         Toast.makeText(context,label,Toast.LENGTH_SHORT).show();
