@@ -31,7 +31,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
-                android:hint="Market Search Keywords"
+                android:hint="Help Keywords Search"
                 android:paddingLeft="5dp"
                 android:paddingRight="42dp"
                 android:textColor="#fff"
@@ -66,6 +66,7 @@
                 android:text="G.M. - Knowledge Base"
                 android:layout_marginLeft="10dp"
                 android:textAllCaps="true"
+                android:singleLine="true"
                 android:textColor="#fff"
                 style="?android:textAppearanceMedium"/>
             <Button

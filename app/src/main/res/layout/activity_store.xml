@@ -76,6 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="#fff"
                 android:fontFamily="@font/gothic"
+                android:singleLine="true"
                 style="?android:textAppearanceMedium"/>
             <Button
                 android:layout_width="42dp"

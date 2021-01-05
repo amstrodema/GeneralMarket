@@ -76,6 +76,7 @@
                             android:text="Credit"
                             android:textAllCaps="false"
                             android:background="#0b0"
+                            android:visibility="gone"
                             android:textColor="#fff"
                             android:layout_marginRight="5dp"
                             android:layout_weight="2"/>
@@ -97,7 +98,7 @@
                             android:textColor="#fff"
                             android:background="@drawable/no_border_no_fill"
                             android:paddingLeft="10dp"
-                            android:hint="Copy Account Number"
+                            android:hint="Copy"
                             android:drawableStart="@drawable/copy"
                             android:layout_weight="1"/>
                     </LinearLayout>

@@ -193,6 +193,7 @@ public class OwnerWalletFragment extends Fragment {
             public void onCallback( ArrayList<Model_Wallet> wallet_Model) {
                 if(wallet_Model == null){
                     createWalletPanel.setVisibility(View.VISIBLE);
+                    createWallet.setVisibility(View.VISIBLE);
                 }
                 else
                 {

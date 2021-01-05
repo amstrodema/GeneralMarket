@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class Bonus extends AppCompatActivity {
     private pl.droidsonroids.gif.GifImageView claimBtn;
-    private LinearLayout claimPage,oopsPage;
     private ImageView cancel;
+    private RelativeLayout claimPage, oopsPage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

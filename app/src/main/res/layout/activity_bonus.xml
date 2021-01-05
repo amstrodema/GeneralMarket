@@ -27,80 +27,104 @@
             android:textAlignment="center"
             android:textColor="#444"/>
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
+        android:paddingHorizontal="5dp"
         android:layout_margin="3dp"
         android:background="#000"
-        android:orientation="vertical"
+        android:paddingTop="35dp"
         android:id="@+id/claimPage">
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:src="@drawable/gold"
-            android:scaleType="fitStart"/>
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/claimBtn"
+            android:layout_alignParentTop="true"/>
         <pl.droidsonroids.gif.GifImageView
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:src="@drawable/btn"
+            android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:baselineAlignBottom="true"
+            android:layout_centerInParent="true"
             android:id="@+id/claimBtn"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Terms &amp; Conditions applies"
-            android:textColor="#f39"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/bodonin"
-            android:textAlignment="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Powered By General Market"
-            android:textColor="#fff"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/bodonini"
-            android:textAlignment="center"/>
-    </LinearLayout>
-    <LinearLayout
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_below="@id/claimBtn">
+           <ImageView
+               android:layout_width="200dp"
+               android:layout_height="200dp"
+               android:src="@drawable/bonus"
+               android:layout_gravity="center_horizontal"
+               android:scaleType="fitStart"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Terms &amp; Conditions applies"
+               android:textColor="#f39"
+               android:layout_marginTop="10dp"
+               android:fontFamily="@font/bodonin"
+               android:textAlignment="center"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Powered By General Market"
+               android:textColor="#fff"
+               android:layout_marginTop="10dp"
+               android:fontFamily="@font/bodonini"
+               android:textAlignment="center"/>
+       </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="5dp"
         android:layout_margin="3dp"
+        android:visibility="gone"
         android:background="#f5f5f5"
         android:orientation="vertical"
-        android:id="@+id/oopsPage"
-        android:visibility="gone">
+        android:id="@+id/oopsPage">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/delete_canvas_hover"
             android:scaleType="fitStart"
-            android:id="@+id/cancel"/>
+            android:id="@+id/cancel"
+            android:translationZ="2dp"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/frown"
             android:scaleType="fitStart"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Oops!"
-            android:textColor="#f80"
-            android:textSize="80sp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/rema"
-            android:textAlignment="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Powered By General Market"
-            android:textColor="#000"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/bodonini"
-            android:textAlignment="center"/>
-    </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="30dp">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Oops!"
+              android:textColor="#f80"
+              android:textSize="80sp"
+              android:layout_marginTop="10dp"
+              android:fontFamily="@font/annabel"
+              android:textAlignment="center"/>
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Powered By General Market"
+              android:textColor="#000"
+              android:layout_marginTop="10dp"
+              android:fontFamily="@font/bodonini"
+              android:textAlignment="center"/>
+      </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

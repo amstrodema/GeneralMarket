@@ -351,6 +351,21 @@ public class CartInvoiceTransaction {
                     deleteInvoiceCart(id,position,progressDialog,context,cartModels);
                 }
                 else{
+                  try {
+                      DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Invoice").child(id);
+                      databaseReference.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                          @Override
+                          public void onSuccess(Void aVoid) {
+                              Toast.makeText(context, "Invoice Deleted", Toast.LENGTH_SHORT).show();
+                              Trade.invoices.remove(position);
+                              Trade.mAdapter_Invoice.notifyDataSetChanged();
+                              progressDialog.dismiss();
+                          }
+                      });
+                  }
+                  catch (Exception ignored){
+
+                  }
                     Toast.makeText(context, "Carts Items Not Found!", Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
