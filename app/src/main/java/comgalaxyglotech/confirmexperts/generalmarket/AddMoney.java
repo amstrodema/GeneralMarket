@@ -5,11 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
-import co.paystack.android.Paystack;
-import co.paystack.android.PaystackSdk;
-import co.paystack.android.Transaction;
-import co.paystack.android.model.Card;
-import co.paystack.android.model.Charge;
 
 import android.os.Bundle;
 import android.view.View;
@@ -17,18 +12,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.flutterwave.raveandroid.RavePayActivity;
+import com.flutterwave.raveandroid.RaveUiManager;
+import com.flutterwave.raveandroid.rave_java_commons.Meta;
+import com.flutterwave.raveandroid.rave_java_commons.RaveConstants;
+
+import java.util.List;
+
 public class AddMoney extends AppCompatActivity {
     private Button payFund;
     private EditText amountPayable,cardNumber ,expiryMonth ,expiryYear ,cvv;
     private ProgressDialog progressDialog;
     private ModelClass modelClass = new ModelClass();
     private String walletId, type;
+    private Activity activity= this;
+    private Context context = this;
+    private double amount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_money);
-        PaystackSdk.initialize(getApplicationContext());
-       // setPaystackKey();
+
         Intent intent = getIntent();
         walletId = intent.getStringExtra("walletId");
         type = intent.getStringExtra("type");
@@ -43,53 +47,45 @@ public class AddMoney extends AppCompatActivity {
         payFund.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                amount = Double.parseDouble(amountPayable.getText().toString().trim());
                 if(!amountPayable.getText().toString().isEmpty())
-                if (Integer.parseInt(amountPayable.getText().toString().trim()) >= 500) {
-                    progressDialog.setMessage("Loading...");
-                    progressDialog.show();
-
-                    // This sets up the card and check for validity
-                    // This is a test card from paystack
-                    String _cardNumber = cardNumber.getText().toString();
-                    int _expiryMonth = Integer.parseInt(expiryMonth.getText().toString()); //any month in the future
-                    int _expiryYear =Integer.parseInt(expiryYear.getText().toString()); // any year in the future. '2018' would work also!
-                    String _cvv = cvv.getText().toString() ;  // cvv of the test card
-
-                    Card card = new Card(_cardNumber, _expiryMonth, _expiryYear, _cvv);
-                    if(card.validNumber()) {
-                        progressDialog.setMessage("Validating Card.... (1)");
-                        if(card.validCVC()){
-                            progressDialog.setMessage("Validating Card.... (2)");
-                            if(card.validExpiryDate()){
-                                progressDialog.setMessage("Validating Card.... (3)");
-                                if (card.isValid()) {
-                                    progressDialog.setMessage("Validating Card.... (4)");
-                                    // charge card'
-                                    ModelClass.paymentModel = new PaymentModel(card,walletId,type, Integer.parseInt(amountPayable.getText().toString().trim()));
-                                    startActivity(new Intent(AddMoney.this, Payment_Loader.class));
-                                    finish();
-                                } else {
-                                    //do something
-                                    progressDialog.dismiss();
-                                    Toast.makeText(AddMoney.this, "Invalid Card!", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                            else{
-                                progressDialog.dismiss();
-                                Toast.makeText(AddMoney.this, "Card has expired!", Toast.LENGTH_SHORT).show();
-                            }
-
-                        }
-                        else{
-                            progressDialog.dismiss();
-                            Toast.makeText(AddMoney.this, "Invalid Card CVV", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    else{
-                        progressDialog.dismiss();
-                        Toast.makeText(AddMoney.this, "Invalid Card Number", Toast.LENGTH_SHORT).show();
-                    }
+                if (amount >= 500) {
+                   /* progressDialog.setMessage("Loading...");
+                    progressDialog.show();*/
+                    String ref = modelClass.getCurrentUserId()+ modelClass.getDate();
+                    RaveUiManager raveUiManager =  new RaveUiManager(activity).setAmount(amount)
+                            .setCurrency("NGN")
+                            .setEmail(modelClass.getCurrentUserMail())
+                            .setfName("first Name")
+                            .setlName("Last name")
+                            .setNarration("narration")
+                            .setPublicKey("FLWPUBK_TEST-e9f83cc2f6b1f0d112eadb0699129701-X")
+                            .setEncryptionKey("FLWSECK_TESTa6f8fd9f170b")
+                            .setTxRef(ref)
+                           // .setPhoneNumber(phoneNumber, boolean)
+                    .acceptAccountPayments(true)
+                    .acceptCardPayments(true)
+                    .acceptMpesaPayments(true)
+                    .acceptAchPayments(true)
+                    .acceptGHMobileMoneyPayments(true)
+                    .acceptUgMobileMoneyPayments(true)
+                    .acceptZmMobileMoneyPayments(true)
+                    .acceptRwfMobileMoneyPayments(true)
+                    .acceptSaBankPayments(true)
+                    .acceptUkPayments(true)
+                    .acceptBankTransferPayments(true)
+                    .acceptUssdPayments(true)
+                    .acceptBarterPayments(true)
+                    .acceptFrancMobileMoneyPayments(true)
+                    .allowSaveCardFeature(true)
+                    .onStagingEnv(true)
+                    /*.setMeta(List<Meta>)
+                            .withTheme(styleId)
+                            .isPreAuth(boolean)*/
+                   /* .setSubAccounts(List<SubAccount>)
+                            .shouldDisplayFee(boolean)*/
+                    .showStagingLabel(true)
+                    .initialize();
                 }
                 else{
                     Toast.makeText(AddMoney.this, "Minimum payable is ₦500", Toast.LENGTH_SHORT).show();
@@ -99,7 +95,33 @@ public class AddMoney extends AppCompatActivity {
             }
         });
     }
-   /* public static void setPaystackKey() {
-        PaystackSdk.setPublicKey("pk_test_7b0176a35fa3b5473e1f61f5b790c2880b6085b6");
-    }*/
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        /*
+         *  We advise you to do a further verification of transaction's details on your server to be
+         *  sure everything checks out before providing service or goods.
+         */
+        if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null) {
+            String message = data.getStringExtra("response");
+            if (resultCode == RavePayActivity.RESULT_SUCCESS) {
+                ProcessWallet addToWallet = new ProcessWallet();
+                Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
+                if(type.equals("personal")){
+                    addToWallet.addTo_Wallet(amount, progressDialog,context,activity,walletId);
+                }
+                else{
+                    addToWallet.addTo_Store_Wallet_Acct(walletId,amount, progressDialog,context,activity);
+                }
+            }
+            else if (resultCode == RavePayActivity.RESULT_ERROR) {
+                Toast.makeText(this, "ERROR " + message, Toast.LENGTH_SHORT).show();
+            }
+            else if (resultCode == RavePayActivity.RESULT_CANCELLED) {
+                Toast.makeText(this, "CANCELLED " + message, Toast.LENGTH_SHORT).show();
+            }
+        }
+        else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 }

@@ -8,12 +8,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import co.paystack.android.Paystack;
-import co.paystack.android.PaystackSdk;
-import co.paystack.android.Transaction;
-import co.paystack.android.model.Card;
-import co.paystack.android.model.Charge;
-
 public class Payment_Loader extends AppCompatActivity {
     ModelClass modelClass = new ModelClass();
     ProgressDialog progressDialog;
@@ -24,11 +18,11 @@ public class Payment_Loader extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_loader);
         progressDialog = new ProgressDialog(this);
-        performCharge();
+       // performCharge();
     }
     // This is the subroutine you will call after creating the charge
     // adding a card and setting the access_code
-    public void performCharge(){
+   /* public void performCharge(){
         Card card = ModelClass.paymentModel.getCard();
         //create a Charge object
         Toast.makeText(Payment_Loader.this, "Charge Card", Toast.LENGTH_SHORT).show();
@@ -39,9 +33,9 @@ public class Payment_Loader extends AppCompatActivity {
         charge.setEmail(modelClass.getCurrentUserMail());
         String ref = modelClass.getCurrentUserId()+ modelClass.getDate();
         charge.setReference(ref);
-       /* setCurrency, setPlan, setSubaccount,
+        setCurrency, setPlan, setSubaccount,
         setTransactionCharge, setAmount, setEmail, setReference, setBearer,
-                putMetadata, putCustomField */
+                putMetadata, putCustomField
 
         PaystackSdk.chargeCard(Payment_Loader.this, charge, new Paystack.TransactionCallback() {
             @Override
@@ -73,5 +67,5 @@ public class Payment_Loader extends AppCompatActivity {
             }
 
         });
-    }
+    }*/
 }

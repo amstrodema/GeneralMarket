@@ -27,8 +27,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-import co.paystack.android.model.Card;
-
 /**
  * Created by ELECTRON on 02/22/2019.
  */
@@ -288,5 +286,4 @@ public class ModelClass {
     public interface FirebaseCallback{
         void onCallback (ArrayList<A_Settings> settings);
     }
-    public static PaymentModel paymentModel;
 }
