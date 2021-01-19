@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.flutterwave.raveandroid.RavePayActivity;
@@ -21,13 +22,14 @@ import java.util.List;
 
 public class AddMoney extends AppCompatActivity {
     private Button payFund;
-    private EditText amountPayable,cardNumber ,expiryMonth ,expiryYear ,cvv;
+    private EditText amountPayable,firstName, lastName;
     private ProgressDialog progressDialog;
     private ModelClass modelClass = new ModelClass();
     private String walletId, type;
     private Activity activity= this;
     private Context context = this;
     private double amount;
+    private TextView alert;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,25 +42,28 @@ public class AddMoney extends AppCompatActivity {
         progressDialog.setCancelable(false);
         payFund = findViewById(R.id.payFund);
         amountPayable = findViewById(R.id.amountPayable);
-        cardNumber = findViewById(R.id.cardNumber);
-        expiryMonth = findViewById(R.id.expiryMonth);
-        expiryYear = findViewById(R.id.expiryYear);
-        cvv = findViewById(R.id.cvv);
+        lastName = findViewById(R.id.lastName);
+        firstName = findViewById(R.id.firstName);
+        alert = findViewById(R.id.alert);
         payFund.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 amount = Double.parseDouble(amountPayable.getText().toString().trim());
+                String fname = firstName.getText().toString().trim();
+                String lname = lastName.getText().toString().trim();
+                if(!fname.isEmpty() && !lname.isEmpty())
                 if(!amountPayable.getText().toString().isEmpty())
                 if (amount >= 500) {
                    /* progressDialog.setMessage("Loading...");
                     progressDialog.show();*/
-                    String ref = modelClass.getCurrentUserId()+ modelClass.getDate();
-                    RaveUiManager raveUiManager =  new RaveUiManager(activity).setAmount(amount)
-                            .setCurrency("NGN")
+                    String ref = modelClass.getNewId()+ modelClass.getDate();
+                    //ref should be saved
+                    new RaveUiManager(activity).setAmount(amount)
+                            .setCurrency("NGN") //we can discuss currency dropdown in later description
                             .setEmail(modelClass.getCurrentUserMail())
-                            .setfName("first Name")
-                            .setlName("Last name")
-                            .setNarration("narration")
+                            .setfName(fname)
+                            .setlName(lname)
+                            .setNarration("General Market Wallet Funding")
                             .setPublicKey("FLWPUBK_TEST-e9f83cc2f6b1f0d112eadb0699129701-X")
                             .setEncryptionKey("FLWSECK_TESTa6f8fd9f170b")
                             .setTxRef(ref)
@@ -88,10 +93,12 @@ public class AddMoney extends AppCompatActivity {
                     .initialize();
                 }
                 else{
-                    Toast.makeText(AddMoney.this, "Minimum payable is ₦500", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddMoney.this, "Minimum deposit is ₦500", Toast.LENGTH_SHORT).show();
                 }
                 else
-                    Toast.makeText(AddMoney.this, "Amount is empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddMoney.this, "Amount field is empty!", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(AddMoney.this, "Name field is empty!", Toast.LENGTH_SHORT).show();
             }
         });
     }

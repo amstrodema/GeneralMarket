@@ -168,7 +168,11 @@ public class SendMoney extends AppCompatActivity {
                         profile.add(userProfile);
 
                     }
-                    firebaseCallback.onCallback(profile);
+                    //We disabled this function 1-jan-2021 1:23pm
+                    //current policy states that funds cannot be transferred to store wallet in any regards
+                  //  firebaseCallback.onCallback(profile);
+                    progressDialog.dismiss();
+                    Toast.makeText(SendMoney.this, "Forbidden Transaction! Refer to our T&C", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     progressDialog.dismiss();
