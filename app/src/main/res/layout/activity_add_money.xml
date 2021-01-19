@@ -53,29 +53,20 @@
            android:layout_width="match_parent"
            android:layout_height="1dp"
            android:background="#fff"
-           android:layout_marginTop="30dp"/>
+           android:layout_marginTop="15dp"/>
        <TextView
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:fontFamily="@font/gothic"
            android:padding="5dp"
-           android:text="Deposit Form"
-           android:layout_marginTop="30dp"
-           android:textAlignment="center"
-           android:textColor="#fff"/>
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:fontFamily="@font/gothic"
-           android:padding="5dp"
-           android:text="Amount to fund"
-           android:layout_marginTop="25dp"
+           android:text="First Name"
+           android:layout_marginTop="10dp"
            android:textColor="#fff"/>
 
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:background="@drawable/white_bordered"
+           android:background="@drawable/gray_border"
            android:paddingHorizontal="10dp"
            android:paddingVertical="12dp"
            android:fontFamily="@font/amira"
@@ -90,13 +81,13 @@
            android:fontFamily="@font/gothic"
            android:padding="5dp"
            android:text="Last Name"
-           android:layout_marginTop="10dp"
+           android:layout_marginTop="6dp"
            android:textColor="#fff"/>
 
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:background="@drawable/white_bordered"
+           android:background="@drawable/gray_border"
            android:paddingHorizontal="10dp"
            android:paddingVertical="12dp"
            android:fontFamily="@font/amira"
@@ -112,12 +103,12 @@
            android:fontFamily="@font/gothic"
            android:padding="5dp"
            android:text="Amount to fund"
-           android:layout_marginTop="10dp"
+           android:layout_marginTop="6dp"
            android:textColor="#fff"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:background="@drawable/white_bordered"
+           android:background="@drawable/gray_border"
            android:paddingHorizontal="10dp"
            android:paddingVertical="12dp"
            android:fontFamily="@font/amira"
@@ -132,13 +123,13 @@
            android:layout_width="match_parent"
            android:layout_height="42dp"
            android:text="Proceed"
-           android:background="@drawable/white_bordered"
+           android:background="@drawable/btn_effect_curved_square"
            android:paddingHorizontal="10dp"
            android:paddingVertical="12dp"
-           android:layout_marginTop="20dp"
+           android:layout_marginTop="10dp"
            android:layout_marginBottom="5dp"
            android:fontFamily="@font/dut"
-           android:textColor="#fff" />
+           android:textColor="#000" />
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"

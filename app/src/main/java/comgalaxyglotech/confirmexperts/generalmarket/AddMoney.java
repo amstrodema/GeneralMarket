@@ -7,6 +7,7 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,7 +57,7 @@ public class AddMoney extends AppCompatActivity {
                 if (amount >= 500) {
                    /* progressDialog.setMessage("Loading...");
                     progressDialog.show();*/
-                    String ref = modelClass.getNewId()+ modelClass.getDate();
+                    String ref = modelClass.getCurrentUserId()+ modelClass.getDate();
                     //ref should be saved
                     new RaveUiManager(activity).setAmount(amount)
                             .setCurrency("NGN") //we can discuss currency dropdown in later description
@@ -111,20 +112,24 @@ public class AddMoney extends AppCompatActivity {
         if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null) {
             String message = data.getStringExtra("response");
             if (resultCode == RavePayActivity.RESULT_SUCCESS) {
+                progressDialog.setMessage("Please Wait...");
+                progressDialog.show();
                 ProcessWallet addToWallet = new ProcessWallet();
                 Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
                 if(type.equals("personal")){
                     addToWallet.addTo_Wallet(amount, progressDialog,context,activity,walletId);
                 }
-                else{
+               //there's a json file returned with #Data We haven't accessed it
+                //no adding money directly to store wallet
+             /*   else{
                     addToWallet.addTo_Store_Wallet_Acct(walletId,amount, progressDialog,context,activity);
-                }
+                }*/
             }
             else if (resultCode == RavePayActivity.RESULT_ERROR) {
                 Toast.makeText(this, "ERROR " + message, Toast.LENGTH_SHORT).show();
             }
             else if (resultCode == RavePayActivity.RESULT_CANCELLED) {
-                Toast.makeText(this, "CANCELLED " + message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "CANCELLED ", Toast.LENGTH_SHORT).show();
             }
         }
         else {
