@@ -199,6 +199,7 @@ public class Wallet extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
+                        progressDialog.dismiss();
                         Toast.makeText(context,"Failed",Toast.LENGTH_SHORT).show();
                     }
                 });
