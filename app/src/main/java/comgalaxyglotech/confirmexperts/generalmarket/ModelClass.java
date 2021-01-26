@@ -286,4 +286,20 @@ public class ModelClass {
     public interface FirebaseCallback{
         void onCallback (ArrayList<A_Settings> settings);
     }
+    public static String initials(String marketName){
+        String [] initials = marketName.split(" ");
+        StringBuilder inital = new StringBuilder();
+        try{
+            int count =0;
+            for (String ss : initials) {
+                count++;
+                inital.append(String.valueOf(ss.charAt(0)));
+                if (count==2)break;
+            }
+        }
+        catch (Exception e){
+            inital = new StringBuilder(String.valueOf(marketName.charAt(0)));
+        }
+        return inital.toString();
+    }
 }

@@ -42,10 +42,9 @@ public class StoreAdapter  extends RecyclerView.Adapter <StoreAdapter.StoreViewH
     }
 
     public static class StoreViewHolder extends RecyclerView.ViewHolder{
-        public TextView storeName,storeTotal,openTime,newStoreClosing,newStoreDelivery,storeDistance,banned;
+        public TextView storeName,storeImage,storeTotal,openTime,newStoreClosing,newStoreDelivery,storeDistance,banned;
         public CardView contentHolder;
         public RatingBar rating;
-        public ImageView storeImage;
         public StoreViewHolder(View itemView, final StoreAdapter.OnStoreItemClickListener listener){
             super(itemView);
             storeImage  =  itemView.findViewById(R.id.storeImage);
@@ -92,7 +91,8 @@ public class StoreAdapter  extends RecyclerView.Adapter <StoreAdapter.StoreViewH
         StoreDisplayModel currentItem= StoreList.get(position);
         int itemCount=0;
         ModelClass model = new ModelClass();
-        holder.storeImage.setImageResource(R.drawable.store_clip);
+        holder.storeImage.setText(ModelClass.initials(currentItem.getStoreName()));
+      /*  holder.storeImage.setImageResource(R.drawable.store_clip);
         StorageReference storageReference = firebaseStorage.getReference();
         storageReference.child("Store").child(currentItem.getId()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -100,7 +100,7 @@ public class StoreAdapter  extends RecyclerView.Adapter <StoreAdapter.StoreViewH
                 Picasso.get().load(uri).into(holder.storeImage);
             }
 
-        });
+        });*/
         holder.rating.setRating(model.loadRating(currentItem.getRatin()));
         for (NewStockDisplayModel item: displayData) {
             if(item.getStoreId().equals(currentItem.getId())){

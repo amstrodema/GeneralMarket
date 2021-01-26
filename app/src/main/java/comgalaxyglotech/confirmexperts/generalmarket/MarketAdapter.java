@@ -75,7 +75,8 @@ public class MarketAdapter extends RecyclerView.Adapter <MarketAdapter.MarketVie
     @Override
     public void onBindViewHolder(MarketViewHolder holder, int position) {
         marketModel currentItem= MarketList.get(position);
-        holder.storeImage.setText(marketInitials(currentItem.getMarketName()));
+
+        holder.storeImage.setText(ModelClass.initials(currentItem.getMarketName()));
         holder.marketName.setText(currentItem.getMarketName());
         String NextTrade = GetNextDay(currentItem.getLastTradingDay(),currentItem.getMarketFreq());
         String lastTradeDay;
@@ -98,22 +99,6 @@ public class MarketAdapter extends RecyclerView.Adapter <MarketAdapter.MarketVie
         holder.mktRecy_Loc.setText(currentItem.getMktRecy_Loc());
 
         holder.marketId.setText(currentItem.getMarketId());
-    }
-    private String marketInitials(String marketName){
-        String [] initials = marketName.split(" ");
-        StringBuilder inital = new StringBuilder();
-        try{
-            int count =0;
-            for (String ss : initials) {
-                count++;
-                inital.append(String.valueOf(ss.charAt(0)));
-                if (count==2)break;
-            }
-        }
-        catch (Exception e){
-            inital = new StringBuilder(String.valueOf(marketName.charAt(0)));
-        }
-        return inital.toString();
     }
 
     @Override

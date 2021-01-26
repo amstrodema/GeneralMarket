@@ -31,14 +31,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:src="@drawable/store_clip"
-                android:id="@+id/storeImage"
-                android:scaleType="centerInside"
-                android:layout_marginVertical="5dp"
-                android:layout_marginRight="3dp"/>
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_wite">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/storeImage"
+                        android:scaleType="centerInside"
+                        android:text="KJ"
+                        android:fontFamily="@font/dut"
+                        style="?android:textAppearanceLarge"
+                        android:layout_centerInParent="true"
+                        android:textColor="#000"/>
+                </RelativeLayout>
+            </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
