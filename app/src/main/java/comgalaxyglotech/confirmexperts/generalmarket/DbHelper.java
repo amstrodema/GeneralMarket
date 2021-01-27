@@ -32,14 +32,21 @@ public class DbHelper extends SQLiteOpenHelper {
         DB.delete("userDetails",null,  null);
         boolean isDone = true;
         for (SettingsModel x: userDetails) {
+            String type = x.getDataType();
             ContentValues contentValues = new ContentValues();
             contentValues.put("settingName",x.getSettingName());
-            if(!x.getValueText().isEmpty())
-                contentValues.put("valueText",x.getValueText());
-            else if(x.getValueDouble() != 0)
-                contentValues.put("valueInt",x.getValueDouble());
-            else if(x.getValueInt() != 0)
-                contentValues.put("valueDouble",x.getValueInt());
+            contentValues.put("dataType", type);
+            switch (type) {
+                case "text":
+                    contentValues.put("valueText", x.getValueText());
+                    break;
+                case "double":
+                    contentValues.put("valueInt", x.getValueDouble());
+                    break;
+                case "int":
+                    contentValues.put("valueDouble", x.getValueInt());
+                    break;
+            }
            long result = DB.insert("userDetails", null, contentValues);
            if(result == -1)
                isDone =false;
@@ -52,29 +59,78 @@ public class DbHelper extends SQLiteOpenHelper {
         boolean isDone = true;
         for (SettingsModel x: userDetails) {
             ContentValues contentValues = new ContentValues();
+            String type = x.getDataType();
             contentValues.put("settingName",x.getSettingName());
-            if(!x.getValueText().isEmpty())
-                contentValues.put("valueText",x.getValueText());
-            else if(x.getValueDouble() != 0)
-                contentValues.put("valueInt",x.getValueDouble());
-            else if(x.getValueInt() != 0)
-                contentValues.put("valueDouble",x.getValueInt());
+            contentValues.put("dataType", type);
+            switch (type) {
+                case "text":
+                    contentValues.put("valueText", x.getValueText());
+                    break;
+                case "double":
+                    contentValues.put("valueInt", x.getValueDouble());
+                    break;
+                case "int":
+                    contentValues.put("valueDouble", x.getValueInt());
+                    break;
+            }
             long result = DB.insert("appSettings", null, contentValues);
             if(result == -1)
                 isDone =false;
         }
         return isDone;
     }
-    public Cursor getUserData(){
-        SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from userDetails", null);
-        cursor.close();
-        return cursor;
-    }
-    public Cursor getAppSettings(){
+    public ArrayList<String> getAppSettings(){
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.rawQuery("Select * from appSettings", null);
+
+        ArrayList<String> appSetting = new ArrayList<>();
+        if(cursor.getCount() != 0){
+            while (cursor.moveToNext()){
+                StringBuffer buffer = new StringBuffer();
+                buffer.append(cursor.getString(0)+"\n");
+                String type = cursor.getString(4);
+                switch (type) {
+                    case "text":
+                        buffer.append(cursor.getString(1)+"\n");
+                        break;
+                    case "double":
+                        buffer.append(cursor.getString(3)+"\n");
+                        break;
+                    case "int":
+                        buffer.append(cursor.getString(2)+"\n");
+                        break;
+                }
+                appSetting.add(buffer.toString());
+            }
+        }
         cursor.close();
-        return cursor;
+        return appSetting;
+    }
+    public ArrayList<String> getUserDetails(){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from userDetails", null);
+
+        ArrayList<String> appSetting = new ArrayList<>();
+        if(cursor.getCount() != 0){
+            while (cursor.moveToNext()){
+                StringBuffer buffer = new StringBuffer();
+                buffer.append(cursor.getString(0)+"\n");
+                String type = cursor.getString(4);
+                switch (type) {
+                    case "text":
+                        buffer.append(cursor.getString(1)+"\n");
+                        break;
+                    case "double":
+                        buffer.append(cursor.getString(3)+"\n");
+                        break;
+                    case "int":
+                        buffer.append(cursor.getString(2)+"\n");
+                        break;
+                }
+                appSetting.add(buffer.toString());
+            }
+        }
+        cursor.close();
+        return appSetting;
     }
 }
