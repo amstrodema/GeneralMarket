@@ -106,28 +106,27 @@ public class DbHelper extends SQLiteOpenHelper {
         cursor.close();
         return appSetting;
     }
-    public ArrayList<String> getUserDetails(){
+    public ArrayList<SettingsModel> getUserDetails(){
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.rawQuery("Select * from userDetails", null);
 
-        ArrayList<String> appSetting = new ArrayList<>();
+        ArrayList<SettingsModel> appSetting = new ArrayList<>();
         if(cursor.getCount() != 0){
             while (cursor.moveToNext()){
-                StringBuffer buffer = new StringBuffer();
-                buffer.append(cursor.getString(0)+"\n");
-                String type = cursor.getString(4);
-                switch (type) {
-                    case "text":
-                        buffer.append(cursor.getString(1)+"\n");
-                        break;
-                    case "double":
-                        buffer.append(cursor.getString(3)+"\n");
-                        break;
-                    case "int":
-                        buffer.append(cursor.getString(2)+"\n");
-                        break;
-                }
-                appSetting.add(buffer.toString());
+                SettingsModel model = new SettingsModel();
+                model.setDataType(cursor.getString(4));
+                model.setSettingName(cursor.getString(0));
+                model.setValueText(cursor.getString(1));
+                model.setValueDouble(Double.parseDouble(cursor.getString(3)));
+                model.setValueInt(Integer.parseInt(cursor.getString(2)));
+            /*  if(cursor.getString(0).equals("dateUpdated")){
+                   if( modelClass.isDbStale(cursor.getString(1)))
+                   {
+
+                       break;
+                   }
+                }*/
+                appSetting.add(model);
             }
         }
         cursor.close();

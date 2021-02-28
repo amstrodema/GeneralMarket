@@ -5,21 +5,14 @@ public class SettingsModel {
     private int valueInt= 0;
     private double valueDouble =0;
 
-    public SettingsModel( String settingName, String valueText, String dataType) {
-        this.settingName = settingName;
-        this.valueText = valueText;
-        this.dataType = dataType;
+    public SettingsModel() {
     }
-    public SettingsModel(String settingName, String valueText, String dataType, int valueInt) {
+
+    public SettingsModel(String settingName, String valueText, String dataType, int valueInt, double valueDouble) {
         this.settingName = settingName;
         this.valueText = valueText;
         this.dataType = dataType;
         this.valueInt = valueInt;
-    }
-    public SettingsModel(String id, String settingName, String valueText, String dataType, double valueDouble) {
-        this.settingName = settingName;
-        this.valueText = valueText;
-        this.dataType = dataType;
         this.valueDouble = valueDouble;
     }
 

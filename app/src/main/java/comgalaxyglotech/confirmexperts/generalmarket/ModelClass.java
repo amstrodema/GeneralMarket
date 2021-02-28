@@ -186,7 +186,7 @@ public class ModelClass {
     private boolean isActive(long diff){
         //  long diffSeconds = diff / 1000 % 60;
         long diffMinutes = diff / (60 * 1000) % 60;
-        //returens valid for 1hr difference
+        //returns valid for 1hr difference
         long diffHours = diff / (60 * 60 * 1000) % 24;
         long diffDays = diff / (24 * 60 * 60 * 1000);
         if(diffDays > 0)
@@ -197,6 +197,38 @@ public class ModelClass {
             }
 
         return false;
+    }
+
+    public boolean isDbStale(String lastUpdateDateString){
+        SimpleDateFormat ddf=new SimpleDateFormat("dd/MM/yyyy HH:mm:ss a");
+        Date date = new Date();
+
+        Date invoiceDate= formatDate(lastUpdateDateString);
+        Date currentTime = formatDate(ddf.format(date));
+
+        long longCurrentTime =currentTime.getTime();
+        long longInvoiceDate =invoiceDate.getTime();
+
+        long diff = longCurrentTime - longInvoiceDate;
+        return isDue(diff);
+
+
+        //LocalDate localDate = LocalDate.of(date)
+        // return "\n \n"+currentTime.before(closeTime)  +"=="+ currentTime.before(openTime)+"\n \n"+DateText(closeTime)+currentTime.before(closeTime)  +"-"+ DateText(openTime)+currentTime.after(openTime)+" ;; "+DateText(closeTime)+currentTime.after(closeTime)  + DateText(openTime)+currentTime.before(openTime) +"::"+DateText(currentTime);
+    }
+    private boolean isDue(long diff){
+        //  long diffSeconds = diff / 1000 % 60;
+        long diffMinutes = diff / (60 * 1000) % 60;
+        //returns valid for 1hr difference
+        long diffHours = diff / (60 * 60 * 1000) % 24;
+        long diffDays = diff / (24 * 60 * 60 * 1000);
+        if(diffDays > 0)
+            return false;
+        else if(diffHours > 0)
+          return false;
+        else if(diffMinutes > 5)
+            return false;
+        else return true;
     }
     private String countDown(long diff){
          long diffSeconds = diff / 1000 % 60;
@@ -288,18 +320,19 @@ public class ModelClass {
     }
     public static String initials(String marketName){
         String [] initials = marketName.split(" ");
-        StringBuilder inital = new StringBuilder();
+        StringBuilder initial;
         try{
-            int count =0;
-            for (String ss : initials) {
-                count++;
-                inital.append(String.valueOf(ss.charAt(0)));
-                if (count==2)break;
-            }
+            initial = new StringBuilder();
+            String x =initials[0];
+            initial.append(String.valueOf(x.charAt(0)));
+            x =initials[1];
+            initial.append(String.valueOf(x.charAt(0)));
         }
         catch (Exception e){
-            inital = new StringBuilder(String.valueOf(marketName.charAt(0)));
+            initial = new StringBuilder();
+            String x =initials[0];
+            initial.append(String.valueOf(x.charAt(0)));
         }
-        return inital.toString();
+        return initial.toString();
     }
 }

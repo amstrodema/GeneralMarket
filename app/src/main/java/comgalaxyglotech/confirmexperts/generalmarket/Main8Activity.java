@@ -38,6 +38,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import androidx.work.Constraints;
@@ -50,7 +51,7 @@ public class Main8Activity extends AppCompatActivity implements loginDialog.dial
     private Button btnAcct,notification,setting,helpBtn,loan,favey,logOutClick,adminBtn;
     private TextView logInStatus,marque;
     FirebaseAuth firebaseAuth;
-    private TextView trades, stocksBtn;
+    private TextView trades, stocksBtn,label;
     private ImageView advert2, advert3,storeBtn,marktBtn,farmBtn,archiveBtn,cartBonus,wallet;
     private ModelClass modelClass = new ModelClass();
     ProgressDialog progressDialog;
@@ -58,14 +59,26 @@ public class Main8Activity extends AppCompatActivity implements loginDialog.dial
     private long UPDATE_INTERVAL = 60 * 1000;  /* 60 secs */
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
     int counter =3;
+    private DbHelper dbHelper;
     //Icon_Manager icon_manager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main8);
+      //  dbHelper = new DbHelper(this);
         //icon_manager = new Icon_Manager();
         //((TextView)findViewById(R.id.frontLabel)).setTypeface(icon_manager.get_icons("fonts/ionicons.ttf",this));
         setup();
+     /*   ArrayList<SettingsModel>ky = new ArrayList<>();
+        ky.add(new SettingsModel("","","int",180,12.00));
+        ky.add(new SettingsModel("","gbam","text",0,0));
+        ky.add(new SettingsModel("","","double",0,12.00));
+        dbHelper.insertUserDetails(ky);
+StringBuilder val= new StringBuilder();
+        for (SettingsModel x: dbHelper.getUserDetails()) {
+            val.append(x.getSettingName()).append(": ").append(x.getValueInt()).append("\n");
+        }
+        label.setText(val.toString());*/
         if(splashScreen.message!= null){
             marque.setText(splashScreen.message);
             marque.setVisibility(View.VISIBLE);
@@ -112,6 +125,7 @@ public class Main8Activity extends AppCompatActivity implements loginDialog.dial
         startLocationUpdates();
     }
     private void setup(){
+        label = findViewById(R.id.label);
         logOutPanel = findViewById(R.id.logOutPanel);
         adminPanel = findViewById(R.id.adminPanel);
         wallet = findViewById(R.id.wallet);
