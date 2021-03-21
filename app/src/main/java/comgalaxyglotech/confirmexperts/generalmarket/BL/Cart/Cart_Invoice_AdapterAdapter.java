@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.BL.Cart;
 
 import android.annotation.SuppressLint;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**
  * Created by ELECTRON on 02/14/2020.

@@ -22,6 +22,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceModel;
+
 public class CartInvoice extends AppCompatActivity {
     private EditText invoiceCode;
     private Button proceed,clearList,makeInvoiceCode;

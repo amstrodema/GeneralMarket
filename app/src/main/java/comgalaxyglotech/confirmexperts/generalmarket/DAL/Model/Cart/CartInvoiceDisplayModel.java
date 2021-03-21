@@ -1,34 +1,25 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart;
 
 import java.util.ArrayList;
 
 /**
- * Created by ELECTRON on 06/19/2020.
+ * Created by ELECTRON on 06/18/2020.
  */
 
-public class CartInvoiceModel {
-    private String id, buyerId, status,payerId, dateTime;
+public class CartInvoiceDisplayModel {
+    private String id, buyerId, status,payerId, dateTime,invoiceName;
     private double cost;
-    private int noItems;
-    public CartInvoiceModel() {
-    }
+    private int cartNo;
 
-    public CartInvoiceModel(String id, String buyerId, String status, String payerId, String dateTime, double cost, int noItems) {
+    public CartInvoiceDisplayModel(String id, String buyerId, String status, String payerId, String dateTime, String invoiceName, double cost, int cartNo) {
         this.id = id;
         this.buyerId = buyerId;
         this.status = status;
         this.payerId = payerId;
         this.dateTime = dateTime;
+        this.invoiceName = invoiceName;
         this.cost = cost;
-        this.noItems = noItems;
-    }
-
-    public int getNoItems() {
-        return noItems;
-    }
-
-    public void setNoItems(int noItems) {
-        this.noItems = noItems;
+        this.cartNo = cartNo;
     }
 
     public String getId() {
@@ -71,11 +62,27 @@ public class CartInvoiceModel {
         this.dateTime = dateTime;
     }
 
+    public String getInvoiceName() {
+        return invoiceName;
+    }
+
+    public void setInvoiceName(String invoiceName) {
+        this.invoiceName = invoiceName;
+    }
+
     public double getCost() {
         return cost;
     }
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public int getCartNo() {
+        return cartNo;
+    }
+
+    public void setCartNo(int cartNo) {
+        this.cartNo = cartNo;
     }
 }
