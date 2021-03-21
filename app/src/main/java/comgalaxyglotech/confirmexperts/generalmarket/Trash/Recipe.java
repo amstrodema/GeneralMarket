@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -23,6 +23,12 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.ListAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.ListDisplayClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.StockLanding;
 
 public class Recipe extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
@@ -124,7 +130,7 @@ public class Recipe extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new ListAdapter.OnAllCommoditiesItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                 Intent intent =new Intent(Recipe.this,StockLanding.class);
+                 Intent intent =new Intent(Recipe.this, StockLanding.class);
                  startActivity(intent);
                 /*intent.putExtra("recipeId",RecipeDataClass.recipeData.get(position).getId());
                 progressDialog.setMessage("Loading Recipe Ingredients");

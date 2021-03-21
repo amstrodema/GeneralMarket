@@ -37,6 +37,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Farm.FarmAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Store.StoreAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayModel;
 
 public class Account extends AppCompatActivity implements marketDialog.marketDialogListener {

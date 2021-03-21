@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -15,6 +15,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import comgalaxyglotech.confirmexperts.generalmarket.ExampleItem;
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.RecipeDataClass;
 
 /**
  * Created by ELECTRON on 09/26/2019.

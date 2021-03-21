@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
 /**
  * Created by ELECTRON on 10/04/2019.

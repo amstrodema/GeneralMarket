@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -33,6 +33,12 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.ExampleItem;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.itemDialogue;
 
 public class NewRecipe extends AppCompatActivity{
     private LinearLayout categoryHolder;
@@ -149,7 +155,7 @@ public class NewRecipe extends AppCompatActivity{
                                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                                            Toast.makeText(NewRecipe.this,"Recipe Saved Successfully",Toast.LENGTH_SHORT).show();
                                            finish();
-                                           Intent intent =new Intent(NewRecipe.this,Recipe.class);
+                                           Intent intent =new Intent(NewRecipe.this, Recipe.class);
                                            intent.putExtra("recipeId",id);
                                            dataClass.getSmarterData(progressDialog,context,intent);
                                        }

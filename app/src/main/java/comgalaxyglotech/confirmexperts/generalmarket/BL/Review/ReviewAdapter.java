@@ -1,6 +1,5 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.BL.Review;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +8,11 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.ReviewDisplayClass;
+import comgalaxyglotech.confirmexperts.generalmarket.UserDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.UserProfile;
 
 /**
  * Created by ELECTRON on 10/23/2019.

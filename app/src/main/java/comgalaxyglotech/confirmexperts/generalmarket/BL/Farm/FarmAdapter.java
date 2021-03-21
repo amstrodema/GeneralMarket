@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.BL.Farm;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +16,11 @@ import java.util.Calendar;
 import java.util.Date;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**
  * Created by ELECTRON on 09/23/2019.

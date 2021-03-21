@@ -18,6 +18,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Farm.FarmAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Review.ReviewAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Store.StoreAdapter;
+
 /**
  * Created by ELECTRON on 10/23/2019.
  */

@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.BL.Commodities;
 
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Commodities.AllCommodities;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**
  * Created by ELECTRON on 03/28/2019.

@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveDataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveList;
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.RecipeList;
 
 public class TransitionAdvertDisplay extends AppCompatActivity {
     Context context = this;
@@ -77,7 +79,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                     //call the dataclass to get ingredient item into dictionary. getRecipePerequsite() then calls on the recipe class upon completion.
                     DataClass dataClass = new DataClass();
                     StopThisActivity=activity;
-                    dataClass.getRecipePerequsite(context,new Intent(TransitionAdvertDisplay.this,RecipeList.class));
+                    dataClass.getRecipePerequsite(context,new Intent(TransitionAdvertDisplay.this, RecipeList.class));
                 }
                 else if(location.equals("Archive_Transition")){
                     StopThisActivity=activity;

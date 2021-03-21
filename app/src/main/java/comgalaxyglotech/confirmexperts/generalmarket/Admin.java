@@ -40,6 +40,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 
 public class Admin extends AppCompatActivity implements  itemDialogue.itemDialogListener {
     private ImageButton advertImagePick;
@@ -65,7 +66,7 @@ public class Admin extends AppCompatActivity implements  itemDialogue.itemDialog
         storageReference = firebaseStorage.getReference();
         progressDialog = new ProgressDialog(context);
         setUI();
-        ArrayAdapter<String> adapterItm = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,DataClass.itemIdData);
+        ArrayAdapter<String> adapterItm = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, DataClass.itemIdData);
         itemPicker.setAdapter(adapterItm);
     }
     private void setUI(){

@@ -31,6 +31,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+
 public class Main6Activity extends AppCompatActivity {
     private String  commonNameId,metricLabel;
     private RecyclerView mRecyclerView;

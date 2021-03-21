@@ -17,7 +17,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import comgalaxyglotech.confirmexperts.generalmarket.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.NewArchive;

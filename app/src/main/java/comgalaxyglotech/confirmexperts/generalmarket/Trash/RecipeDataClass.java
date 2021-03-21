@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveRecipeDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 
 /**
  * Created by ELECTRON on 10/06/2019.

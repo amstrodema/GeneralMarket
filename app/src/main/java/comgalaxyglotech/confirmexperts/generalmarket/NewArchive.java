@@ -28,6 +28,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.Archive;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveMainModel;
 
@@ -56,7 +57,7 @@ public class NewArchive extends AppCompatActivity {
         storageReference = firebaseStorage.getReference();
         setUI();
         //setting spinner with data obtained from list of itemNames.
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,DataClass.itemIdData);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, DataClass.itemIdData);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         focusItem.setAdapter(adapter);
         //method contains all listeners

@@ -14,6 +14,8 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Help.HelpAdapter;
+
 public class Help extends AppCompatActivity {
     ArrayList<HelpModel> helpModelArrayList = new ArrayList<>();
     private RecyclerView mRecyclerView;

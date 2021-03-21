@@ -268,7 +268,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Recipe"
+            android:name=".Trash.Recipe"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -338,7 +338,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewRecipe"
+            android:name=".Trash.NewRecipe"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -378,7 +378,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RecipeList"
+            android:name=".Trash.RecipeList"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

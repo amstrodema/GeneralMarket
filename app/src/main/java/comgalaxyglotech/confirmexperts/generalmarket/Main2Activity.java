@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Looper;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,6 +47,8 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Market.MarketAdapter;
 
 public class Main2Activity extends AppCompatActivity{
     private SwipeRefreshLayout swiper;

@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+
 public class Main4Activity extends AppCompatActivity{
 private RecyclerView mRecyclerView;
 private FloatingActionButton addNewItem;

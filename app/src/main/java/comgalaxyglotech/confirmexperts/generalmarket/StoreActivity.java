@@ -41,6 +41,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Store.StoreAdapter;
+
 public class StoreActivity extends AppCompatActivity {
     private SwipeRefreshLayout swiper;
     private RecyclerView mRecyclerView;

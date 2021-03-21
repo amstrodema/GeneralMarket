@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -17,7 +17,11 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveRecipeDisplayAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
 
 public class RecipeList extends AppCompatActivity {
     private FloatingActionButton newRecipe;
@@ -52,7 +56,7 @@ public class RecipeList extends AppCompatActivity {
                 if(isLoggedIn){
                     progressDialog.setMessage("Loading Ingredient Items");
                     progressDialog.show();
-                    dataClass.getSmarterData(progressDialog,context, new Intent(RecipeList.this,NewRecipe.class));
+                    dataClass.getSmarterData(progressDialog,context, new Intent(RecipeList.this, NewRecipe.class));
                 }
                 else{
                     Toast.makeText(RecipeList.this,"Log in first!",Toast.LENGTH_SHORT).show();
@@ -110,7 +114,7 @@ public class RecipeList extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
