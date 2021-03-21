@@ -28,6 +28,9 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.Archive;
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveMainModel;
+
 public class NewArchive extends AppCompatActivity {
     Spinner focusItem, focusRecipe,focusMarket;
     //private ArrayList<String> selectedItem = new ArrayList<>();
@@ -91,7 +94,7 @@ public class NewArchive extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                                             Toast.makeText(NewArchive.this,"Archive Saved Successfully",Toast.LENGTH_SHORT).show();
                                             finish();
-                                            Intent intent =new Intent(NewArchive.this,Archive.class);
+                                            Intent intent =new Intent(NewArchive.this, Archive.class);
                                             intent.putExtra("archiveId",id);
                                             startActivity(intent);
                                             progressDialog.dismiss();

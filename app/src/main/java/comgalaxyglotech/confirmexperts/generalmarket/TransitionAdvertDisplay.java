@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveList;
 
 public class TransitionAdvertDisplay extends AppCompatActivity {
     Context context = this;
@@ -79,7 +82,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                 else if(location.equals("Archive_Transition")){
                     StopThisActivity=activity;
                     ArchiveDataClass archiveDataClass = new ArchiveDataClass();
-                    archiveDataClass.getData(context,new Intent(TransitionAdvertDisplay.this,ArchiveList.class));
+                    archiveDataClass.getData(context,new Intent(TransitionAdvertDisplay.this, ArchiveList.class));
                 }
             }
         },3000);

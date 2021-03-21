@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveRecipeDisplayAdapter;
+
 public class RecipeList extends AppCompatActivity {
     private FloatingActionButton newRecipe;
     private DataClass dataClass = new DataClass();

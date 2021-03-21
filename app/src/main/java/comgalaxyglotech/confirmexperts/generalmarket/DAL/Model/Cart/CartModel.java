@@ -1,4 +1,6 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart;
+
+import comgalaxyglotech.confirmexperts.generalmarket.NewStockMainModel;
 
 /**
  * Created by ELECTRON on 06/18/2020.

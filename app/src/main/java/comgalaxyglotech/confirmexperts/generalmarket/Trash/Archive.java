@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -19,6 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
+
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class Archive extends AppCompatActivity {
     private TextView archiveName,archiveDesc,archiveLink,archiveDetails,archiveSig,archiveAuthor;

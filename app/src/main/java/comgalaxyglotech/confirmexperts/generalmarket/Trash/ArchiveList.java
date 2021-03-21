@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -16,6 +16,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.NewArchive;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
 
 public class ArchiveList extends AppCompatActivity {
     FloatingActionButton newArchive;
@@ -47,7 +54,7 @@ public class ArchiveList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isLoggedIn){
-                    startActivity(new Intent(ArchiveList.this,NewArchive.class));
+                    startActivity(new Intent(ArchiveList.this, NewArchive.class));
                 }
                 else{
                     Toast.makeText(ArchiveList.this,"Log in first!",Toast.LENGTH_SHORT).show();
@@ -103,7 +110,7 @@ public class ArchiveList extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);

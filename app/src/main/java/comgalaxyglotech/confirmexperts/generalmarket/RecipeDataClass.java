@@ -12,6 +12,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveRecipeDisplayModel;
+
 /**
  * Created by ELECTRON on 10/06/2019.
  */

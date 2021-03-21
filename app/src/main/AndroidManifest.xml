@@ -278,7 +278,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Archive"
+            android:name=".Trash.Archive"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -368,7 +368,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ArchiveList"
+            android:name=".Trash.ArchiveList"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
