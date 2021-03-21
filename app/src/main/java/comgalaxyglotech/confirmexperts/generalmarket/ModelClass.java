@@ -3,7 +3,6 @@ package comgalaxyglotech.confirmexperts.generalmarket;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import androidx.annotation.NonNull;
@@ -24,8 +23,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Commodities.AllCommodities;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 
 /**
  * Created by ELECTRON on 02/22/2019.
@@ -272,7 +273,7 @@ public class ModelClass {
     private void getNotification(final String id){
         readData(new FirebaseCallback() {
             @Override
-            public void onCallback(ArrayList<A_Settings> settings) {
+            public void onCallback(ArrayList<SettingsModel> settings) {
                 if(settings != null){
 
                 }
@@ -284,10 +285,10 @@ public class ModelClass {
             // String name;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ArrayList<A_Settings> settings = new ArrayList<>();
+                ArrayList<SettingsModel> settings = new ArrayList<>();
                 if (dataSnapshot.exists()) {
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        A_Settings set= snapshot.getValue(A_Settings.class);
+                        SettingsModel set= snapshot.getValue(SettingsModel.class);
                         settings.add(set);
                     }
                     firebaseCallback.onCallback(settings);
@@ -316,7 +317,7 @@ public class ModelClass {
 
     }
     public interface FirebaseCallback{
-        void onCallback (ArrayList<A_Settings> settings);
+        void onCallback (ArrayList<SettingsModel> settings);
     }
     public static String initials(String marketName){
         String [] initials = marketName.split(" ");

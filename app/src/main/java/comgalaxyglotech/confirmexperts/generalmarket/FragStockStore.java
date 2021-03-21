@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 
 
 /**
@@ -315,7 +316,7 @@ public class FragStockStore extends Fragment{
     public void  getData(){
         modelClass.readData(new ModelClass.FirebaseCallback(){
             @Override
-            public void onCallback(ArrayList<A_Settings> settings) {
+            public void onCallback(ArrayList<SettingsModel> settings) {
 
             }
         },"","","");

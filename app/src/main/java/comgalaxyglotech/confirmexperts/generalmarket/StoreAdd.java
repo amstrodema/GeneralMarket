@@ -51,6 +51,8 @@ import com.squareup.picasso.Picasso;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+
 public class StoreAdd extends AppCompatActivity implements PaymentPop.paymentDialogListener{
     private boolean isEdit = false;
     Button saveStore;
@@ -521,9 +523,9 @@ private boolean isValidateEntry(){
     private void getSettings(){
         model.readData(new ModelClass.FirebaseCallback() {
             @Override
-            public void onCallback(ArrayList<A_Settings> settings) {
+            public void onCallback(ArrayList<SettingsModel> settings) {
                 if(settings != null){
-                    for (A_Settings set:settings) {
+                    for (SettingsModel set:settings) {
                         if (set.getSettingType().equals("StoreCost")) {
                             cost = set.getSettingValueDouble();
                             break;

@@ -48,6 +48,8 @@ import com.google.firebase.storage.StorageReference;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+
 public class FarmAdd extends AppCompatActivity  implements PaymentPop.paymentDialogListener{
     //called from farm activity
     private boolean isEdit = false;
@@ -240,9 +242,9 @@ public class FarmAdd extends AppCompatActivity  implements PaymentPop.paymentDia
     private void getSettings(){
         model.readData(new ModelClass.FirebaseCallback() {
             @Override
-            public void onCallback(ArrayList<A_Settings> settings) {
+            public void onCallback(ArrayList<SettingsModel> settings) {
                 if(settings != null){
-                    for (A_Settings set:settings) {
+                    for (SettingsModel set:settings) {
                         if (set.getSettingType().equals("StoreCost")) {
                             StoreAdd.cost = set.getSettingValueDouble();
                             break;

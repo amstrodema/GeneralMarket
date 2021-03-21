@@ -1,17 +1,17 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting;
 
 /**
  * Created by ELECTRON on 08/10/2020.
  */
 
-public class A_Settings {
+public class SettingsModel {
     private String id, settingType, settingValue;
     private Double settingValueDouble;
-    public A_Settings() {
+    public SettingsModel() {
 
     }
 
-    public A_Settings(String id, String settingType, String settingValue, Double settingValueInt) {
+    public SettingsModel(String id, String settingType, String settingValue, Double settingValueInt) {
         this.id = id;
         this.settingType = settingType;
         this.settingValue = settingValue;

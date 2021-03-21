@@ -29,6 +29,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+
 public class splashScreen extends AppCompatActivity {
    // private GifImageView gifImageView;
   //  private ImageView imageView;
@@ -124,9 +126,9 @@ public class splashScreen extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
                     String updateDate="";
-                    A_Settings appAccessSetting = new A_Settings(), appCleanSetting = new A_Settings(), appVersionSetting = new A_Settings(), appUpdateSetting = new A_Settings(), appMinSetting = new A_Settings();
+                    SettingsModel appAccessSetting = new SettingsModel(), appCleanSetting = new SettingsModel(), appVersionSetting = new SettingsModel(), appUpdateSetting = new SettingsModel(), appMinSetting = new SettingsModel();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        A_Settings set= snapshot.getValue(A_Settings.class);
+                        SettingsModel set= snapshot.getValue(SettingsModel.class);
                         assert set != null;
                         if(set.getSettingType().equals("GeneralMessage")){
                             message= set.getSettingValue();
