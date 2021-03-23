@@ -22,6 +22,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.FarmOwnerWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+
 public class FarmOwnerTrades extends AppCompatActivity {
     private ArrayList<NewStockMainModel> stocks = new ArrayList<>();
     private ArrayList<Model_Transaction> transactions = new ArrayList<>();
@@ -334,7 +338,7 @@ public class FarmOwnerTrades extends AppCompatActivity {
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmOwnerTrades.this,FarmOwnerWallet.class);
+                Intent intent = new Intent(FarmOwnerTrades.this, FarmOwnerWallet.class);
                 intent.putExtra("storeId", storeId);
                 intent.putExtra("creator",creatorId);
                 startActivity(intent);

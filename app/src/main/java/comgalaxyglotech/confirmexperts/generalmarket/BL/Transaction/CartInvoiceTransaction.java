@@ -23,7 +23,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceM
 import comgalaxyglotech.confirmexperts.generalmarket.FragStockStore;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
-import comgalaxyglotech.confirmexperts.generalmarket.NewStockMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.Trade;

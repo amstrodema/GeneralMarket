@@ -49,6 +49,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Market.MarketAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.marketModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
 
 public class Main2Activity extends AppCompatActivity{
     private SwipeRefreshLayout swiper;

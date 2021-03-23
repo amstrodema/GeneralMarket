@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock;
 
 /**
  * Created by ELECTRON on 03/18/2019.

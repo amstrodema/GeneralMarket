@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -7,7 +7,6 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,10 +15,11 @@ import android.widget.Toast;
 
 import com.flutterwave.raveandroid.RavePayActivity;
 import com.flutterwave.raveandroid.RaveUiManager;
-import com.flutterwave.raveandroid.rave_java_commons.Meta;
 import com.flutterwave.raveandroid.rave_java_commons.RaveConstants;
 
-import java.util.List;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class AddMoney extends AppCompatActivity {
     private Button payFund;

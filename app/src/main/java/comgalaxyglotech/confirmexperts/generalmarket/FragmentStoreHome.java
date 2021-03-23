@@ -36,6 +36,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
 

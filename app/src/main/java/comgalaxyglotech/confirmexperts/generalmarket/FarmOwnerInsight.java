@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.FarmOwnerWallet;
+
 public class FarmOwnerInsight extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class FarmOwnerInsight extends AppCompatActivity {
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmOwnerInsight.this,FarmOwnerWallet.class);
+                Intent intent = new Intent(FarmOwnerInsight.this, FarmOwnerWallet.class);
                 intent.putExtra("storeId", storeId);
                 intent.putExtra("creator",creatorId);
                 startActivity(intent);

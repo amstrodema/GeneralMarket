@@ -7,7 +7,7 @@
     android:background="#ccf"
     android:scrollbars="none"
     android:paddingHorizontal="15dp"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.CartInvoice">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartInvoice">
     <LinearLayout
         android:id="@+id/marketPickLayout"
         android:layout_width="match_parent"

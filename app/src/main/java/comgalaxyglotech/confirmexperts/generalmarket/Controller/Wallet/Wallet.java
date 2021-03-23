@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -28,7 +28,16 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Account.Account;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.AddMoney;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.CartInvoiceTransaction;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Model_Wallet;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.SendMoney;
+import comgalaxyglotech.confirmexperts.generalmarket.Trade;
 
 public class Wallet extends AppCompatActivity {
     private SwipeRefreshLayout swiper;
@@ -120,7 +129,7 @@ public class Wallet extends AppCompatActivity {
         addMoney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Wallet.this,AddMoney.class);
+                Intent intent =new Intent(Wallet.this, AddMoney.class);
                 intent.putExtra("walletId",modelClass.getCurrentUserId());
                 intent.putExtra("type","personal");
                 startActivity(intent);
@@ -129,7 +138,7 @@ public class Wallet extends AppCompatActivity {
         sendMoney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Wallet.this,SendMoney.class);
+                Intent intent =new Intent(Wallet.this, SendMoney.class);
                 intent.putExtra("walletId",modelClass.getCurrentUserId());
                 intent.putExtra("type","personal");
                 startActivity(intent);
@@ -216,7 +225,7 @@ public class Wallet extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
@@ -225,7 +234,7 @@ public class Wallet extends AppCompatActivity {
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Wallet.this,Account.class));
+                startActivity(new Intent(Wallet.this, Account.class));
             }
         });
         market.setOnClickListener(new View.OnClickListener() {
@@ -237,7 +246,7 @@ public class Wallet extends AppCompatActivity {
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Wallet.this,Trade.class));
+                startActivity(new Intent(Wallet.this, Trade.class));
             }
         });
     }

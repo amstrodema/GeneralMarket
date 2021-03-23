@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Bonus.Bonus;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.Farm;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveDataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveList;
@@ -45,7 +47,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                 }
                 else if(location.equals("Farm_Transition")){
                     DataStock dataStock = new DataStock();
-                    Intent intent = new Intent(TransitionAdvertDisplay.this,Farm.class);
+                    Intent intent = new Intent(TransitionAdvertDisplay.this, Farm.class);
                     StopThisActivity=activity;
                     //dataStock.getData(true,progress,context,intent);
                     startActivity(intent);
@@ -65,7 +67,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                 }
                 else if(location.equals("cart")){
                     DataStock dataStock = new DataStock();
-                    Intent intent = new Intent(TransitionAdvertDisplay.this,Bonus.class);
+                    Intent intent = new Intent(TransitionAdvertDisplay.this, Bonus.class);
                     StopThisActivity=activity;
                     startActivity(intent);
                 }

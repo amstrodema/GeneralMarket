@@ -21,6 +21,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
+
 /**
  * Created by ELECTRON on 10/18/2019.
  */

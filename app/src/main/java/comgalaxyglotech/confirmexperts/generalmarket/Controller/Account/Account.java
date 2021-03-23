@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Account;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -38,8 +38,25 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Farm.FarmAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.Wallet;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Store.StoreAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmAdd;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.marketModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DataStock;
+import comgalaxyglotech.confirmexperts.generalmarket.FarmView;
+import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.Trade;
+import comgalaxyglotech.confirmexperts.generalmarket.UserProfile;
+import comgalaxyglotech.confirmexperts.generalmarket.marketDialog;
 
 public class Account extends AppCompatActivity implements marketDialog.marketDialogListener {
 
@@ -206,7 +223,7 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
@@ -221,13 +238,13 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Account.this,Wallet.class));
+                startActivity(new Intent(Account.this, Wallet.class));
             }
         });
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Account.this,Trade.class));
+                startActivity(new Intent(Account.this, Trade.class));
             }
         });
     }

@@ -5,12 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import androidx.annotation.NonNull;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,6 +24,9 @@ import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.Date;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 
 /**
  * Created by ELECTRON on 02/01/2020.

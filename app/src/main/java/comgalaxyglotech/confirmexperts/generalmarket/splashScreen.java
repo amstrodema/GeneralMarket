@@ -29,6 +29,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities.CleaningInProgress;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 
 public class splashScreen extends AppCompatActivity {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.AddMoney"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.AddMoney"
     android:background="#000"
     android:padding="8dp"
     android:orientation="vertical">

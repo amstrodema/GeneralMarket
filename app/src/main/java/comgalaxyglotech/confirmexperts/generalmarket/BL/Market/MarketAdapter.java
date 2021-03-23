@@ -19,7 +19,7 @@ import java.util.Date;
 import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.marketModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.marketModel;
 
 /**
  * Created by ELECTRON on 03/03/2019.

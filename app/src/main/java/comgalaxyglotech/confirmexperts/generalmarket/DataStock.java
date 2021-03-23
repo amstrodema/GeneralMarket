@@ -1,9 +1,6 @@
 package comgalaxyglotech.confirmexperts.generalmarket;
 
-import android.content.Context;
-import android.content.Intent;
 import androidx.annotation.NonNull;
-import android.widget.ProgressBar;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -12,6 +9,9 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 
 /**
  * Created by ELECTRON on 10/16/2019.

@@ -19,7 +19,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayM
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**

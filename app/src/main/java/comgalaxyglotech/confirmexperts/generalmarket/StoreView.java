@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
+
 public class StoreView extends AppCompatActivity {
     private ModelClass modelClass = new ModelClass();
     private String creator, storeId;

@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
 
 import android.Manifest;
 import android.content.Context;
@@ -46,6 +46,17 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Farm.FarmAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DataStock;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerHome;
+import comgalaxyglotech.confirmexperts.generalmarket.FarmView;
+import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.RegisterActivity;
+import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
 
 public class Farm extends AppCompatActivity{
     //called from activity 8
@@ -213,7 +224,7 @@ public class Farm extends AppCompatActivity{
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);

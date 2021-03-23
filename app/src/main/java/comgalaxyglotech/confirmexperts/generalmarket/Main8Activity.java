@@ -2,15 +2,11 @@ package comgalaxyglotech.confirmexperts.generalmarket;
 
 import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Looper;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,7 +34,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import androidx.work.Constraints;
@@ -46,6 +41,10 @@ import androidx.work.Data;
 import androidx.work.NetworkType;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
+
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Account.Account;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Admin.Admin;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.Wallet;
 
 public class Main8Activity extends AppCompatActivity implements loginDialog.dialogListener {
     private Button btnAcct,notification,setting,helpBtn,loan,favey,logOutClick,adminBtn;

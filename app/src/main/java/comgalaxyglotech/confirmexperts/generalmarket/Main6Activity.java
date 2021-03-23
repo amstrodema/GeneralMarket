@@ -31,6 +31,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_StoreAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
 
@@ -65,7 +69,7 @@ public class Main6Activity extends AppCompatActivity {
         cartView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.CartInvoice");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartInvoice");
                 startActivity(intent);
             }
         });

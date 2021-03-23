@@ -113,7 +113,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmOwnerWallet"
+            android:name=".Controller.Wallet.FarmOwnerWallet"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -248,7 +248,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Farm"
+            android:name=".Controller.Farm.Farm"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -328,7 +328,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmAdd"
+            android:name=".Controller.Farm.FarmAdd"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -408,7 +408,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Account"
+            android:name=".Controller.Account.Account"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -438,7 +438,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Admin"
+            android:name=".Controller.Admin.Admin"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -471,7 +471,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Bonus"
+            android:name=".Controller.Bonus.Bonus"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -481,7 +481,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Wallet"
+            android:name=".Controller.Wallet.Wallet"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -541,7 +541,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CartInvoice"
+            android:name=".Controller.Cart.CartInvoice"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -561,7 +561,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddMoney"
+            android:name=".Controller.Transaction.AddMoney"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -591,7 +591,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CleaningInProgress"
+            android:name=".Controller.Utilities.CleaningInProgress"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

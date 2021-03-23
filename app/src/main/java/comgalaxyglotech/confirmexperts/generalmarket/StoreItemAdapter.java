@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreItemDisplayModel;
+
 /**
  * Created by ELECTRON on 03/29/2019.
  */

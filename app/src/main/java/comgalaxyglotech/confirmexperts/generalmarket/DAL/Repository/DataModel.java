@@ -20,11 +20,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
-import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
-import comgalaxyglotech.confirmexperts.generalmarket.FarmMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 
 /**
  * Created by ELECTRON on 09/23/2019.

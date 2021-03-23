@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerWallet">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.FarmOwnerWallet">
     <fragment
         android:name="comgalaxyglotech.confirmexperts.generalmarket.OwnerWalletFragment"
         android:id="@+id/fragWallet"

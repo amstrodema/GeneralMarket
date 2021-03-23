@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.BL.Stock;
 
 import android.net.Uri;
 import androidx.annotation.NonNull;
@@ -22,20 +22,24 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**
  * Created by ELECTRON on 03/18/2019.
  */
 
-public class NewStock_FarmAdapter extends RecyclerView.Adapter <NewStock_FarmAdapter.PriceViewHolder> implements Filterable{
+public class NewStock_StoreAdapter extends RecyclerView.Adapter <NewStock_StoreAdapter.PriceViewHolder> implements Filterable{
     private ArrayList<NewStockDisplayModel> PriceList;
     private ArrayList<NewStockDisplayModel> PriceListFull;
     private FirebaseStorage firebaseStorage;
-    private NewStock_FarmAdapter.OnPriceClickListener mListener;
-    private ModelClass  modelClass = new ModelClass();
+    private NewStock_StoreAdapter.OnPriceClickListener mListener;
+    private ModelClass modelClass = new ModelClass();
 
-    public void setOnItemClickListener(NewStock_FarmAdapter.OnPriceClickListener listener) {
+    public void setOnItemClickListener(NewStock_StoreAdapter.OnPriceClickListener listener) {
         mListener = listener;
     }
 
@@ -56,7 +60,7 @@ public class NewStock_FarmAdapter extends RecyclerView.Adapter <NewStock_FarmAda
         public ImageView listImage,fav,buy,cart;
         public RelativeLayout companyHolder;
         public Button banBtn;
-        public PriceViewHolder(View itemView, final NewStock_FarmAdapter.OnPriceClickListener listener) {
+        public PriceViewHolder(View itemView, final NewStock_StoreAdapter.OnPriceClickListener listener) {
             super(itemView);
             companyHolder = itemView.findViewById(R.id.companyHolder);
             buy =itemView.findViewById(R.id.buy);
@@ -167,23 +171,23 @@ public class NewStock_FarmAdapter extends RecyclerView.Adapter <NewStock_FarmAda
     }
 
     @Override
-    public NewStock_FarmAdapter.PriceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NewStock_StoreAdapter.PriceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.stock_recycler, parent, false);
 
         firebaseStorage = FirebaseStorage.getInstance();
-        NewStock_FarmAdapter.PriceViewHolder evh = new NewStock_FarmAdapter.PriceViewHolder(v, mListener);
+        NewStock_StoreAdapter.PriceViewHolder evh = new NewStock_StoreAdapter.PriceViewHolder(v, mListener);
         return evh;
 
     }
 
-    public NewStock_FarmAdapter(ArrayList<NewStockDisplayModel> priceList) {
+    public NewStock_StoreAdapter(ArrayList<NewStockDisplayModel> priceList) {
         PriceList = priceList;
         PriceListFull = new ArrayList<>(priceList);
     }
 
     @Override
-    public void onBindViewHolder(final NewStock_FarmAdapter.PriceViewHolder holder, int position) {
+    public void onBindViewHolder(final NewStock_StoreAdapter.PriceViewHolder holder, int position) {
         //listImage
         //this is adapter requires a mandatory call to both the data model class and the dataclass
         //if these classes are not call, crashe ;-)
@@ -215,22 +219,22 @@ public class NewStock_FarmAdapter extends RecyclerView.Adapter <NewStock_FarmAda
                     }
                 });
         //get the store details
-        FarmMainModel thisStore = DataModel.displayEntireFarmData.get(currentItem.getStoreId());
+        StoreMainModel thisStore = DataModel.displayEntireData.get(currentItem.getStoreId());
 
         //display store rating and not item rating (no item rating for now)
-        holder.rating.setRating(modelClass.loadRating(thisStore.getRatings()));
+        holder.rating.setRating(modelClass.loadRating(thisStore.getRating()));
 
         // shows the title of the advert
         holder.advertName.setText(currentItem.getAdvertName());
         String delivery;
-        if(thisStore.getDelivery().equals("AVAILABLE")){
+        if(thisStore.getDelievery().equals("AVAILABLE")){
             delivery=" (DSA)"; // delivery service available
         }
         else{
             delivery=" (NDS)"; //no delivery service
         }
-        String name = thisStore.getFarmName()+delivery;
-        holder.itmStoreName.setText(name);//
+        String name = thisStore.getStoreName()+delivery;
+        holder.itmStoreName.setText(name) ;//
         //category info
         holder.itmCategory.setText(currentItem.getCategory());
         holder.price.setText(currentItem.getPrice());

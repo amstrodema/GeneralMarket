@@ -4,9 +4,11 @@ import android.content.Intent;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.FarmOwnerWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 
 public class FarmView extends AppCompatActivity {
     private static final  String TAG="TabzStoreOwner";
@@ -59,7 +61,7 @@ public class FarmView extends AppCompatActivity {
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmView.this,FarmOwnerWallet.class);
+                Intent intent = new Intent(FarmView.this, FarmOwnerWallet.class);
                 intent.putExtra("storeId", farmId);
                 startActivity(intent);
             }

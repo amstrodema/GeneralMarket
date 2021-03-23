@@ -20,9 +20,9 @@ import java.util.Date;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreDisplayModel;
 
 /**
  * Created by ELECTRON on 03/19/2019.

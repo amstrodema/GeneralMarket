@@ -1,9 +1,8 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +11,9 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class CleaningInProgress extends AppCompatActivity {
 

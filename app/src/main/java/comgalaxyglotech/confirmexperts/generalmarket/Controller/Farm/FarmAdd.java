@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
 
 import android.Manifest;
 import android.app.Activity;
@@ -49,8 +49,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.FarmView;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.PaymentPop;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessTransaction;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.StoreAdd;
 
-public class FarmAdd extends AppCompatActivity  implements PaymentPop.paymentDialogListener{
+public class FarmAdd extends AppCompatActivity  implements PaymentPop.paymentDialogListener {
     //called from farm activity
     private boolean isEdit = false;
     Button saveStore;

@@ -31,8 +31,14 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Cart.Cart_Invoice_AdapterAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.CartInvoiceTransaction;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Account.Account;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.Wallet;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 
 public class Trade extends AppCompatActivity {
     private SwipeRefreshLayout swiper;
@@ -552,13 +558,13 @@ public class Trade extends AppCompatActivity {
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Trade.this,Account.class));
+                startActivity(new Intent(Trade.this, Account.class));
             }
         });
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Trade.this,Wallet.class));
+                startActivity(new Intent(Trade.this, Wallet.class));
             }
         });
         store.setOnClickListener(new View.OnClickListener() {

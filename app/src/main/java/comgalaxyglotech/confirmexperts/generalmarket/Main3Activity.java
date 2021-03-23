@@ -33,6 +33,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 
 public class Main3Activity extends AppCompatActivity{

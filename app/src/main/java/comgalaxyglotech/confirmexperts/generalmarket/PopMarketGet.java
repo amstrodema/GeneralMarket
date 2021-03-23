@@ -7,8 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatDialogFragment;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,6 +19,8 @@ import android.widget.ImageView;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.marketModel;
 
 /**
  * Created by ELECTRON on 01/30/2020.

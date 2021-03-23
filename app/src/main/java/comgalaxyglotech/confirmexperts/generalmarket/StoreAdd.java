@@ -52,6 +52,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 
 public class StoreAdd extends AppCompatActivity implements PaymentPop.paymentDialogListener{
     private boolean isEdit = false;

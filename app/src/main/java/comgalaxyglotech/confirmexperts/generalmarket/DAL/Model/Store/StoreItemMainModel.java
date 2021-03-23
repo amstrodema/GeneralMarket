@@ -1,13 +1,16 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store;
 
 /**
  * Created by ELECTRON on 03/29/2019.
  */
 
-public class StoreItemDisplayModel {
-    String storeItemId,storeId, storeItemName,storeItemDesc,storeItemAvailQty,storeItemMetric,storeItemQtyMetric,storeItemPriceLow,storeItemPriceHigh;
+public class StoreItemMainModel {
+    String storeItemId,storeId, storeItemName,storeItemDesc,storeItemAvailQty,storeItemMetric,storeItemQtyMetric,storeItemPriceLow,storeItemPriceHigh,creatorId,date;
 
-    public StoreItemDisplayModel(String storeItemId, String storeId, String storeItemName, String storeItemDesc, String storeItemAvailQty, String storeItemMetric, String storeItemQtyMetric, String storeItemPriceLow, String storeItemPriceHigh) {
+    public StoreItemMainModel() {
+    }
+
+    public StoreItemMainModel(String storeItemId, String storeId, String storeItemName,String storeItemDesc, String storeItemAvailQty, String storeItemMetric, String storeItemQtyMetric, String storeItemPriceLow, String storeItemPriceHigh, String creatorId, String date) {
         this.storeItemId = storeItemId;
         this.storeId = storeId;
         this.storeItemName = storeItemName;
@@ -17,6 +20,24 @@ public class StoreItemDisplayModel {
         this.storeItemQtyMetric = storeItemQtyMetric;
         this.storeItemPriceLow = storeItemPriceLow;
         this.storeItemPriceHigh = storeItemPriceHigh;
+        this.creatorId = creatorId;
+        this.date=date;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getCreatorId() {
+        return creatorId;
+    }
+
+    public void setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
     }
 
     public String getStoreItemQtyMetric() {

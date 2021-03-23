@@ -31,6 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.CartInvoiceTransaction;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.AddMoney;
 
 
 /**
@@ -161,7 +162,7 @@ public class OwnerWalletFragment extends Fragment {
         addMoney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(context,AddMoney.class);
+                Intent intent =new Intent(context, AddMoney.class);
                 intent.putExtra("walletId",storeId);
                 intent.putExtra("type","store");
                 startActivity(intent);

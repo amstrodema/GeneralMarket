@@ -1,10 +1,16 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet;
 
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerHome;
+import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerInsight;
+import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerTrades;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class FarmOwnerWallet extends AppCompatActivity {
     @Override
@@ -26,7 +32,7 @@ public class FarmOwnerWallet extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
@@ -44,7 +50,7 @@ public class FarmOwnerWallet extends AppCompatActivity {
         trades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmOwnerWallet.this,FarmOwnerTrades.class);
+                Intent intent = new Intent(FarmOwnerWallet.this, FarmOwnerTrades.class);
                 intent.putExtra("storeId", storeId);
                 intent.putExtra("creator",creatorId);
                 startActivity(intent);
@@ -62,7 +68,7 @@ public class FarmOwnerWallet extends AppCompatActivity {
         insight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmOwnerWallet.this,FarmOwnerInsight.class);
+                Intent intent = new Intent(FarmOwnerWallet.this, FarmOwnerInsight.class);
                 intent.putExtra("storeId", storeId);
                 intent.putExtra("creator",creatorId);
                 startActivity(intent);

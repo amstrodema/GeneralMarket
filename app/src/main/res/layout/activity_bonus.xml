@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Bonus">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Bonus.Bonus">
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -3,6 +3,8 @@ package comgalaxyglotech.confirmexperts.generalmarket;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+
 public class StoreItems extends AppCompatActivity {
     public static NewStockMainModel EditReference;
     @Override

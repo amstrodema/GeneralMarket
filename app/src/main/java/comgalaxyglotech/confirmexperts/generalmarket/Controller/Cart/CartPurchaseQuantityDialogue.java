@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -14,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
+import comgalaxyglotech.confirmexperts.generalmarket.FragStockStore;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**
  * Created by ELECTRON on 01/29/2019.

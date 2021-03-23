@@ -35,6 +35,7 @@ import com.squareup.picasso.Picasso;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 
 public class NewStockActivity extends AppCompatActivity {

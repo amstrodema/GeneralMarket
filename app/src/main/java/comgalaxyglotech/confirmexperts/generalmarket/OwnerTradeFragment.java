@@ -26,6 +26,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+
 public class OwnerTradeFragment extends Fragment {
     private ProgressBar progBar;
     private SwipeRefreshLayout swiper;

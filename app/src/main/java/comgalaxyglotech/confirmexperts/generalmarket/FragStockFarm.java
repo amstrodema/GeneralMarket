@@ -37,7 +37,12 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Map;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_FarmAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
 
@@ -95,7 +100,7 @@ public class FragStockFarm extends Fragment{
         cartView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.CartInvoice");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartInvoice");
                 startActivity(intent);
             }
         });

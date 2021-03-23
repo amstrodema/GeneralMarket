@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Admin;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -41,8 +41,12 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.ExampleItem;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.itemDialogue;
 
-public class Admin extends AppCompatActivity implements  itemDialogue.itemDialogListener {
+public class Admin extends AppCompatActivity implements itemDialogue.itemDialogListener {
     private ImageButton advertImagePick;
     private Button uploadAdvert,setPromo,setStoreCost,setMarketItem,setAppVersion,setMinVersions,setUpdateTime,setAppAccess,setAppClean,setGeneralMessage;
     private ImageView advertImage;

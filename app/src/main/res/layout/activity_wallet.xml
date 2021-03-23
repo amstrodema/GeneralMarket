@@ -7,7 +7,7 @@
     android:background="#eee"
     android:padding="5dp"
     android:id="@+id/swiper"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Wallet">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.Wallet">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

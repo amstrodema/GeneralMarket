@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
+
 public class SendMoney extends AppCompatActivity {
     private Button sendMoney;
     private EditText amountToSend, recipientAddress;
