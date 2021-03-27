@@ -31,16 +31,30 @@
                 android:background="@drawable/blue_gradient3">
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
                     android:translationZ="1dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginTop="10dp">
-
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/demo"
+                        android:text="General Market"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="-5dp"
+                        android:lineSpacingExtra="8dp"
+                        android:translationZ="9dp"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_one"
-                        android:text="Cashless"
+                        android:text="Welcome"
+                        android:visibility="gone"
                         android:textAllCaps="true"
                         android:textAlignment="center"
                         android:textColor="#fff"
@@ -51,23 +65,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/rema"
-                        android:text="Shopping &amp; Purchase"
+                        android:text="Trade Simulator"
                         android:textAlignment="center"
                         android:textColor="#f60"
                         android:padding="8dp"
-                        android:layout_marginTop="-9dp"
-                        android:textSize="36sp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/demo"
-                        android:text="Xperience"
-                        android:textAlignment="center"
-                        android:textColor="#fff"
-                        android:textSize="24sp"
-                        android:layout_marginTop="-5dp"
-                        android:lineSpacingExtra="8dp"
-                        android:translationZ="9dp"/>
+                        android:textSize="36sp"
+                        android:background="#fff"/>
+
 
                 </LinearLayout>
                 <RelativeLayout
@@ -104,296 +108,245 @@
                 android:focusableInTouchMode="true"/>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fff">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/back_wite_small"
-                    android:layout_alignParentBottom="true"
-                    android:translationZ="5dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="1dp"
-                        android:background="#f60"
-                        android:layout_marginTop="15dp"/>
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:scrollbars="none">
-                        <LinearLayout
-                            android:id="@+id/panel1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingHorizontal="5dp"
-                            android:paddingVertical="30dp">
-                            <RelativeLayout
-                                android:layout_width="120dp"
-                                android:layout_height="100dp"
-                                android:background="@drawable/back_black"
-                                android:layout_marginHorizontal="8dp">
-                                <TextView
-                                    android:id="@+id/store"
-                                    android:layout_width="match_parent"
-                                    android:textAlignment="center"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_height="wrap_content"
-                                    android:text="STORES"
-                                    android:textColor="#fff"
-                                    android:fontFamily="@font/aladin"
-                                    style="?android:textAppearanceMedium"/>
-                                <TextView
-                                    android:id="@+id/storeSub"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:text="Multi-Traders"
-                                    android:textColor="#f60"
-                                    android:fontFamily="@font/amira"
-                                    android:layout_below="@id/store"/>
-
-                                <ImageView
-                                    android:layout_width="27dp"
-                                    android:layout_height="27dp"
-                                    android:layout_below="@id/storeSub"
-                                    android:background="@drawable/circle_orange"
-                                    android:src="@drawable/arrow"
-                                    android:paddingHorizontal="4dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginVertical="8dp"/>
-                                <ImageView
-                                    android:id="@+id/L2a"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
-
-
-                            </RelativeLayout>
-                            <RelativeLayout
-                                android:layout_width="120dp"
-                                android:layout_height="100dp"
-                                android:background="@drawable/back_black"
-                                android:layout_marginHorizontal="8dp">
-                                <TextView
-                                    android:id="@+id/market"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:textAlignment="center"
-                                    android:text="MARKETS"
-                                    android:textColor="#fff"
-                                    android:fontFamily="@font/aladin"
-                                    style="?android:textAppearanceMedium"/>
-
-                                <TextView
-                                    android:id="@+id/mktSub"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:text="Trade Zones"
-                                    android:textColor="#ff0"
-                                    android:fontFamily="@font/amira"
-                                    android:layout_below="@id/market"/>
-                                <ImageView
-                                    android:layout_width="27dp"
-                                    android:layout_height="27dp"
-                                    android:layout_below="@id/mktSub"
-                                    android:background="@drawable/circle_yellow"
-                                    android:src="@drawable/arrow_black"
-                                    android:paddingHorizontal="4dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginVertical="8dp"/>
-                                <ImageView
-                                    android:id="@+id/btn2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" />
-                            </RelativeLayout>
-                            <RelativeLayout
-                                android:layout_width="120dp"
-                                android:layout_height="100dp"
-                                android:background="@drawable/back_black"
-                                android:layout_marginHorizontal="8dp">
-                                <TextView
-                                    android:id="@+id/farm"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="FARMS"
-                                    android:textAlignment="center"
-                                    android:layout_marginTop="10dp"
-                                    android:textColor="#fff"
-                                    android:fontFamily="@font/aladin"
-                                    style="?android:textAppearanceMedium"/>
-
-                                <TextView
-                                    android:id="@+id/farmSub"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:text="Agriculturals"
-                                    android:textColor="#f00"
-                                    android:fontFamily="@font/amira"
-                                    android:layout_below="@id/farm"/>
-                                <ImageView
-                                    android:layout_width="27dp"
-                                    android:layout_height="27dp"
-                                    android:layout_below="@id/farmSub"
-                                    android:background="@drawable/circle_red"
-                                    android:src="@drawable/arrow"
-                                    android:paddingHorizontal="4dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginVertical="8dp"/>
-                                <ImageView
-                                    android:id="@+id/L11a"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
-                            </RelativeLayout>
-
-                            <!--   <ImageView
-                                   android:id="@+id/transport"
-                                   android:layout_width="85dp"
-                                   android:layout_height="70dp"
-                                   android:layout_marginRight="8dp"
-                                   android:background="#000"
-                                   android:src="@drawable/farmx" /> -->
-
-                            <!--   <Button
-                                   android:layout_width="100dp"
-                                   android:layout_height="125dp"
-                                   android:layout_toLeftOf="@id/btn2"
-                                   android:background="@drawable/click_reaction1"
-                                   android:drawableTop="@drawable/store"
-                                   android:paddingHorizontal="5dp"
-                                   android:paddingTop="10dp"
-                                   android:text="STORES"
-                                   android:textAppearance="?android:textAppearanceSmall"
-                                   android:textColor="#000"
-                                   android:visibility="gone" />
-
-                               <Button
-                                   android:layout_width="100dp"
-                                   android:layout_height="80dp"
-                                   android:layout_centerHorizontal="true"
-                                   android:layout_marginHorizontal="10dp"
-                                   android:background="@drawable/click_reaction1"
-                                   android:drawableTop="@drawable/front_store"
-                                   android:paddingHorizontal="5dp"
-                                   android:paddingTop="10dp"
-                                   android:text="MARKETS"
-                                   android:textAppearance="?android:textAppearanceSmall"
-                                   android:textColor="#000"
-                                   android:visibility="gone" />
-
-                               <Button
-                                   android:layout_width="100dp"
-                                   android:layout_height="80dp"
-                                   android:layout_toRightOf="@id/btn2"
-                                   android:background="@drawable/click_reaction1"
-                                   android:drawableTop="@drawable/farm"
-                                   android:paddingHorizontal="5dp"
-                                   android:paddingTop="10dp"
-                                   android:text="FARMS"
-                                   android:textAppearance="?android:textAppearanceSmall"
-                                   android:textColor="#000"
-                                   android:visibility="gone" /> -->
-                        </LinearLayout>
-                    </HorizontalScrollView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font_too"
-                        android:text="Multiple Sellers - Zero Monopoly"
-                        android:padding="5dp"
-                        android:textColor="#008"
-                        android:textAlignment="textEnd"
-                        android:textAllCaps="true"
-                        android:paddingRight="5dp"
-                        android:layout_alignParentBottom="true"/>
-                </RelativeLayout>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/blue_gradient2">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="12dp">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:drawableTop="@drawable/shopping_cart_icon"
-                        android:scaleType="fitStart"
-                        android:text="Stocks"
-                        android:id="@+id/btnooo"
-                        android:background="@drawable/btn_effect_curved_square"
-                        android:layout_marginRight="2dp"
-                        android:drawablePadding="10dp"
-                        android:textColor="#000"
-                        android:fontFamily="@font/amira"
-                        android:padding="8dp"
-                        android:textAlignment="center"/>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:drawableTop="@drawable/transaction_pics"
-                        android:scaleType="fitStart"
-                        android:drawablePadding="10dp"
-                        android:background="@drawable/btn_effect_curved_square"
-                        android:text="Transactions"
-                        android:textColor="#000"
-                        android:id="@+id/trades"
-                        android:fontFamily="@font/amira"
-                        android:padding="8dp"
-                        android:layout_marginLeft="2dp"
-                        android:textAlignment="center"/>
-                    </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:textAlignment="center"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:background="@drawable/white_border_orange_fill"
-                    android:text="STOCKS"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#fff"
-                    android:fontFamily="@font/dut"
-                    android:visibility="gone"
-                    android:layout_centerVertical="true"/>
-
-            </RelativeLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="1dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:background="#ccc"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="1dp"
-                android:background="#ccc"/>
-            <RelativeLayout
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <LinearLayout
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/mid"
-                    android:orientation="horizontal"
-                    android:layout_centerInParent="true"/>
-                <RelativeLayout
-                    android:layout_width="120dp"
-                    android:layout_height="85dp"
-                    android:layout_margin="8dp"
+                    android:scrollbars="none"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/panelList">
+                    <LinearLayout
+                        android:id="@+id/panel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/back_black"
+                            android:layout_marginHorizontal="3dp">
+                            <TextView
+                                android:id="@+id/store"
+                                android:layout_width="match_parent"
+                                android:textAlignment="center"
+                                android:layout_marginTop="3dp"
+                                android:layout_height="wrap_content"
+                                android:text="STORES"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+                            <TextView
+                                android:id="@+id/storeSub"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="Multi-Traders"
+                                android:textColor="#f60"
+                                android:fontFamily="@font/amira"
+                                android:layout_below="@id/store"/>
+
+                            <ImageView
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_below="@id/storeSub"
+                                android:background="@drawable/circle_orange"
+                                android:src="@drawable/arrow"
+                                android:paddingHorizontal="4dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="4dp"/>
+                            <ImageView
+                                android:id="@+id/L2a"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/back_black"
+                            android:layout_marginHorizontal="8dp">
+                            <TextView
+                                android:id="@+id/market"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:textAlignment="center"
+                                android:text="MARKETS"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+
+                            <TextView
+                                android:id="@+id/mktSub"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Trade Zones"
+                                android:textColor="#ff0"
+                                android:fontFamily="@font/amira"
+                                android:layout_below="@id/market"/>
+                            <ImageView
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_below="@id/mktSub"
+                                android:background="@drawable/circle_yellow"
+                                android:src="@drawable/arrow_black"
+                                android:paddingHorizontal="4dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="4dp"/>
+                            <ImageView
+                                android:id="@+id/btn2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/back_black"
+                            android:layout_marginHorizontal="8dp">
+                            <TextView
+                                android:id="@+id/farm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="FARMS"
+                                android:textAlignment="center"
+                                android:layout_marginTop="3dp"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+
+                            <TextView
+                                android:id="@+id/farmSub"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Agriculturals"
+                                android:textColor="#f00"
+                                android:fontFamily="@font/amira"
+                                android:layout_below="@id/farm"/>
+                            <ImageView
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_below="@id/farmSub"
+                                android:background="@drawable/circle_red"
+                                android:src="@drawable/arrow"
+                                android:paddingHorizontal="4dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="4dp"/>
+                            <ImageView
+                                android:id="@+id/L11a"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </RelativeLayout>
+
+                        <!--   <ImageView
+                               android:id="@+id/transport"
+                               android:layout_width="85dp"
+                               android:layout_height="70dp"
+                               android:layout_marginRight="8dp"
+                               android:background="#000"
+                               android:src="@drawable/farmx" /> -->
+
+                        <!--   <Button
+                               android:layout_width="100dp"
+                               android:layout_height="125dp"
+                               android:layout_toLeftOf="@id/btn2"
+                               android:background="@drawable/click_reaction1"
+                               android:drawableTop="@drawable/store"
+                               android:paddingHorizontal="5dp"
+                               android:paddingTop="10dp"
+                               android:text="STORES"
+                               android:textAppearance="?android:textAppearanceSmall"
+                               android:textColor="#000"
+                               android:visibility="gone" />
+
+                           <Button
+                               android:layout_width="100dp"
+                               android:layout_height="80dp"
+                               android:layout_centerHorizontal="true"
+                               android:layout_marginHorizontal="10dp"
+                               android:background="@drawable/click_reaction1"
+                               android:drawableTop="@drawable/front_store"
+                               android:paddingHorizontal="5dp"
+                               android:paddingTop="10dp"
+                               android:text="MARKETS"
+                               android:textAppearance="?android:textAppearanceSmall"
+                               android:textColor="#000"
+                               android:visibility="gone" />
+
+                           <Button
+                               android:layout_width="100dp"
+                               android:layout_height="80dp"
+                               android:layout_toRightOf="@id/btn2"
+                               android:background="@drawable/click_reaction1"
+                               android:drawableTop="@drawable/farm"
+                               android:paddingHorizontal="5dp"
+                               android:paddingTop="10dp"
+                               android:text="FARMS"
+                               android:textAppearance="?android:textAppearanceSmall"
+                               android:textColor="#000"
+                               android:visibility="gone" /> -->
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_too"
+                    android:text="Multiple Sellers - Zero Monopoly"
+                    android:paddingHorizontal="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="#008"
+                    android:textAlignment="textEnd"
+                    android:layout_below="@id/panelList"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/shopping_cart_icon"
+                    android:scaleType="fitStart"
+                    android:text="Stocks"
+                    android:id="@+id/btnooo"
                     android:background="@drawable/back_black"
+                    android:layout_marginRight="1dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/amira"
+                    android:paddingLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/transaction_pics"
+                    android:scaleType="fitStart"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/back_black"
+                    android:text="Trades"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:id="@+id/trades"
+                    android:fontFamily="@font/amira"
+                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="1dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="3dp">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_orange_fill"
                     android:layout_toLeftOf="@id/mid"
                     android:layout_alignParentLeft="true">
                     <ImageView
@@ -402,79 +355,84 @@
                         android:layout_height="match_parent"/>
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/img"
                         android:src="@drawable/wallet_pics"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"/>
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
+                        android:textAlignment="center"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_alignParentBottom="true">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:textAlignment="center"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:text="WALLET"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/amira"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/font_too"
-                            android:text="Account Details"
-                            android:textAlignment="center"
-                            android:textColor="#fff"
-                            android:visibility="gone"
-                            android:singleLine="true"
-                            android:layout_marginHorizontal="5dp"/>
-                    </LinearLayout>
+                        android:padding="5dp"
+                        android:background="#fff"
+                        android:layout_marginTop="8dp"
+                        android:text="Wallet"
+                        android:layout_below="@id/img"
+                        android:textColor="#000"
+                        android:fontFamily="@font/dut"/>
 
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="120dp"
-                    android:layout_height="85dp"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/back_black"
-                    android:layout_toRightOf="@id/mid"
-                    android:layout_alignParentRight="true">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_orange_fill"
+                    android:layout_marginHorizontal="2dp">
+                    <ImageView
+                        android:id="@+id/invoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:src="@drawable/wallet_pics"
+                        android:layout_centerHorizontal="true"
+                        android:id="@id/img"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:background="#fff"
+                        android:layout_marginTop="8dp"
+                        android:text="Invoice"
+                        android:textColor="#000"
+                        android:layout_below="@id/img"
+                        android:fontFamily="@font/dut"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_orange_fill">
                     <ImageView
                         android:id="@+id/cartBonus"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/loanz"
+                        android:id="@id/img"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="8dp"/>
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
+                        android:textAlignment="center"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_alignParentBottom="true">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:textAlignment="center"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:text="BONUS"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/amira"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/font_too"
-                            android:text="Monitor Transactions"
-                            android:textAlignment="center"
-                            android:textColor="#fff"
-                            android:visibility="gone"
-                            android:layout_marginHorizontal="5dp"/>
-                    </LinearLayout>
+                        android:padding="5dp"
+                        android:text="Bonus"
+                        android:background="#fff"
+                        android:textColor="#000"
+                        android:layout_below="@id/img"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/dut"/>
                 </RelativeLayout>
-            </RelativeLayout>
+            </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -570,213 +528,6 @@
                     </LinearLayout>
                 </RelativeLayout>
             </RelativeLayout>
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:scrollbars="none">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="5dp"
-                    android:paddingVertical="15dp">
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="73dp"
-                        android:background="@drawable/back_black"
-                        android:layout_marginHorizontal="8dp">
-                        <TextView
-                            android:id="@+id/loanLbl"
-                            android:layout_width="match_parent"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_height="wrap_content"
-                            android:text="LOANS"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/aladin"
-                            style="?android:textAppearanceMedium"/>
-                        <TextView
-                            android:id="@+id/loanSub"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="Trade Loans"
-                            android:textColor="#f60"
-                            android:fontFamily="@font/roboto"
-                            android:layout_below="@id/loanLbl"/>
-                        <Button
-                            android:id="@+id/loan"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:translationZ="6dp"
-                            android:background="@android:color/transparent"/>
-
-
-                    </RelativeLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/label"
-                        android:textColor="#000"/>
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="73dp"
-                        android:background="@drawable/back_black"
-                        android:layout_marginHorizontal="8dp"
-                        android:visibility="gone">
-                        <TextView
-                            android:id="@+id/faveyLbl"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:textAlignment="center"
-                            android:text="FAVEY"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/aladin"
-                            style="?android:textAppearanceMedium"/>
-
-                        <TextView
-                            android:id="@+id/faveySub"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="Favorite Stocks"
-                            android:textColor="#ff0"
-                            android:fontFamily="@font/roboto"
-                            android:layout_below="@id/faveyLbl"/>
-
-                        <Button
-                            android:id="@+id/favey"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:translationZ="6dp"
-                            android:background="@android:color/transparent"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="73dp"
-                        android:background="@drawable/back_black"
-                        android:layout_marginHorizontal="8dp">
-                        <TextView
-                            android:id="@+id/elpLbl"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="HELP"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/aladin"
-                            style="?android:textAppearanceMedium"/>
-
-                        <TextView
-                            android:id="@+id/elpSub"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="Complete Guide"
-                            android:textColor="#f60"
-                            android:fontFamily="@font/roboto"
-                            android:layout_below="@id/elpLbl"/>
-
-                        <Button
-                            android:id="@+id/L3c"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:translationZ="6dp"
-                            android:background="@android:color/transparent"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="73dp"
-                        android:background="@drawable/back_black"
-                        android:layout_marginHorizontal="8dp"
-                        android:id="@+id/logOutPanel">
-                        <TextView
-                            android:id="@id/elpLbl"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Log Out"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/aladin"
-                            style="?android:textAppearanceMedium"/>
-
-                        <TextView
-                            android:id="@id/elpSub"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="Sign User Out"
-                            android:textColor="#f00"
-                            android:fontFamily="@font/roboto"
-                            android:layout_below="@id/elpLbl"/>
-
-                        <Button
-                            android:id="@+id/logOut"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:translationZ="6dp"
-                            android:background="@android:color/transparent"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="73dp"
-                        android:id="@+id/adminPanel"
-                        android:visibility="gone"
-                        android:background="@drawable/back_black"
-                        android:layout_marginHorizontal="8dp">
-                        <TextView
-                            android:id="@id/elpLbl"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="ADMIN"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textColor="#f60"
-                            android:fontFamily="@font/aladin"
-                            style="?android:textAppearanceMedium"/>
-
-                        <TextView
-                            android:id="@id/elpSub"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="Administrator"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/roboto"
-                            android:layout_below="@id/elpLbl"/>
-
-                        <Button
-                            android:id="@+id/adminBtn"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:translationZ="6dp"
-                            android:background="@android:color/transparent"/>
-                    </RelativeLayout>
-
-                </LinearLayout>
-            </HorizontalScrollView>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="15dp"
-                android:background="@drawable/blue_gradient2">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#fff"
-                    android:layout_margin="15dp"
-                    android:paddingVertical="15dp"
-                    android:paddingHorizontal="5dp"
-                    android:textAlignment="center"
-                    android:text="EXCLUSIVE SHOPPING EXPERIENCE"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-
             <ImageView
                 android:id="@+id/advert2"
                 android:layout_width="wrap_content"
@@ -784,12 +535,208 @@
                 android:background="@drawable/blue_gradient3"
                 android:paddingVertical="10dp"
                 android:src="@drawable/stor12"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="3dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="3dp">
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_border_orange_fill"
+                            android:layout_marginHorizontal="2dp">
+                            <TextView
+                                android:id="@+id/faveyLbl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="Favey"
+                                android:paddingVertical="5dp"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+
+                            <TextView
+                                android:id="@+id/faveySub"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="Favorite Stocks"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:background="#fff"
+                                android:fontFamily="@font/roboto"
+                                android:layout_below="@id/faveyLbl"/>
+
+                            <Button
+                                android:id="@+id/favey"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:translationZ="6dp"
+                                android:background="@android:color/transparent"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_border_orange_fill"
+                            android:layout_marginHorizontal="2dp">
+                            <TextView
+                                android:id="@+id/loanLbl"
+                                android:layout_width="match_parent"
+                                android:textAlignment="center"
+                                android:layout_height="wrap_content"
+                                android:text="Loans"
+                                android:paddingVertical="5dp"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+                            <TextView
+                                android:id="@+id/loanSub"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Trade Loans"
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:textColor="#000"
+                                android:background="#fff"
+                                android:fontFamily="@font/roboto"
+                                android:layout_below="@id/loanLbl"/>
+                            <Button
+                                android:id="@+id/loan"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:translationZ="6dp"
+                                android:background="@android:color/transparent"/>
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_border_orange_fill"
+                            android:layout_marginHorizontal="2dp">
+                            <TextView
+                                android:id="@+id/historyLbl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="History"
+                                android:paddingVertical="5dp"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+
+                            <TextView
+                                android:id="@+id/historySub"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="Trade History"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:background="#fff"
+                                android:fontFamily="@font/roboto"
+                                android:layout_below="@id/historyLbl"/>
+
+                            <Button
+                                android:id="@+id/history"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:translationZ="6dp"
+                                android:background="@android:color/transparent"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_border_orange_fill"
+                            android:layout_marginHorizontal="2dp">
+                            <TextView
+                                android:id="@+id/elpLbl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Help"
+                                android:textAlignment="center"
+                                android:paddingVertical="5dp"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+
+                            <TextView
+                                android:id="@+id/elpSub"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Complete Guide"
+                                android:padding="5dp"
+                                android:background="#fff"
+                                android:textColor="#000"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto"
+                                android:layout_below="@id/elpLbl"/>
+
+                            <Button
+                                android:id="@+id/L3c"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:translationZ="6dp"
+                                android:background="@android:color/transparent"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_border_orange_fill"
+                            android:layout_marginHorizontal="2dp"
+                            android:id="@+id/logOutPanel">
+                            <TextView
+                                android:id="@id/elpLbl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Log Out"
+                                android:textAlignment="center"
+                                android:paddingVertical="5dp"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/aladin"
+                                style="?android:textAppearanceMedium"/>
+
+                            <TextView
+                                android:id="@id/elpSub"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Sign User Out"
+                                android:textColor="#000"
+                                android:background="#fff"
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:fontFamily="@font/roboto"
+                                android:layout_below="@id/elpLbl"/>
+
+                            <Button
+                                android:id="@+id/logOut"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:translationZ="6dp"
+                                android:background="@android:color/transparent"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingHorizontal="8dp"
                 android:visibility="gone">
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -852,12 +799,12 @@
                 </RelativeLayout>
             </LinearLayout>
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/blue_gradient3"
-                android:paddingBottom="15dp">
+                android:paddingBottom="15dp"
+                android:layout_marginTop="3dp">
 
                 <RelativeLayout
                     android:id="@+id/moreHolder2"
@@ -880,19 +827,14 @@
                        android:fontFamily="@font/rema"/>
                 </RelativeLayout>
             </RelativeLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="1dp"
-                android:background="#f60"
-                android:layout_marginBottom="15dp"/>
             <ImageView
                 android:id="@+id/advert3"
                 android:layout_width="wrap_content"
                 android:layout_height="160dp"
                 android:background="#fff"
                 android:paddingVertical="10dp"
-                android:src="@drawable/item3" />
+                android:src="@drawable/item3"
+                android:layout_marginTop="3dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -931,22 +873,52 @@
                 tools:layout="@layout/fragment_stock_picks">
 
             </fragment> -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="1dp"
-                android:background="#f60"
-                android:layout_marginTop="15dp"/>
+
             <TextView
                 android:id="@+id/logInStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp"
                 android:paddingHorizontal="8dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/blue_gradient2"
                 android:textAlignment="center"
                 android:textColor="#fff" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adminPanel"
+                android:background="#f60">
+                <TextView
+                    android:id="@id/elpLbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ADMIN"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:padding="5dp"
+                    android:fontFamily="@font/aladin"
+                    style="?android:textAppearanceMedium"/>
 
+                <TextView
+                    android:id="@id/elpSub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Administrator"
+                    android:textColor="#000"
+                    android:background="#fff"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/roboto"
+                    android:layout_below="@id/elpLbl"/>
+
+                <Button
+                    android:id="@+id/adminBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:translationZ="6dp"
+                    android:background="@android:color/transparent"/>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 

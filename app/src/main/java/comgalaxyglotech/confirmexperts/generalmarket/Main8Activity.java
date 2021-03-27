@@ -124,7 +124,6 @@ StringBuilder val= new StringBuilder();
         startLocationUpdates();
     }
     private void setup(){
-        label = findViewById(R.id.label);
         logOutPanel = findViewById(R.id.logOutPanel);
         adminPanel = findViewById(R.id.adminPanel);
         wallet = findViewById(R.id.wallet);
