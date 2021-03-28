@@ -28,6 +28,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Example.ExampleAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Example.ExampleItem;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;

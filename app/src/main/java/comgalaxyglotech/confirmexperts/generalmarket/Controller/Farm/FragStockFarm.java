@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
 
 
 import android.app.Activity;
@@ -38,6 +38,8 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_FarmAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmStock;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
@@ -45,6 +47,14 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDis
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelFavey;
+import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessFavourites;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
 
 
 /**
@@ -197,7 +207,7 @@ public class FragStockFarm extends Fragment{
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context.getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(context.getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 activity.finish();
                 startActivity(intent);

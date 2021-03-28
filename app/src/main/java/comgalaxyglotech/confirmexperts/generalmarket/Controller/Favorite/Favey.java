@@ -1,7 +1,10 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Favorite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
 
 public class Favey extends AppCompatActivity {
 

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerHome">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmOwnerHome">
     <fragment
-        android:name="comgalaxyglotech.confirmexperts.generalmarket.FragFarmMain"
+        android:name="comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FragFarmMain"
         android:id="@+id/fragHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

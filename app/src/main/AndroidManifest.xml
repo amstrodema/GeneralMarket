@@ -83,7 +83,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmView"
+            android:name=".Controller.Farm.FarmView"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -103,7 +103,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmOwnerHome"
+            android:name=".Controller.Farm.FarmOwnerHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -123,7 +123,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmOwnerTrades"
+            android:name=".Controller.Farm.FarmOwnerTrades"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -133,7 +133,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmOwnerInsight"
+            android:name=".Controller.Farm.FarmOwnerInsight"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -258,7 +258,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Analysis"
+            android:name=".ClassPack.Analysis"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -358,7 +358,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmStock"
+            android:name=".Controller.Farm.FarmStock"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -388,7 +388,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Favey"
+            android:name=".Controller.Favorite.Favey"
             android:label="FAVOURITES"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -551,7 +551,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FarmItems"
+            android:name=".Controller.Farm.FarmItems"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

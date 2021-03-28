@@ -1,4 +1,5 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
+
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -36,31 +37,31 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
-import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
+import comgalaxyglotech.confirmexperts.generalmarket.UserDataClass;
 
 import static android.app.Activity.RESULT_OK;
 
 
-public class FragmentStoreHome extends Fragment {
-    public static StoreMainModel EditReferenceHolder;
-    String storeId, marketId;
-    private FirebaseDatabase firebaseDatabase;
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class FragFarmMain extends Fragment {
+
     private RelativeLayout addStockBtnPanel;
-    private TextView storeName, storeLoc,storeDesc,creator,market,availability, time,delivery, noReviewLabel,editStore;
-    private Button enterStore,storeReview, stockAdd,contact,currentlyHere,banBtn;
-    private ImageButton thisStoreImageUploadBtn;
-    //private ReviewData reviewData= new ReviewData();
-    private UserDataClass userDataClass = new UserDataClass();
-    private ImageView thisStoreImage;
-    private FirebaseStorage firebaseStorage;
-    private static int PICK_IMAGE =123;
-    Uri imagePath;
-    View v;
-    private StorageReference storageReference;
+    private View v;
+    private String farmId;
+    private FirebaseDatabase firebaseDatabase;
+    private TextView storeName, storeLoc,storeDesc,creator,market,availability,time,delivery,noReviewLabel,editFarm;
+    private Button enterStore,storeReview, stockAdd, contact,currentlyHere,banBtn;
+    private RatingBar farmRating;
     ScrollView thisScroll;
-    private RatingBar storeRating;
     DataClass dataClass = new DataClass();
     DataModel dataModel = new DataModel();
     Context context;
@@ -68,30 +69,40 @@ public class FragmentStoreHome extends Fragment {
     ModelClass model;
     boolean user;
     ProgressDialog progressDialog;
+    private ImageButton thisStoreImageUploadBtn;
+    private ImageView thisStoreImage;
+    private FirebaseStorage firebaseStorage;
+    private UserDataClass userDataClass = new UserDataClass();
+    private static int PICK_IMAGE =123;
+    Uri imagePath;
+    private StorageReference storageReference;
+    public FragFarmMain() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.frag_store_home, container, false);
+        v = inflater.inflate(R.layout.frag_farm_main, container, false);
         context = v.getContext();
         activity = getActivity();
         progressDialog = new ProgressDialog(context);
-        firebaseStorage = FirebaseStorage.getInstance();
-        storageReference = firebaseStorage.getReference();
         progressDialog.setMessage("Please Wait");
         progressDialog.setCancelable(false);
         progressDialog.show();
-        //dataClass.getData();
-        Intent prevIntent = getActivity().getIntent();
-        storeId = prevIntent.getStringExtra("storeId");
+        Intent prevIntent =activity.getIntent();
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference();
+        farmId = prevIntent.getStringExtra("storeId");
         model = new ModelClass();
         setUI();
-        storeReview.setEnabled(false);
         if(ModelClass.admin){
             banBtn.setVisibility(View.VISIBLE);
         }
-        userDataClass.getData(1,storeId,context,activity,noReviewLabel);
-        storageReference.child("Store").child(storeId).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        userDataClass.getData(3,farmId,context,activity,noReviewLabel);
+        storageReference.child("Store").child(farmId).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(thisStoreImage);
@@ -99,67 +110,20 @@ public class FragmentStoreHome extends Fragment {
 
         });
         setStore();//stockAdd
-        setListeners();
-        return v;
-    }
-    private void ownerVisible(String creatorId){
-        user= model.userLoggedIn();
-        if(user) {
-            String userId = model.getCurrentUserId();
-            if (userId.equals(creatorId)) {
-                addStockBtnPanel.setVisibility(View.VISIBLE);
-                editStore.setVisibility(View.VISIBLE);
-                thisStoreImageUploadBtn.setVisibility(View.VISIBLE);
-            }
-        }
-
-    }
-    private void setListeners(){
-        currentlyHere.setOnClickListener(new View.OnClickListener() {
+        storeReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ModelClass model = new ModelClass();
-                boolean user= model.userLoggedIn();
-                if(user){
-                    String userId =model.getCurrentUserId(), current =creator.getText().toString() ;
-                    if(userId.equals(current)){
-                        StoreView.EditReference = EditReferenceHolder;
-                        LocationHandler locationHandler = new LocationHandler();
-                        locationHandler.getGpsLocation(context,activity,"store");
-                    }
-                    else {
-                        Toast.makeText(context,"Store Owner Notified!",Toast.LENGTH_LONG).show();
-                    }
-                }
-                else{
-                    Toast.makeText(context,"Log In First",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        editStore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //edit store. calls the add store class which defects to edit so far the static EditReference variable is not null
-                //reset static variable as null after successful contract.
-                progressDialog.setMessage("Verifying Access");
-                progressDialog.show();
                 user= model.userLoggedIn();
                 if(user){
-                    String userId =model.getCurrentUserId(), current =creator.getText().toString() ;
-                    if(userId.equals(current)){
-                        StoreView.EditReference = EditReferenceHolder;
-                        Intent intent =new Intent(context, StoreAdd.class);
-                        progressDialog.dismiss();
-                        startActivity(intent);
-                    }
-                    else {
-                        progressDialog.dismiss();
-                        Toast.makeText(context,"You Do Not Own This Store",Toast.LENGTH_LONG).show();
-                    }
+                    FarmReviewDialogue.context =context;
+                    FarmReviewDialogue.storeId = farmId;
+                    FarmReviewDialogue.activity = activity;
+                    FarmReviewDialogue.ratingBar = farmRating;
+                    FarmReviewDialogue.noReviewLabel = noReviewLabel;
+                    openDialog();
                 }
                 else{
-                    progressDialog.dismiss();
-                    Toast.makeText(context,"Log In First",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"Log in first!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -179,47 +143,24 @@ public class FragmentStoreHome extends Fragment {
                         startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE);
                     }
                     else {
-                        Toast.makeText(context,"You Do Not Own This Store",Toast.LENGTH_LONG).show();
+                        Toast.makeText(context,"You Do Not Own This Farm",Toast.LENGTH_LONG).show();
                     }
                 }
                 else{
                     progressDialog.dismiss();
                     Toast.makeText(context,"Log In First",Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
-        storeReview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                user= model.userLoggedIn();
-                if(user){
-                    StoreReviewDialogue.context =context;
-                    StoreReviewDialogue.storeId = storeId;
-                    StoreReviewDialogue.activity = activity;
-                    StoreReviewDialogue.ratingBar = storeRating;
-                    StoreReviewDialogue.noReviewLabel = noReviewLabel;
-                    openDialog();
-                }
-                else{
-                    Toast.makeText(context,"Log in first!",Toast.LENGTH_SHORT).show();
-                }
 
             }
         });
-
         enterStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressDialog.setMessage("Please Wait");
-                progressDialog.show();
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreItems");
-                intent.putExtra("storeId",storeId);
-                intent.putExtra("farmClick","False");
-                //  gets data from datamodel class and then dataclass which then moves the activity
-                dataModel.getDoubleData(progressDialog,context,intent);
+                Intent intent = new Intent(context, FarmItems.class);
+                intent.putExtra("farmId",farmId);
+                dataModel.getDoubleFarmData(progressDialog, context,intent);
             }
         });
-
         stockAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -230,15 +171,13 @@ public class FragmentStoreHome extends Fragment {
                     String userId =model.getCurrentUserId(), current =creator.getText().toString() ;
                     if(userId.equals(current)){
                         StoreItems.EditReference = null;
-                        marketId = market.getText().toString();
-                        Intent intent = new Intent(context, NewStockActivity.class);
-                        intent.putExtra("storeId",storeId);
-                        intent.putExtra("marketId",marketId);
+                        Intent intent = new Intent(context, FarmStock.class);
+                        intent.putExtra("farmId",farmId);
                         dataClass.getSmarterData(progressDialog,context,intent);
                     }
                     else {
                         progressDialog.dismiss();
-                        Toast.makeText(context,"You Do Not Own This Store",Toast.LENGTH_LONG).show();
+                        Toast.makeText(context,"You Do Not Own This Farm",Toast.LENGTH_LONG).show();
                     }
                 }
                 else{
@@ -247,15 +186,69 @@ public class FragmentStoreHome extends Fragment {
                 }
             }
         });
+        editFarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                progressDialog.setMessage("Verifying Access");
+                progressDialog.show();
+                user= model.userLoggedIn();
+                if(user){
+                    progressDialog.dismiss();
+                    String userId =model.getCurrentUserId(), current =creator.getText().toString() ;
+                    if(userId.equals(current)){
+                        FarmView.EditReference = FarmView.EditReferenceHolder;
+                        Intent intent = new Intent(context, FarmAdd.class);
+                        progressDialog.dismiss();
+                        startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(context,"You Do Not Own This Farm",Toast.LENGTH_LONG).show();
+                    }
+                }
+                else{
+                    progressDialog.dismiss();
+                    Toast.makeText(context,"Log In First",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        currentlyHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user= model.userLoggedIn();
+                if(user){
+                    FarmView.EditReference = FarmView.EditReferenceHolder;
+                    String userId =model.getCurrentUserId(), current =creator.getText().toString() ;
+                    if(userId.equals(current)){
+                        LocationHandler locationHandler = new LocationHandler();
+                        locationHandler.getGpsLocation(context,activity,"farm");
+                    }
+                    else {
+                        Toast.makeText(context,"Location Observed.",Toast.LENGTH_LONG).show();
+                    }
+                }
+                else{
+                    Toast.makeText(context,"Log In First",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        return v;
     }
-    private void openDialog(){
-        StoreReviewDialogue itemDialog = new StoreReviewDialogue();
-        itemDialog.show(getFragmentManager(),"");
+    private void ownerVisible(String creatorId){
+        user= model.userLoggedIn();
+        if(user) {
+            String userId = model.getCurrentUserId();
+            if (userId.equals(creatorId)) {
+                addStockBtnPanel.setVisibility(View.VISIBLE);
+                editFarm.setVisibility(View.VISIBLE);
+                thisStoreImageUploadBtn.setVisibility(View.VISIBLE);
+            }
+        }
+
     }
-    private void setStore() {
-        Query query = firebaseDatabase.getInstance().getReference("AllStores")
+    public void setStore() {
+        Query query = firebaseDatabase.getInstance().getReference("AllFarms")
                 .orderByChild("id")
-                .equalTo(storeId);
+                .equalTo(farmId);
         query.addListenerForSingleValueEvent(valueEventListener);
 
     }
@@ -266,18 +259,19 @@ public class FragmentStoreHome extends Fragment {
 
             if (dataSnapshot.exists()){
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    final StoreMainModel newStoreMode= snapshot.getValue(StoreMainModel.class);
-                    EditReferenceHolder = newStoreMode;
-                    final String store =newStoreMode.getStoreName();
-                    storeName.setText(store);
-                    //String desc =  ++
-                    storeDesc.setText(newStoreMode.getStoreDesc());
-                    availability.setText(newStoreMode.getStoreOpeningDays());
-                    String desc =dataClass.timeCheck(newStoreMode.getStoreOpeningTime())+" - "+dataClass.timeCheck(newStoreMode.getStoreClosingTime());
+                    final FarmMainModel newStoreMode= snapshot.getValue(FarmMainModel.class);
+                    FarmView.EditReferenceHolder = newStoreMode;
+                    final String store =  newStoreMode.getFarmName();
+                    storeName.setText(store.toUpperCase());
+                    storeDesc.setText(newStoreMode.getFarmDesc());
+                    String desc="FARM AVAILABLE: "+newStoreMode.getFarmOpeningDays().toUpperCase();
+                    availability.setText(desc);
+                    desc ="OPENS: "+dataClass.timeCheck(newStoreMode.getFarmOpeningTime())+" and CLOSES: "+dataClass.timeCheck(newStoreMode.getFarmClosingTime());
                     time.setText(desc);
-                    delivery.setText(newStoreMode.getDelievery());
+                    desc = "DELIVERY SERVICES: "+newStoreMode.getDelivery();
+                    delivery.setText(desc);
                     //set call uri here and attach to call button
-                    final String tel =newStoreMode.getStorePhone();
+                    final String tel =newStoreMode.getFarmPhone();
                     contact.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -307,56 +301,54 @@ public class FragmentStoreHome extends Fragment {
                             }
                         }
                     });
-                    ownerVisible(newStoreMode.getCreatorId());
-                    storeLoc.setText(newStoreMode.getStoreLocation());
-                    creator.setText(newStoreMode.getCreatorId());
-                    storeRating.setRating(model.loadRating(newStoreMode.getRating()));
-                    try{
-                        market.setText(newStoreMode.getMarketId());
-                    }
-                    catch (Exception e){
 
-                    }
                     banBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            ModelClass.banStore(newStoreMode);
+                            ModelClass.banFarm(newStoreMode);
                         }
                     });
+                    ownerVisible(newStoreMode.getCreatorId());
+                    storeLoc.setText(newStoreMode.getFarmLocation());
+                    creator.setText(newStoreMode.getCreatorId());
                     enterStore.setEnabled(true);
                     storeReview.setEnabled(true);
-                    progressDialog.dismiss();
                 }
-
             }
+            progressDialog.dismiss();
 
         }
+
         @Override
         public void onCancelled(@NonNull DatabaseError databaseError) {
 
         }
     };
+    private void openDialog(){
+        FarmReviewDialogue itemDialog = new FarmReviewDialogue();
+        itemDialog.show(getFragmentManager(),"Add New Review");
+    }
     private void setUI (){
-        addStockBtnPanel = v.findViewById(R.id.addStockBtnPanel);
         banBtn  = v.findViewById(R.id.banBtn);
         currentlyHere = v.findViewById(R.id.currentlyHere);
-        editStore = v.findViewById(R.id.editStore);
+        editFarm = v.findViewById(R.id.editFarm);
         noReviewLabel = v.findViewById(R.id.noReviewLabel);
+        farmRating = v.findViewById(R.id.farmRatingBar);
         thisStoreImage = v.findViewById(R.id.thisStoreImage);
         thisStoreImageUploadBtn = v.findViewById(R.id.thisStoreImageUploadBtn);
-        storeRating = v.findViewById(R.id.storeRating);
+        availability =v.findViewById(R.id.availabilty);
+        time =v.findViewById(R.id.store_time);
+        delivery =v.findViewById(R.id.delivery);
+        contact = v.findViewById(R.id.contact);
         market = v.findViewById(R.id.market);
         creator = v.findViewById(R.id.creator);
         stockAdd = v.findViewById(R.id.addStock);
         storeName=v.findViewById(R.id.thisStoreName);
         storeDesc =v.findViewById(R.id.thisStoreDescription);
-        availability =v.findViewById(R.id.availabilty);
-        time =v.findViewById(R.id.store_time);
-        delivery =v.findViewById(R.id.delivery);
-        contact =v.findViewById(R.id.contact);
         storeLoc=v.findViewById(R.id.thisStoreLocation);
         storeReview=v.findViewById(R.id.thisStoreReview);
         enterStore=v.findViewById(R.id.thisStoreBtn);
+        addStockBtnPanel =v.findViewById(R.id.addStockBtnPanel);
     }
 
     @Override
@@ -364,7 +356,7 @@ public class FragmentStoreHome extends Fragment {
         if(requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null)
         {
             imagePath = data.getData();
-            final StorageReference imageReference = storageReference.child("Store").child(storeId);
+            final StorageReference imageReference = storageReference.child("Store").child(farmId);
             imageReference.putFile(imagePath).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
@@ -393,4 +385,5 @@ public class FragmentStoreHome extends Fragment {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 }

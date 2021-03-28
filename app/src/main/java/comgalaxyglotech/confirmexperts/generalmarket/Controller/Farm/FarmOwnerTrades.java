@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -25,6 +25,13 @@ import java.util.ArrayList;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.FarmOwnerWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelDisplayTransaction;
+import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.TransactionAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.UserProfile;
 
 public class FarmOwnerTrades extends AppCompatActivity {
     private ArrayList<NewStockMainModel> stocks = new ArrayList<>();
@@ -311,7 +318,7 @@ public class FarmOwnerTrades extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
@@ -347,7 +354,7 @@ public class FarmOwnerTrades extends AppCompatActivity {
         insight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmOwnerTrades.this,FarmOwnerInsight.class);
+                Intent intent = new Intent(FarmOwnerTrades.this, FarmOwnerInsight.class);
                 intent.putExtra("storeId", storeId);
                 intent.putExtra("creator",creatorId);
                 startActivity(intent);

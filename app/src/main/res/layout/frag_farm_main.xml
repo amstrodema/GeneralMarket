@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#eee"
     android:padding="5dp"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.FragFarmMain">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FragFarmMain">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView

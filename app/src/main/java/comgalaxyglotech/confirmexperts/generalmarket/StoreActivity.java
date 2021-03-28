@@ -45,6 +45,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.BL.Store.StoreAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
 
 public class StoreActivity extends AppCompatActivity {
     private SwipeRefreshLayout swiper;

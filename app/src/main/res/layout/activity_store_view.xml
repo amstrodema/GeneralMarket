@@ -7,7 +7,7 @@
     android:background="#eee"
     tools:context="comgalaxyglotech.confirmexperts.generalmarket.StoreView">
    <fragment
-       android:name="comgalaxyglotech.confirmexperts.generalmarket.FragmentStoreHome"
+       android:name="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragmentStoreHome"
        android:id="@+id/fragHome"
        android:layout_width="match_parent"
        android:layout_height="match_parent"

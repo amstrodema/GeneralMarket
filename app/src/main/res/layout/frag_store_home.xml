@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.FragmentStoreHome">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragmentStoreHome">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
@@ -41,8 +41,7 @@
                     android:layout_height="287dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/store2"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/back_wite"/>
+                    android:layout_centerVertical="true"/>
                 <ImageButton
                     android:layout_width="40dp"
                     android:layout_height="40dp"

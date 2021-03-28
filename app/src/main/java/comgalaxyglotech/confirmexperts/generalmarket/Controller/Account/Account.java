@@ -48,8 +48,8 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketM
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
-import comgalaxyglotech.confirmexperts.generalmarket.DataStock;
-import comgalaxyglotech.confirmexperts.generalmarket.FarmView;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView;
 import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;

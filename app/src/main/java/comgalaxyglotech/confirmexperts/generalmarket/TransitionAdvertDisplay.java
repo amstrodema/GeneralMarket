@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Favorite.Favey;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Bonus.Bonus;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.Farm;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveDataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveList;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.RecipeList;
@@ -54,7 +56,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                 }
                 else if(location.equals("favey")){
                     DataStock dataStock = new DataStock();
-                    Intent intent = new Intent(TransitionAdvertDisplay.this,Favey.class);
+                    Intent intent = new Intent(TransitionAdvertDisplay.this, Favey.class);
                     intent.putExtra("dataType","Fav");
                     StopThisActivity=activity;
                     startActivity(intent);

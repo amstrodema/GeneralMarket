@@ -866,7 +866,7 @@
                 android:visibility="gone" />
           <!--  <fragment
                 android:id="@+id/fragStock"
-                android:name="comgalaxyglotech.confirmexperts.generalmarket.FragStock_picks_store"
+                android:name="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStock_picks_store"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="gone"

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import comgalaxyglotech.confirmexperts.generalmarket.ExampleItem;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Example.ExampleItem;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.RecipeDataClass;
 
 /**

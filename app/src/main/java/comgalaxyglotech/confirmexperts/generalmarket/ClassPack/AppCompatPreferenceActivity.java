@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.ClassPack;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

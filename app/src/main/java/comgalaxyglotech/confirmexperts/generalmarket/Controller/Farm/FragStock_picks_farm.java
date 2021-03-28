@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
 
 
 import android.app.Activity;
@@ -34,17 +34,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_StoreAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Example.ExampleItem;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelFavey;
+import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessFavourites;
+import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
+import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragStock_picks_store extends Fragment {
+public class FragStock_picks_farm extends Fragment {
 
     private View view;
     private DatabaseReference databaseReference;
@@ -54,7 +63,6 @@ public class FragStock_picks_store extends Fragment {
     private RecyclerView mRecyclerView;
     private NewStock_StoreAdapter mAdapter;
     private ArrayList<NewStockMainModel>storeItemKeep=new ArrayList<>();
-    private ArrayList<NewStockMainModel>storeItemRaw=new ArrayList<>();
     private ArrayList<ModelFavey>faveys=new ArrayList<>();
     private RecyclerView.LayoutManager mlayoutManager;
     private ArrayList<NewStockDisplayModel> storeList= new ArrayList<>();
@@ -64,10 +72,9 @@ public class FragStock_picks_store extends Fragment {
     private ProgressBar progress;
     private ProgressDialog progressDialog;
     private ModelClass modelClass = new ModelClass();
-    public FragStock_picks_store() {
+    public FragStock_picks_farm() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -109,140 +116,123 @@ public class FragStock_picks_store extends Fragment {
         super.onStart();
         loadFav();
     }
+
     private void setStoreList(){
-        readStockData(new FirebaseCallbackStock() {
-            @Override
-            public void onCallback( ArrayList<NewStockMainModel> stockModel) {
+        Query query = FirebaseDatabase.getInstance().getReference("Farm_Stock")
+                .orderByChild("storeId");
+        query.addListenerForSingleValueEvent(valueEventListener);
+
+        /*if(dataType=="fav") {
+            if (isFarm.equals("False")) {
+                Query query = FirebaseDatabase.getInstance().getReference("Store_Stock")
+                        .orderByChild("storeId")
+                        .equalTo(storeId);
+                query.addListenerForSingleValueEvent(valueEventListener);
+            }
+
+            /*else {
+                Query query = FirebaseDatabase.getInstance().getReference("FarmStock")
+                        .orderByChild("storeId")
+                        .equalTo(storeId);
+                query.addListenerForSingleValueEvent(valueEventListener);
+            }
+
+        }
+        else {
+
+            /*else {
+                Query query = FirebaseDatabase.getInstance().getReference("FarmStock")
+                        .orderByChild("storeId")
+                        .equalTo(storeId);
+                query.addListenerForSingleValueEvent(valueEventListener);
+            }
+        }*/
+    }
+    private ValueEventListener valueEventListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            if (dataSnapshot.exists()){
                 storeItemKeep.clear();
                 storeList.clear();
-                if(stockModel != null){
-                    storeItemRaw = stockModel;
-                }
-
-                setFarmList();
-            }
-        },"Store_Stock","storeId","");
-    }
-    private void setFarmList(){
-        readStockData(new FirebaseCallbackStock() {
-            @Override
-            public void onCallback( ArrayList<NewStockMainModel> stockModel) {
-
-
-                if(stockModel == null && storeItemRaw.size()<1){
-                    noData.setVisibility(View.VISIBLE);
-                }
-                else{
-                    noData.setVisibility(View.INVISIBLE);
-                    storeItemRaw.addAll(stockModel);
-                }
+                noData.setVisibility(View.VISIBLE);
                 progress.setVisibility(View.GONE);
-                filterData(storeItemRaw);
-            }
-        },"Farm_Stock","storeId","");
-    }
-    private void readStockData(final FirebaseCallbackStock firebaseCallback, String reference, String OrderBy, String id){
-        ValueEventListener valueEventListener = new ValueEventListener() {
-            // String name;
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ArrayList<NewStockMainModel> stockData=new ArrayList<>();
-                if (dataSnapshot.exists()){
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        NewStockMainModel newData= snapshot.getValue(NewStockMainModel.class);
-                        stockData.add(newData);
-                    }
-                    firebaseCallback.onCallback(stockData);
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    NewStockMainModel newPrice= snapshot.getValue(NewStockMainModel.class);
+                    String isFvor =isFav(newPrice.getId());
+                 try{
+                     if(newPrice.getIsEditorsPick().equals("True") && !dataType.equals("Fav")){
+                         if((modelClass.userLoggedIn() && modelClass.getCurrentUserId().equals(newPrice.getCreatorId())) || ModelClass.admin){
+                             NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFvor, newPrice.isBan());
+
+                             //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
+                             storeItemKeep.add(newPrice);
+                             //displays for editors picks
+                             storeList.add(newPriceDisplay);
+                         }
+                         else{
+                             if(!newPrice.isBan()){
+                                 NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFvor, newPrice.isBan());
+                                 //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
+                                 storeItemKeep.add(newPrice);
+                                 //displays for editors picks
+                                 storeList.add(newPriceDisplay);
+                             }
+                         }
+                         progress.setVisibility(View.GONE);
+                         noData.setVisibility(View.GONE);
+                     }
+                 }
+                 catch (Exception e)
+                 {
+
+                 }
+                  try{
+                      //displays for fav
+                      if(isFvor.equals("True") && dataType.equals("Fav")){
+                          if((modelClass.userLoggedIn() && modelClass.getCurrentUserId().equals(newPrice.getCreatorId())) || ModelClass.admin){
+                              NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFvor, newPrice.isBan());
+                              //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
+                              storeItemKeep.add(newPrice);
+                              //displays for editors picks
+                              storeList.add(newPriceDisplay);
+                          }
+                          else{
+                              if(!newPrice.isBan()){
+                                  NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFvor, newPrice.isBan());
+                                  //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
+                                  storeItemKeep.add(newPrice);
+                                  //displays for editors picks
+                                  storeList.add(newPriceDisplay);
+                              }
+                          }
+                          progress.setVisibility(View.GONE);
+                          noData.setVisibility(View.GONE);
+                      }
+                  }
+                  catch (Exception e){
+
+                  }
+
+
+
                 }
-                else{
-                    firebaseCallback.onCallback(null);
-                }
+                adapterOp();
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
+            else{
+                noData.setVisibility(View.VISIBLE);
+                progress.setVisibility(View.GONE);
             }
-        };
-        if(id.isEmpty()){
-            Query query = firebaseDatabase.getReference(reference)
-                    .orderByChild(OrderBy);
-            query.addListenerForSingleValueEvent(valueEventListener);
-        }
-        else{
-            Query query = firebaseDatabase.getReference(reference)
-                    .orderByChild(OrderBy)
-                    .equalTo(id);
-            query.addListenerForSingleValueEvent(valueEventListener);
+            //  progressDialog.dismiss();
         }
 
-    }
-    private interface FirebaseCallbackStock{
-        void onCallback (ArrayList<NewStockMainModel> stockModel);
-    }
-   private void filterData(ArrayList<NewStockMainModel> stockModels){
-       for (NewStockMainModel newPrice: stockModels) {
-         /*  try{
-               if(newPrice.getIsEditorsPick().equals("True") && !dataType.equals("Fav")){
-                   if((modelClass.userLoggedIn() && modelClass.getCurrentUserId().equals(newPrice.getCreatorId())) || ModelClass.admin){
-                       NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFav(newPrice.getId()), newPrice.isBan());
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                       //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
-                       storeItemKeep.add(newPrice);
-                       //displays for editors picks
-                       storeList.add(newPriceDisplay);
-                   }
-                   else{
-                       if(!newPrice.isBan()){
-                           NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFav(newPrice.getId()), newPrice.isBan());
-                           //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
-                           storeItemKeep.add(newPrice);
-                           //displays for editors picks
-                           storeList.add(newPriceDisplay);
-                       }
-                   }
-                   progress.setVisibility(View.GONE);
-                   noData.setVisibility(View.GONE);
-               }
-           }
-           catch (Exception e)
-           {
-
-           }*/
-           try{
-               String isFvor = isFav(newPrice.getId());
-               //displays for fav
-               if(isFvor.equals("True") && dataType.equals("Fav")){
-                   if((modelClass.userLoggedIn() && modelClass.getCurrentUserId().equals(newPrice.getCreatorId())) || ModelClass.admin){
-                       NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFav(newPrice.getId()), newPrice.isBan());
-                       //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
-                       storeItemKeep.add(newPrice);
-                       //displays for editors picks
-                       storeList.add(newPriceDisplay);
-                   }
-                   else{
-                       if(!newPrice.isBan()){
-                           NewStockDisplayModel newPriceDisplay=new NewStockDisplayModel(newPrice.getId(),newPrice.getAdvertName(),newPrice.getStoreId(),newPrice.getCategory(),newPrice.getItemDesc(),newPrice.getItemCost(), newPrice.getCreatorId(),newPrice.getRating(),isFav(newPrice.getId()), newPrice.isBan());
-                           //store identical data as field, not to be altered or reassined and must appear wit d its twin variable
-                           storeItemKeep.add(newPrice);
-                           //displays for editors picks
-                           storeList.add(newPriceDisplay);
-                       }
-                   }
-                   progress.setVisibility(View.GONE);
-                   noData.setVisibility(View.GONE);
-               }
-           }
-           catch (Exception e){
-
-           }
+        }
+    };
 
 
 
-       }
-
-       adapterOp();
-   }
     private void adapterOp(){
         mAdapter = new NewStock_StoreAdapter(storeList);
         mRecyclerView.setAdapter(mAdapter);
@@ -287,9 +277,8 @@ public class FragStock_picks_store extends Fragment {
             @Override
             public void onStoreMetaClick(int position) {
                 StoreItems.EditReference = storeItemKeep.get(position);
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreView");
-                    intent.putExtra("storeId",storeList.get(position).getStoreId());
-                    //intent.putExtra("metric",metricLabel);
+                    Intent intent = new Intent(context, FarmView.class);
+                    intent.putExtra("farmId",storeList.get(position).getStoreId());
                     startActivity(intent);
 
             }
@@ -327,7 +316,7 @@ public class FragStock_picks_store extends Fragment {
                     modelTransaction.setStoreId(StoreItems.EditReference.getStoreId());
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(activity);
                     alertDialog.setTitle("Purchase Alert!!!");
-                    alertDialog.setMessage("You are about to purchase "+StoreItems.EditReference.getItemQty()+" "+StoreItems.EditReference.getAdvertName()+"\nCost: ₦"+cost);
+                    alertDialog.setMessage("You are about to purchase "+StoreItems.EditReference.getItemQty()+" "+StoreItems.EditReference.getAdvertName()+"\nCost: &#8358;"+cost);
                     alertDialog.setIcon(R.drawable.transaction_pics);
                     alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
@@ -355,21 +344,23 @@ public class FragStock_picks_store extends Fragment {
             @Override
             public void onBanClick(int position) {
                 StoreItems.EditReference = storeItemKeep.get(position);
-                    ModelClass.banStoreStock( StoreItems.EditReference);
+                    ModelClass.banFarmStock( StoreItems.EditReference);
             }
 
             @Override
             public void onEditClick(int position) {
                 StoreItems.EditReference = storeItemKeep.get(position);
                 if(modelClass.userLoggedIn()){
-                        if(modelClass.getCurrentUserId().equals(StoreItems.EditReference.getCreatorId())){
-                            Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.NewStockActivity");
-                            startActivity(intent);
-                        }
-                        else{
-                            Toast.makeText(context,"Contact store owner",Toast.LENGTH_SHORT).show();
-                        }
-
+                    if(modelClass.getCurrentUserId().equals(StoreItems.EditReference.getCreatorId())){
+                        Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmStock");
+                        DataClass dataClass = new DataClass();
+                        progressDialog.setMessage("Please Wait");
+                        progressDialog.show();
+                        dataClass.getSmarterData(progressDialog,context,intent);
+                    }
+                    else{
+                        Toast.makeText(context,"Contact farm owner",Toast.LENGTH_SHORT).show();
+                    }
                 }
                 else{
                     Toast.makeText(context,"Log In Required.",Toast.LENGTH_SHORT).show();
@@ -513,7 +504,7 @@ public class FragStock_picks_store extends Fragment {
 
     }
     private interface FirebaseItemCallback{
-        void onCallback (Map<String, String> list, ArrayList<String> list2,Map<String, String> list3,Map<String, String> listCategory,ArrayList<String> farmItemIdData);
+        void onCallback(Map<String, String> list, ArrayList<String> list2, Map<String, String> list3, Map<String, String> listCategory, ArrayList<String> farmItemIdData);
     }
 
     public void getStoreData(){
@@ -570,6 +561,6 @@ public class FragStock_picks_store extends Fragment {
     }
 
     private interface FirebaseStoreCallback{
-        void onCallback (Map<String, String> list);
+        void onCallback(Map<String, String> list);
     }
 }

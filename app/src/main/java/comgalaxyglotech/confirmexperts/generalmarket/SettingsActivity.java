@@ -22,6 +22,8 @@ import androidx.core.app.NavUtils;
 
 import java.util.List;
 
+import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.AppCompatPreferenceActivity;
+
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
  * handset devices, settings are presented as a single list. On tablets,

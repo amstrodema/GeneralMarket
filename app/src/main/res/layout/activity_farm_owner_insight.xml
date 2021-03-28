@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerInsight">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmOwnerInsight">
     <fragment
         android:name="comgalaxyglotech.confirmexperts.generalmarket.OwnerInsightFragment"
         android:id="@+id/fragWallet"

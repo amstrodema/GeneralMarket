@@ -50,7 +50,6 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
-import comgalaxyglotech.confirmexperts.generalmarket.FarmView;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.PaymentPop;
 import comgalaxyglotech.confirmexperts.generalmarket.ProcessTransaction;
@@ -162,7 +161,7 @@ public class FarmAdd extends AppCompatActivity  implements PaymentPop.paymentDia
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 String farmId= itemId;
                                                 Toast.makeText(FarmAdd.this,"Farm Edited Successfully", Toast.LENGTH_SHORT).show();
-                                                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.FarmView");
+                                                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView");
                                                 //storeId is only an identifier for farmId here, used to ensure easy flow btw store and farm wallets
                                                 intent.putExtra("storeId",newFarm.getId());
                                                 intent.putExtra("creator",newFarm.getCreatorId());

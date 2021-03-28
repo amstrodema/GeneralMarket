@@ -1,7 +1,9 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.ClassPack;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class Analysis extends AppCompatActivity {
 

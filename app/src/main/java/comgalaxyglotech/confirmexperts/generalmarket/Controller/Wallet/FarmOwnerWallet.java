@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerHome;
-import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerInsight;
-import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerTrades;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmOwnerHome;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmOwnerInsight;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmOwnerTrades;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 

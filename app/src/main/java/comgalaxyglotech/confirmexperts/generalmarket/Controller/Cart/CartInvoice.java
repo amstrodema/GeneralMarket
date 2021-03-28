@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.CartInvoiceTransaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
-import comgalaxyglotech.confirmexperts.generalmarket.FragStockStore;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStockStore;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 

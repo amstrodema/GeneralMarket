@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="comgalaxyglotech.confirmexperts.generalmarket.StoreItems">
     <fragment
-        android:name="comgalaxyglotech.confirmexperts.generalmarket.FragStockStore"
+        android:name="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStockStore"
         android:id="@+id/fragStock"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

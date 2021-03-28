@@ -1,7 +1,9 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class FarmItems extends AppCompatActivity {
 

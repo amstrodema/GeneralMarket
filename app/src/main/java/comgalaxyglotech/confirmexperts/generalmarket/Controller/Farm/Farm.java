@@ -46,10 +46,8 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Farm.FarmAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayModel;
-import comgalaxyglotech.confirmexperts.generalmarket.DataStock;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
-import comgalaxyglotech.confirmexperts.generalmarket.FarmOwnerHome;
-import comgalaxyglotech.confirmexperts.generalmarket.FarmView;
 import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;

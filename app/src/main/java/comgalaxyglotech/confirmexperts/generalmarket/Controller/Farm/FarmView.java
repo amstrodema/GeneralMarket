@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm;
 
 import android.content.Intent;
 import androidx.viewpager.widget.ViewPager;
@@ -9,6 +9,9 @@ import android.widget.Button;
 
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.FarmOwnerWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class FarmView extends AppCompatActivity {
     private static final  String TAG="TabzStoreOwner";
@@ -35,7 +38,7 @@ public class FarmView extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
@@ -44,7 +47,7 @@ public class FarmView extends AppCompatActivity {
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.FarmView");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView");
                 intent.putExtra("storeId",farmId);
                 intent.putExtra("creator",creator);
                 startActivity(intent);
@@ -53,7 +56,7 @@ public class FarmView extends AppCompatActivity {
         trades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmView.this,FarmOwnerTrades.class);
+                Intent intent = new Intent(FarmView.this, FarmOwnerTrades.class);
                 intent.putExtra("storeId", farmId);
                 startActivity(intent);
             }
@@ -69,7 +72,7 @@ public class FarmView extends AppCompatActivity {
         insight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmView.this,FarmOwnerInsight.class);
+                Intent intent = new Intent(FarmView.this, FarmOwnerInsight.class);
                 intent.putExtra("storeId", farmId);
                 startActivity(intent);
             }
