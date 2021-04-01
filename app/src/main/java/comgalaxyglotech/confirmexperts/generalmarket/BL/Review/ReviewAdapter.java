@@ -10,9 +10,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.ReviewDisplayClass;
-import comgalaxyglotech.confirmexperts.generalmarket.UserDataClass;
-import comgalaxyglotech.confirmexperts.generalmarket.UserProfile;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Review.ReviewDisplayClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.User.UserDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.User.UserProfile;
 
 /**
  * Created by ELECTRON on 10/23/2019.

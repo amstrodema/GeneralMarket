@@ -25,10 +25,10 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
-import comgalaxyglotech.confirmexperts.generalmarket.ListAdapter;
-import comgalaxyglotech.confirmexperts.generalmarket.ListDisplayClass;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Shared.ListAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Shared.ListDisplayClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StockLanding;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.StockLanding;
 
 public class Recipe extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;

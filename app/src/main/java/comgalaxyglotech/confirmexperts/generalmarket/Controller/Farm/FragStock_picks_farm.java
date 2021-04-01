@@ -34,20 +34,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_StoreAdapter;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Example.ExampleItem;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelFavey;
-import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessFavourites;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Favorite.ModelFavey;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Favorite.ProcessFavourites;
 import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems;
 
 
 /**

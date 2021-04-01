@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.User.UserProfile;
 
 public class SendMoney extends AppCompatActivity {
     private Button sendMoney;

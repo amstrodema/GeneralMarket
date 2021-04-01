@@ -40,13 +40,12 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMai
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelFavey;
-import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessFavourites;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Favorite.ModelFavey;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Favorite.ProcessFavourites;
 import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
 
 
 /**
@@ -295,7 +294,7 @@ public class FragStock_picks_store extends Fragment {
             @Override
             public void onStoreMetaClick(int position) {
                 StoreItems.EditReference = storeItemKeep.get(position);
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreView");
+                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreView");
                     intent.putExtra("storeId",storeList.get(position).getStoreId());
                     //intent.putExtra("metric",metricLabel);
                     startActivity(intent);
@@ -371,7 +370,7 @@ public class FragStock_picks_store extends Fragment {
                 StoreItems.EditReference = storeItemKeep.get(position);
                 if(modelClass.userLoggedIn()){
                         if(modelClass.getCurrentUserId().equals(StoreItems.EditReference.getCreatorId())){
-                            Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.NewStockActivity");
+                            Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.NewStockActivity");
                             startActivity(intent);
                         }
                         else{

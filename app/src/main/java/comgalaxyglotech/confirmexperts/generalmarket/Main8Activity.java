@@ -45,7 +45,13 @@ import androidx.work.WorkManager;
 import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.DbHelper;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Account.Account;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Admin.Admin;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Help.Help;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Login.loginDialog;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Notification.NotificationView;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Settings.SettingsActivity;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.Stocks;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.Wallet;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 
 public class Main8Activity extends AppCompatActivity implements loginDialog.dialogListener {
     private Button btnAcct,notification,setting,helpBtn,loan,favey,logOutClick,adminBtn;
@@ -311,7 +317,7 @@ StringBuilder val= new StringBuilder();
     }
 
     public void registerUserPlatform(View view){
-        Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.RegisterActivity");
+        Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Register.RegisterActivity");
         startActivity(intent);
     }
     @Override

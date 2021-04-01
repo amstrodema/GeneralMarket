@@ -26,7 +26,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.CartInvoiceT
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStockStore;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class CartInvoice extends AppCompatActivity {

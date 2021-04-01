@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eee"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.StoreActivity">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreActivity">
 
     <ProgressBar
         android:layout_width="24dp"

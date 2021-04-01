@@ -19,6 +19,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 
 /**
  * Created by ELECTRON on 06/13/2020.

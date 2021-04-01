@@ -17,8 +17,8 @@ import java.util.Date;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
-import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 

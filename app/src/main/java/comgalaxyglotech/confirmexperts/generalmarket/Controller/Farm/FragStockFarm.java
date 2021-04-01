@@ -38,8 +38,6 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_FarmAdapter;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmStock;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
@@ -48,13 +46,13 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMai
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelFavey;
-import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessFavourites;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Favorite.ModelFavey;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Favorite.ProcessFavourites;
 import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems;
 
 
 /**

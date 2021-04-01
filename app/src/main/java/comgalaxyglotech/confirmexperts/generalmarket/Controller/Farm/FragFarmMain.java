@@ -40,11 +40,11 @@ import com.squareup.picasso.Picasso;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
-import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
-import comgalaxyglotech.confirmexperts.generalmarket.UserDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.User.UserDataClass;
 
 import static android.app.Activity.RESULT_OK;
 

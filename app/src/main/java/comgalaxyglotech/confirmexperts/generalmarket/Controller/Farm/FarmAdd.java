@@ -50,11 +50,11 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.PaymentPop;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessTransaction;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Payment.PaymentPop;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.ProcessTransaction;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreAdd;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreAdd;
 
 public class FarmAdd extends AppCompatActivity  implements PaymentPop.paymentDialogListener {
     //called from farm activity

@@ -13,6 +13,8 @@ import android.widget.ProgressBar;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Favorite.Favey;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Bonus.Bonus;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.Farm;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Loan.Loans;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveDataClass;
@@ -63,7 +65,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                 }
                 else if(location.equals("loan")){
                     DataStock dataStock = new DataStock();
-                    Intent intent = new Intent(TransitionAdvertDisplay.this,Loans.class);
+                    Intent intent = new Intent(TransitionAdvertDisplay.this, Loans.class);
                     StopThisActivity=activity;
                     startActivity(intent);
                 }
@@ -74,7 +76,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if(location.equals("Store_Transition")){
-                    Intent intent = new Intent(new Intent(TransitionAdvertDisplay.this,StoreActivity.class));
+                    Intent intent = new Intent(new Intent(TransitionAdvertDisplay.this, StoreActivity.class));
                     intent.putExtra("marketId","");
                     StopThisActivity=activity;
                     startActivity(intent);
@@ -118,7 +120,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                         }
                         else if(location.equals("Store_Transition")){
                             DataStock dataStock = new DataStock();
-                            Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreActivity");
+                            Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreActivity");
                             intent.putExtra("marketId","");
                             StopThisActivity=activity;
                             dataStock.getData(false,progress,context,intent);

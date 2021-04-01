@@ -21,10 +21,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.ReviewMainClass;
-import comgalaxyglotech.confirmexperts.generalmarket.UserDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Review.ReviewMainClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.User.UserDataClass;
 
 /**
  * Created by ELECTRON on 11/12/2019.

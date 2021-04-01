@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#333"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.StoreAdd">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreAdd">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -33,8 +33,13 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.MarketEditDialogue;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.marketReviewDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.User.UserDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
 
 public class Main3Activity extends AppCompatActivity{
     public static newMarketModel EditModel;
@@ -112,7 +117,7 @@ public class Main3Activity extends AppCompatActivity{
             public void onClick(View v) {
             //add new stores related to this market
               if(isLoggedIn){
-                  Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreAdd");
+                  Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreAdd");
                   intent.putExtra("marketId",marketId);
                   startActivity(intent);
               }
@@ -124,7 +129,7 @@ public class Main3Activity extends AppCompatActivity{
         viewStores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreActivity");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreActivity");
                 intent.putExtra("marketId",marketId);
                 startActivity(intent);
             }

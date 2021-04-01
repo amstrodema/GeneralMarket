@@ -26,12 +26,12 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.FarmOwner
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelDisplayTransaction;
-import comgalaxyglotech.confirmexperts.generalmarket.Model_Transaction;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.ModelDisplayTransaction;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.TransactionAdapter;
-import comgalaxyglotech.confirmexperts.generalmarket.UserProfile;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.TransactionAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.User.UserProfile;
 
 public class FarmOwnerTrades extends AppCompatActivity {
     private ArrayList<NewStockMainModel> stocks = new ArrayList<>();

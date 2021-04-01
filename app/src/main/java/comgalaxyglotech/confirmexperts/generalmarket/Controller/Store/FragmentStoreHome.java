@@ -39,15 +39,11 @@ import com.squareup.picasso.Picasso;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
-import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.NewStockActivity;
+import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.NewStockActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreAdd;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreReviewDialogue;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreView;
-import comgalaxyglotech.confirmexperts.generalmarket.UserDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.User.UserDataClass;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -221,7 +217,7 @@ public class FragmentStoreHome extends Fragment {
             public void onClick(View v) {
                 progressDialog.setMessage("Please Wait");
                 progressDialog.show();
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreItems");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems");
                 intent.putExtra("storeId",storeId);
                 intent.putExtra("farmClick","False");
                 //  gets data from datamodel class and then dataclass which then moves the activity

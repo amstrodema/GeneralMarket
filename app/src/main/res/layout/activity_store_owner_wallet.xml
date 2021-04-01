@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.StoreOwnerWallet">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreOwnerWallet">
     <fragment
-        android:name="comgalaxyglotech.confirmexperts.generalmarket.OwnerWalletFragment"
+        android:name="comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.OwnerWalletFragment"
         android:id="@+id/fragWallet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

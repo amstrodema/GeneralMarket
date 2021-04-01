@@ -42,9 +42,9 @@ import java.util.ArrayList;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Example.ExampleItem;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.itemDialogue;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Item.itemDialogue;
 
 public class Admin extends AppCompatActivity implements itemDialogue.itemDialogListener {
     private ImageButton advertImagePick;

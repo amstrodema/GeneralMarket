@@ -7,7 +7,7 @@
     android:paddingBottom="20dp"
     android:orientation="vertical"
     android:background="#f5f5f5"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.RegisterActivity">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Register.RegisterActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Help">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Help.Help">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

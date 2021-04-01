@@ -31,12 +31,16 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Favorite.ProcessFavourites;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_StoreAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 
 public class Main6Activity extends AppCompatActivity {
     private String  commonNameId,metricLabel;
@@ -255,7 +259,7 @@ public class Main6Activity extends AppCompatActivity {
 
             @Override
             public void onStoreMetaClick(int position) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreView");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreView");
                 intent.putExtra("storeId",priceList.get(position).getStoreId());
                 //intent.putExtra("metric",metricLabel);
                 startActivity(intent);
@@ -331,7 +335,7 @@ public class Main6Activity extends AppCompatActivity {
                 StoreItems.EditReference = storeItemKeep.get(position);
                 ModelClass modelClass = new ModelClass();
                 if(modelClass.getCurrentUserId().equals(StoreItems.EditReference.getCreatorId())){
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.NewStockActivity");
+                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.NewStockActivity");
                     startActivity(intent);
                 }
                 else{

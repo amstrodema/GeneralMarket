@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.NewArchive"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Trash.NewArchive"
     android:background="#f00">
     <LinearLayout
         android:layout_width="match_parent"

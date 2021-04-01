@@ -50,13 +50,13 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreDispla
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.FarmView;
-import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.Trade;
-import comgalaxyglotech.confirmexperts.generalmarket.UserProfile;
-import comgalaxyglotech.confirmexperts.generalmarket.marketDialog;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.User.UserProfile;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.marketDialog;
 
 public class Account extends AppCompatActivity implements marketDialog.marketDialogListener {
 
@@ -167,7 +167,7 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
                     if(verifyList.contains(mkt)){
                         int indx = verifyList.indexOf(mkt);
                         marketId = mktList.get(indx).getMarketId();
-                        Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreAdd");
+                        Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreAdd");
                         intent.putExtra("marketId",marketId);
                         startActivity(intent);
                     }
@@ -196,7 +196,7 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
         createStandaloneStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreAdd");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreAdd");
                 //intent.putExtra("marketId",marketId);
                 startActivity(intent);
             }
@@ -273,7 +273,7 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
     @Override
     public void launchStore(String mktId) {
         marketId = mktId;
-        Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreAdd");
+        Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreAdd");
         intent.putExtra("marketId",marketId);
         startActivity(intent);
     }
@@ -428,7 +428,7 @@ public class Account extends AppCompatActivity implements marketDialog.marketDia
             mAdapter_stores.setOnItemClickListener(new StoreAdapter.OnStoreItemClickListener() {
                 @Override
                 public void onItemClick(int position) {
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreView");
+                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreView");
                     intent.putExtra("storeId",storeList.get(position).getId());
                     intent.putExtra("creator",storeList.get(position).getCreatorId());
                     startActivity(intent);

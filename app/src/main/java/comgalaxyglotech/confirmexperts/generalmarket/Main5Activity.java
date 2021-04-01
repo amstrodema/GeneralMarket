@@ -19,6 +19,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Metric.MetricAdapter;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Metric.newMetricDialogue;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Metric.MetricDisplayModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Metric.MetricMainModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+
 /*import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;

@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import comgalaxyglotech.confirmexperts.generalmarket.HelpModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Help.HelpModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**

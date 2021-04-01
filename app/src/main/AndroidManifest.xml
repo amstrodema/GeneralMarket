@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Payment_Loader"
+        <activity android:name=".Controller.Payment.Payment_Loader"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
@@ -158,7 +158,7 @@
             android:value="ca-app-pub-3940256099942544~3347511713" />
         -->
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Controller.Register.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -168,7 +168,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewStockActivity"
+            android:name=".Controller.Stock.NewStockActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -178,7 +178,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreAdd"
+            android:name=".Controller.Store.StoreAdd"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -188,7 +188,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreActivity"
+            android:name=".Controller.Store.StoreActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -198,7 +198,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreView"
+            android:name=".Controller.Store.StoreView"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -208,7 +208,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreItems"
+            android:name=".Controller.Store.StoreItems"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -218,7 +218,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreItemsNewAdd"
+            android:name=".Controller.Store.StoreItemsNewAdd"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -228,7 +228,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Health"
+            android:name=".Trash.Health"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -238,7 +238,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Stocks"
+            android:name=".Controller.Stock.Stocks"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -288,7 +288,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".History"
+            android:name=".Controller.History.History"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -298,7 +298,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Help"
+            android:name=".Controller.Help.Help"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -308,7 +308,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StockLanding"
+            android:name=".Controller.Stock.StockLanding"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -318,7 +318,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StockDisplay"
+            android:name=".Controller.Stock.StockDisplay"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -348,7 +348,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewArchive"
+            android:name=".Trash.NewArchive"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -398,7 +398,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Settings"
+            android:name=".Controller.Settings.Settings"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -418,7 +418,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NotificationView"
+            android:name=".Controller.Notification.NotificationView"
             android:label="Notifications"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -447,9 +447,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditComponent" />
+        <activity android:name=".ClassPack.EditComponent" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Controller.Settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".Main8Activity">
             <meta-data
@@ -462,7 +462,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".Loans"
+            android:name=".Controller.Loan.Loans"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="comgalaxyglotech.confirmexperts.generalmarket.Loans" />
@@ -501,7 +501,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreOwnerHome"
+            android:name=".Controller.Store.StoreOwnerHome"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -511,7 +511,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreOwnerWallet"
+            android:name=".Controller.Store.StoreOwnerWallet"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -521,7 +521,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreOwnerTrades"
+            android:name=".Controller.Store.StoreOwnerTrades"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -531,7 +531,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StoreOwnerInsight"
+            android:name=".Controller.Store.StoreOwnerInsight"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

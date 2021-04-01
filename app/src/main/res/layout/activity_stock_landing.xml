@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.StockLanding">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.StockLanding">
     <fragment
         android:name="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStockStore"
         android:id="@+id/fragStock"

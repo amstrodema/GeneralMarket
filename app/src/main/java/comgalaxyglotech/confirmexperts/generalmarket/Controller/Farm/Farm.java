@@ -48,12 +48,12 @@ import comgalaxyglotech.confirmexperts.generalmarket.BL.Farm.FarmAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
-import comgalaxyglotech.confirmexperts.generalmarket.LocationHandler;
+import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.RegisterActivity;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Register.RegisterActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
 
 public class Farm extends AppCompatActivity{

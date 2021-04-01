@@ -39,10 +39,10 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
-import comgalaxyglotech.confirmexperts.generalmarket.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.NewStockAdd;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.StoreItems;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems;
 
 public class FarmStock extends AppCompatActivity {
     private boolean isEdit =false;
@@ -206,7 +206,7 @@ public class FarmStock extends AppCompatActivity {
                     Toast.makeText(FarmStock.this,"Stock Saved Without Image",Toast.LENGTH_SHORT).show();
                     finish();
                     /*
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.StoreItems");
+                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems");
                     intent.putExtra("storeId",farmId);
                     intent.putExtra("farmClick","True");
                     startActivity(intent);*/
