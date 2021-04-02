@@ -24,7 +24,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStockS
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.Trade;
 

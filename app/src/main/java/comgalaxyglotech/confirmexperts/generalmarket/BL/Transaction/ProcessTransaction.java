@@ -27,7 +27,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Notification.NotificationAdd;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.Trade;
 
 /**

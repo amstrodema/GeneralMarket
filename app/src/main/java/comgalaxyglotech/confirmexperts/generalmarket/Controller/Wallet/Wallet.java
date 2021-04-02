@@ -34,7 +34,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.CartInvoiceT
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Wallet.Model_Wallet;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.SendMoney;
 import comgalaxyglotech.confirmexperts.generalmarket.Trade;

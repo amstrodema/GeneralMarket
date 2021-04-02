@@ -428,7 +428,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TransitionAdvertDisplay"
+            android:name=".ClassPack.TransitionAdvertDisplay"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

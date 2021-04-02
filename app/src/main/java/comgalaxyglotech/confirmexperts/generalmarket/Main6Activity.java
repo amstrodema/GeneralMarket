@@ -32,6 +32,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Favorite.ProcessFavourites;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_StoreAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems;
@@ -177,7 +178,7 @@ public class Main6Activity extends AppCompatActivity {
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Farm_Transition");
                 startActivity(intent);
             }
@@ -192,7 +193,7 @@ public class Main6Activity extends AppCompatActivity {
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Market_Transition");
                 startActivity(intent);
             }
@@ -200,7 +201,7 @@ public class Main6Activity extends AppCompatActivity {
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Store_Transition");
                 startActivity(intent);
             }

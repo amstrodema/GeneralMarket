@@ -44,7 +44,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Favorite.ModelFavey;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Favorite.ProcessFavourites;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 

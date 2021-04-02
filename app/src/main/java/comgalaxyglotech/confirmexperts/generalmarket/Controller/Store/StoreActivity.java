@@ -50,7 +50,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationH
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
+import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay;
 
 public class StoreActivity extends AppCompatActivity {
     private SwipeRefreshLayout swiper;
@@ -189,7 +189,7 @@ private void reloadData(){
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Farm_Transition");
                 startActivity(intent);
             }
@@ -204,7 +204,7 @@ private void reloadData(){
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Market_Transition");
                 startActivity(intent);
             }
@@ -212,7 +212,7 @@ private void reloadData(){
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Store_Transition");
                 startActivity(intent);
             }

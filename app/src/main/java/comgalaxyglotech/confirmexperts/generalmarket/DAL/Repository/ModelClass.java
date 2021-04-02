@@ -27,7 +27,7 @@ import java.util.Date;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Commodities.AllCommodities;
-import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsVModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 
@@ -276,7 +276,7 @@ public class ModelClass {
     private void getNotification(final String id){
         readData(new FirebaseCallback() {
             @Override
-            public void onCallback(ArrayList<SettingsModel> settings) {
+            public void onCallback(ArrayList<SettingsVModel> settings) {
                 if(settings != null){
 
                 }
@@ -288,10 +288,10 @@ public class ModelClass {
             // String name;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ArrayList<SettingsModel> settings = new ArrayList<>();
+                ArrayList<SettingsVModel> settings = new ArrayList<>();
                 if (dataSnapshot.exists()) {
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        SettingsModel set= snapshot.getValue(SettingsModel.class);
+                        SettingsVModel set= snapshot.getValue(SettingsVModel.class);
                         settings.add(set);
                     }
                     firebaseCallback.onCallback(settings);
@@ -320,7 +320,7 @@ public class ModelClass {
 
     }
     public interface FirebaseCallback{
-        void onCallback (ArrayList<SettingsModel> settings);
+        void onCallback (ArrayList<SettingsVModel> settings);
     }
     public static String initials(String marketName){
         String [] initials = marketName.split(" ");

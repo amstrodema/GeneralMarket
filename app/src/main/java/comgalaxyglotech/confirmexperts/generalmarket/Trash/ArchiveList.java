@@ -21,7 +21,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
+import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay;
 
 public class ArchiveList extends AppCompatActivity {
     FloatingActionButton newArchive;
@@ -133,7 +133,7 @@ public class ArchiveList extends AppCompatActivity {
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Market_Transition");
                 startActivity(intent);
             }
@@ -141,7 +141,7 @@ public class ArchiveList extends AppCompatActivity {
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Store_Transition");
                 startActivity(intent);
             }

@@ -54,7 +54,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Register.RegisterActivity;
-import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
+import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay;
 
 public class Farm extends AppCompatActivity{
     //called from activity 8
@@ -231,7 +231,7 @@ public class Farm extends AppCompatActivity{
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Farm_Transition");
                 startActivity(intent);
             }
@@ -246,7 +246,7 @@ public class Farm extends AppCompatActivity{
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Market_Transition");
                 startActivity(intent);
             }
@@ -254,7 +254,7 @@ public class Farm extends AppCompatActivity{
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Store_Transition");
                 startActivity(intent);
             }

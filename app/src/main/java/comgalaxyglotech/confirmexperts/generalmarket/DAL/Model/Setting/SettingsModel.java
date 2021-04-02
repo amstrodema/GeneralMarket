@@ -1,52 +1,58 @@
 package comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting;
 
-/**
- * Created by ELECTRON on 08/10/2020.
- */
-
 public class SettingsModel {
-    private String id, settingType, settingValue;
-    private Double settingValueDouble;
+    private String settingName, valueText ="", dataType;
+    private int valueInt= 0;
+    private double valueDouble =0;
+
     public SettingsModel() {
-
     }
 
-    public SettingsModel(String id, String settingType, String settingValue, Double settingValueInt) {
-        this.id = id;
-        this.settingType = settingType;
-        this.settingValue = settingValue;
-        this.settingValueDouble = settingValueInt;
+    public SettingsModel(String settingName, String valueText, String dataType, int valueInt, double valueDouble) {
+        this.settingName = settingName;
+        this.valueText = valueText;
+        this.dataType = dataType;
+        this.valueInt = valueInt;
+        this.valueDouble = valueDouble;
     }
 
-    public String getId() {
-        return id;
+    public String getSettingName() {
+        return settingName;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setSettingName(String settingName) {
+        this.settingName = settingName;
     }
 
-    public String getSettingType() {
-        return settingType;
+    public String getValueText() {
+        return valueText;
     }
 
-    public void setSettingType(String settingType) {
-        this.settingType = settingType;
+    public void setValueText(String valueText) {
+        this.valueText = valueText;
     }
 
-    public String getSettingValue() {
-        return settingValue;
+    public String getDataType() {
+        return dataType;
     }
 
-    public void setSettingValue(String settingValue) {
-        this.settingValue = settingValue;
+    public void setDataType(String dataType) {
+        this.dataType = dataType;
     }
 
-    public Double getSettingValueDouble() {
-        return settingValueDouble;
+    public int getValueInt() {
+        return valueInt;
     }
 
-    public void setSettingValueDouble(Double settingValueDouble) {
-        this.settingValueDouble = settingValueDouble;
+    public void setValueInt(int valueInt) {
+        this.valueInt = valueInt;
+    }
+
+    public double getValueDouble() {
+        return valueDouble;
+    }
+
+    public void setValueDouble(double valueDouble) {
+        this.valueDouble = valueDouble;
     }
 }

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
+import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay;
 
 public class Loans extends AppCompatActivity {
 

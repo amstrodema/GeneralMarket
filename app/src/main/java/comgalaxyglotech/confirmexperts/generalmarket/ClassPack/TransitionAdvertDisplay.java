@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.ClassPack;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,6 +17,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Loan.Loans;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveDataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.ArchiveList;
 import comgalaxyglotech.confirmexperts.generalmarket.Trash.RecipeList;

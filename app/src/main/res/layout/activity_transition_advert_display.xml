@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:id="@+id/adContainer"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay">
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="250dp"
         android:layout_height="250dp"

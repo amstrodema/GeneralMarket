@@ -1,6 +1,6 @@
 package comgalaxyglotech.confirmexperts.generalmarket.Trash;
 
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 
 /**
  * Created by ELECTRON on 02/01/2020.

@@ -39,7 +39,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.NewStockAdd;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockAdd;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class NewStockActivity extends AppCompatActivity {

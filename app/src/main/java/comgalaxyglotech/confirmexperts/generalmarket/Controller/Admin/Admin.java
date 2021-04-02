@@ -39,7 +39,7 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsVModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Example.ExampleItem;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
@@ -59,7 +59,7 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
     Uri imagePath;
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
-    private ArrayList<SettingsModel>settings = new ArrayList<>();
+    private ArrayList<SettingsVModel>settings = new ArrayList<>();
     private Context context = this;
     private ProgressDialog progressDialog;
     @Override
@@ -104,7 +104,7 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
         getSettings();
 
     }
-    private void logSetting(final SettingsModel setting){
+    private void logSetting(final SettingsVModel setting){
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("Save Settings?");
         alertDialog.setIcon(R.drawable.danger);
@@ -143,9 +143,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = minVersions.getText().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("appMin")) {
                             setting = set;
                            isPresent = true;
@@ -173,9 +173,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = promoValue.getText().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("Bonus")) {
                             setting = set;
                             isPresent = true;
@@ -203,9 +203,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = storeCost.getText().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("StoreCost")) {
                             setting = set;
                             isPresent = true;
@@ -240,9 +240,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = appVersionValue.getText().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("AppVersion")) {
                             setting = set;
                             isPresent = true;
@@ -269,9 +269,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = updateTimeValue.getText().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("UpdateTime")) {
                             setting = set;
                             isPresent = true;
@@ -298,9 +298,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = appGrant.getSelectedItem().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("AppAccess")) {
                             setting = set;
                             isPresent = true;
@@ -327,9 +327,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = appCleanGrant.getSelectedItem().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("AppClean")) {
                             setting = set;
                             isPresent = true;
@@ -356,9 +356,9 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
                 final String value = generalMessageValue.getText().toString();
                 if (!value.trim().isEmpty())
                 {
-                    SettingsModel setting = new SettingsModel();
+                    SettingsVModel setting = new SettingsVModel();
                     boolean isPresent = false;
-                    for (SettingsModel set : settings) {
+                    for (SettingsVModel set : settings) {
                         if (set.getSettingType().equals("GeneralMessage")) {
                             setting = set;
                             isPresent = true;
@@ -435,7 +435,7 @@ public class Admin extends AppCompatActivity implements itemDialogue.itemDialogL
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        SettingsModel set= snapshot.getValue(SettingsModel.class);
+                        SettingsVModel set= snapshot.getValue(SettingsVModel.class);
                         assert set != null;
                         switch (set.getSettingType()) {
                             case "GeneralMessage":

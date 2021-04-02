@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
 
 public class DbHelper extends SQLiteOpenHelper {
     private ModelClass modelClass = new ModelClass();

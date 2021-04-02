@@ -18,7 +18,7 @@ import com.flutterwave.raveandroid.RaveUiManager;
 import com.flutterwave.raveandroid.rave_java_commons.RaveConstants;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class AddMoney extends AppCompatActivity {

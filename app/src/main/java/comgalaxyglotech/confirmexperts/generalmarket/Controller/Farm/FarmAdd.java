@@ -48,7 +48,7 @@ import com.google.firebase.storage.StorageReference;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsVModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Payment.PaymentPop;
@@ -248,9 +248,9 @@ public class FarmAdd extends AppCompatActivity  implements PaymentPop.paymentDia
     private void getSettings(){
         model.readData(new ModelClass.FirebaseCallback() {
             @Override
-            public void onCallback(ArrayList<SettingsModel> settings) {
+            public void onCallback(ArrayList<SettingsVModel> settings) {
                 if(settings != null){
-                    for (SettingsModel set:settings) {
+                    for (SettingsVModel set:settings) {
                         if (set.getSettingType().equals("StoreCost")) {
                             StoreAdd.cost = set.getSettingValueDouble();
                             break;

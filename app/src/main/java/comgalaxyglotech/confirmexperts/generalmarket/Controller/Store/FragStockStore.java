@@ -40,7 +40,7 @@ import java.util.Map;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_StoreAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
-import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsVModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
@@ -51,7 +51,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Favorite.ModelFav
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.NewStockActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Favorite.ProcessFavourites;
-import comgalaxyglotech.confirmexperts.generalmarket.ProcessWallet;
+import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 
@@ -259,7 +259,7 @@ public class FragStockStore extends Fragment{
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Farm_Transition");
                 startActivity(intent);
             }
@@ -274,7 +274,7 @@ public class FragStockStore extends Fragment{
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Market_Transition");
                 startActivity(intent);
             }
@@ -282,7 +282,7 @@ public class FragStockStore extends Fragment{
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay");
+                Intent intent =  new Intent("comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay");
                 intent.putExtra("Location","Store_Transition");
                 startActivity(intent);
             }
@@ -330,7 +330,7 @@ public class FragStockStore extends Fragment{
     public void  getData(){
         modelClass.readData(new ModelClass.FirebaseCallback(){
             @Override
-            public void onCallback(ArrayList<SettingsModel> settings) {
+            public void onCallback(ArrayList<SettingsVModel> settings) {
 
             }
         },"","","");

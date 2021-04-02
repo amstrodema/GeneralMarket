@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities.CleaningInProgress;
-import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsModel;
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsVModel;
 
 public class splashScreen extends AppCompatActivity {
    // private GifImageView gifImageView;
@@ -127,9 +127,9 @@ public class splashScreen extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
                     String updateDate="";
-                    SettingsModel appAccessSetting = new SettingsModel(), appCleanSetting = new SettingsModel(), appVersionSetting = new SettingsModel(), appUpdateSetting = new SettingsModel(), appMinSetting = new SettingsModel();
+                    SettingsVModel appAccessSetting = new SettingsVModel(), appCleanSetting = new SettingsVModel(), appVersionSetting = new SettingsVModel(), appUpdateSetting = new SettingsVModel(), appMinSetting = new SettingsVModel();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        SettingsModel set= snapshot.getValue(SettingsModel.class);
+                        SettingsVModel set= snapshot.getValue(SettingsVModel.class);
                         assert set != null;
                         if(set.getSettingType().equals("GeneralMessage")){
                             message= set.getSettingValue();

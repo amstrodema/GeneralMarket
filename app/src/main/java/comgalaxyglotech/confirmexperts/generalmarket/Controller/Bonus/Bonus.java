@@ -4,11 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.TransitionAdvertDisplay;
+import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay;
 
 public class Bonus extends AppCompatActivity {
     private pl.droidsonroids.gif.GifImageView claimBtn;
