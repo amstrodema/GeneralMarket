@@ -32,7 +32,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Wallet.Model_Wallet;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
-import comgalaxyglotech.confirmexperts.generalmarket.Trade;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.Trade;
 
 /**
  * Created by ELECTRON on 02/01/2020.

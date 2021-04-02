@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/swiper"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Trade">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.Trade">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

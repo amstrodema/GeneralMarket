@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -44,6 +44,8 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainMo
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.ModelDisplayTransaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class Trade extends AppCompatActivity {
     private SwipeRefreshLayout swiper;
@@ -554,7 +556,7 @@ public class Trade extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);

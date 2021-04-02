@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreOwnerInsight">
     <fragment
-        android:name="comgalaxyglotech.confirmexperts.generalmarket.OwnerInsightFragment"
+        android:name="comgalaxyglotech.confirmexperts.generalmarket.Controller.Insight.OwnerInsightFragment"
         android:id="@+id/fragWallet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

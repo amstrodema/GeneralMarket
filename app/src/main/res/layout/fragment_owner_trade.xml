@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/swiper"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.OwnerTradeFragment">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.OwnerTradeFragment">
      <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

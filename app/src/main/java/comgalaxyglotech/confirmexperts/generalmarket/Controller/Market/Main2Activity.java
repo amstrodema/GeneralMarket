@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Market;
 
 import android.Manifest;
 import android.content.Context;
@@ -49,11 +49,12 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Market.MarketAdapter;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.marketDialog;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Register.RegisterActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.marketModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
 
 public class Main2Activity extends AppCompatActivity{
@@ -152,7 +153,7 @@ public class Main2Activity extends AppCompatActivity{
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
@@ -355,7 +356,7 @@ public class Main2Activity extends AppCompatActivity{
         mAdapter.setOnItemClickListener(new MarketAdapter.OnMarketItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Main3Activity");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main3Activity");
                 intent.putExtra("marketID",marketList.get(position).getMarketId());
                 startActivity(intent);
 

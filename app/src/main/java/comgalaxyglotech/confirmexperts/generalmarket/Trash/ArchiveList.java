@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
-import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay;
@@ -109,7 +109,7 @@ public class ArchiveList extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);

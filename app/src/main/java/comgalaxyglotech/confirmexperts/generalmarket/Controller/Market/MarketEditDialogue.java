@@ -29,7 +29,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
-import comgalaxyglotech.confirmexperts.generalmarket.Main3Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /**

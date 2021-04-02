@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.splashScreen"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities.splashScreen"
     android:background="#fff">
 
  <!--   <pl.droidsonroids.gif.GifImageView

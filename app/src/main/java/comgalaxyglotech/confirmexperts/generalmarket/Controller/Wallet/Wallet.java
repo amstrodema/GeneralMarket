@@ -31,13 +31,13 @@ import java.util.ArrayList;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Account.Account;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.AddMoney;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Transaction.CartInvoiceTransaction;
-import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Wallet.Model_Wallet;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.SendMoney;
-import comgalaxyglotech.confirmexperts.generalmarket.Trade;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.SendMoney;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.Trade;
 
 public class Wallet extends AppCompatActivity {
     private SwipeRefreshLayout swiper;
@@ -225,7 +225,7 @@ public class Wallet extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);

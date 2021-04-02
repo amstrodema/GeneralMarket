@@ -46,7 +46,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
             @Override
             public void run() {
                 if(location.equals("Market_Transition")){
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Main2Activity");
+                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main2Activity");
                     startActivity(intent);
                     TransitionAdvertDisplay.this.finish();
                 }
@@ -109,7 +109,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
                     @Override
                     public void run() {
                         if(location.equals("Market_Transition")){
-                            Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Main2Activity");
+                            Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main2Activity");
                             startActivity(intent);
                             TransitionAdvertDisplay.this.finish();
                         }

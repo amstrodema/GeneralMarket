@@ -49,7 +49,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmDisplayM
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
-import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
@@ -222,7 +222,7 @@ public class Farm extends AppCompatActivity{
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);

@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket.ClassPack;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Analysis;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

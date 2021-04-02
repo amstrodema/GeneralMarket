@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Main2Activity"
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main2Activity"
     android:background="#eee">
     <ProgressBar
         android:layout_width="25dp"

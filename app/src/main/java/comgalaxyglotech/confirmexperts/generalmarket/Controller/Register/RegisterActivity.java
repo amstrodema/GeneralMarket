@@ -25,7 +25,7 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.User.UserProfile;
-import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -131,7 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
                         firebaseAuth.signOut();
                         progressDialog.dismiss();
                         finish();
-                        startActivity(new Intent(RegisterActivity.this, Main8Activity.class));
+                        startActivity(new Intent(RegisterActivity.this, HomePage.class));
                     }
                     else{
                         progressDialog.dismiss();

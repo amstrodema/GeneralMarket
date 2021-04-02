@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import comgalaxyglotech.confirmexperts.generalmarket.Main8Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class CleaningInProgress extends AppCompatActivity {
@@ -44,7 +44,7 @@ public class CleaningInProgress extends AppCompatActivity {
             public void onClick(View v) {
                 count++;
                 if(counta >=10 && count >=10){
-                    Intent intent = new Intent(CleaningInProgress.this, Main8Activity.class);
+                    Intent intent = new Intent(CleaningInProgress.this, HomePage.class);
                     intent.putExtra("dataType","deal");
                     startActivity(intent);
                     finish();
@@ -76,7 +76,7 @@ public class CleaningInProgress extends AppCompatActivity {
                         timerDisplay.setText(counta);
                     } else {
                        //log in
-                        Intent intent = new Intent(CleaningInProgress.this, Main8Activity.class);
+                        Intent intent = new Intent(CleaningInProgress.this, HomePage.class);
                         intent.putExtra("dataType","deal");
                         startActivity(intent);
                         finish();

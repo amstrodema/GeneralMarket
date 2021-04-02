@@ -29,7 +29,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreView;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Farm.FarmMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
-import comgalaxyglotech.confirmexperts.generalmarket.Main3Activity;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main3Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 
 /**

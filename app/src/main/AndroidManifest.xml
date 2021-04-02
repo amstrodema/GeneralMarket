@@ -23,7 +23,7 @@
             android:name="co.paystack.android.PublicKey"
             android:value="pk_test_7b0176a35fa3b5473e1f61f5b790c2880b6085b6" /> <!-- android:value="pk_live_9e13d0c02262e19e47b8656637018165e79d02d7" -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LandingPage_InfoGraphics"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main2Activity"
+            android:name=".Controller.Market.Main2Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -43,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main3Activity"
+            android:name=".Controller.Market.Main3Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -53,7 +53,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main4Activity"
+            android:name=".Controller.Metric.Main4Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -63,7 +63,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main5Activity"
+            android:name=".Controller.Metric.Main5Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -73,7 +73,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main6Activity"
+            android:name=".Controller.Stock.Main6Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -93,7 +93,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main8Activity"
+            android:name=".HomePage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -143,7 +143,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".splashScreen"
+            android:name=".Controller.Utilities.splashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -258,7 +258,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ClassPack.Analysis"
+            android:name=".Controller.Analysis.Analysis"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -451,10 +451,10 @@
         <activity
             android:name=".Controller.Settings.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".Main8Activity">
+            android:parentActivityName=".HomePage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="comgalaxyglotech.confirmexperts.generalmarket.Main8Activity" />
+                android:value="comgalaxyglotech.confirmexperts.generalmarket.HomePage" />
         </activity>
 
         <meta-data
@@ -491,7 +491,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Trade"
+            android:name=".Controller.Transaction.Trade"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -571,7 +571,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SendMoney"
+            android:name=".Controller.Transaction.SendMoney"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -581,7 +581,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Update"
+            android:name=".Controller.Utilities.Update"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Metric;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -20,10 +20,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Metric.MetricAdapter;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Metric.newMetricDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Metric.MetricDisplayModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Metric.MetricMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 /*import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -59,7 +59,7 @@ public class Main5Activity extends AppCompatActivity implements  newMetricDialog
         mAdapter.setOnItemClickListener(new MetricAdapter.OnMetricItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Main6Activity");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.Main6Activity");
                 intent.putExtra("metricID",metricList.get(position).getId());
                 String metricLabel=metricList.get(position).getMetric().toUpperCase()+" of "+itemName.toUpperCase();
                 intent.putExtra("metric",metricLabel);

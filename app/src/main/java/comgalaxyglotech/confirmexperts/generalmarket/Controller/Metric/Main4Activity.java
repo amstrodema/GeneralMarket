@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Metric;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -34,6 +34,8 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Item.itemModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class Main4Activity extends AppCompatActivity{
 private RecyclerView mRecyclerView;
@@ -93,7 +95,7 @@ private ProgressBar progress;
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);
@@ -282,7 +284,7 @@ private ProgressBar progress;
             @Override
             public void onItemClick(int position) {
                 progressDialog.show();
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Main6Activity");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.Main6Activity");
                 intent.putExtra("commonNameId",metricList.get(position).getCommonId());
                 dataModel.getSmarterData(progressDialog,context,intent);
                 // mAdapter.notifyItemChanged(position);

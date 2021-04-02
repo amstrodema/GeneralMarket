@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Market;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -33,12 +33,11 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.MarketEditDialogue;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.marketReviewDialogue;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Market.newMarketModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.User.UserDataClass;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 import comgalaxyglotech.confirmexperts.generalmarket.Services.Location.LocationHandler;
 
 public class Main3Activity extends AppCompatActivity{
@@ -179,7 +178,7 @@ public class Main3Activity extends AppCompatActivity{
         enterMarket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Main4Activity");
+                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Metric.Main4Activity");
                 intent.putExtra("thisMarketID",marketId);
                 intent.putExtra("marketName",topic);
                 startActivity(intent);

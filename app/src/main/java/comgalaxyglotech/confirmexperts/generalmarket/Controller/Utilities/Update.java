@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.widget.Button;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class Update extends AppCompatActivity {
     private Button update, ignore;
@@ -39,7 +42,7 @@ public class Update extends AppCompatActivity {
         ignore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Update.this, Main8Activity.class);
+                Intent intent = new Intent(Update.this, HomePage.class);
                 intent.putExtra("dataType","deal");
                 startActivity(intent);
                 finish();

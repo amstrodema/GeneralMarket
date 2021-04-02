@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -29,8 +29,9 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities.CleaningInProgress;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsVModel;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class splashScreen extends AppCompatActivity {
    // private GifImageView gifImageView;
@@ -160,7 +161,7 @@ public class splashScreen extends AppCompatActivity {
                     else if (appAccessSetting.getSettingValue() !=  null && appAccessSetting.getSettingValue().equals("Allow Current Only")) {
                         //allows current app version
                        if(appVersionSetting.getSettingValue() != null && appVersionSetting.getSettingValue().equals(appSignature.getText().toString())){
-                           Intent intent = new Intent(splashScreen.this, Main8Activity.class);
+                           Intent intent = new Intent(splashScreen.this, HomePage.class);
                            intent.putExtra("dataType","deal");
                            startActivity(intent);
                            finish();
@@ -183,7 +184,7 @@ public class splashScreen extends AppCompatActivity {
                         }
 
                         if(appVersionSetting.getSettingValue().equals(appSignature.getText().toString())){
-                            Intent intent = new Intent(splashScreen.this, Main8Activity.class);
+                            Intent intent = new Intent(splashScreen.this, HomePage.class);
                             intent.putExtra("dataType","deal");
                             startActivity(intent);
                             finish();

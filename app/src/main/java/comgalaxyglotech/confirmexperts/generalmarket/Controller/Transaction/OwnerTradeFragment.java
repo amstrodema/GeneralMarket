@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -33,6 +33,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMai
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.ModelDisplayTransaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.User.UserProfile;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class OwnerTradeFragment extends Fragment {
     private ProgressBar progBar;

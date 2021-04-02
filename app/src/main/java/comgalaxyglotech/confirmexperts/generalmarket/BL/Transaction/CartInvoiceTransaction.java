@@ -26,7 +26,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
-import comgalaxyglotech.confirmexperts.generalmarket.Trade;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.Trade;
 
 /**
  * Created by ELECTRON on 08/04/2020.

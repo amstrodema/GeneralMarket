@@ -49,7 +49,7 @@ public class ReviewDataMarket {
                 mAdapter.setOnItemClickListener(new ReviewAdapter.OnMetricItemClickListener() {
                     @Override
                     public void onItemClick(int position) {
-                                /* Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Main3Activity");
+                                /* Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main3Activity");
                             intent.putExtra("marketID",marketList.get(position).getMarketId());
                             startActivity(intent);*/
                     }

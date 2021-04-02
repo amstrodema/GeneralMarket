@@ -1,10 +1,10 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
-
-import androidx.annotation.NonNull;
+package comgalaxyglotech.confirmexperts.generalmarket.BL.Monitor;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Monitor.MonitorLog;
 
 /**
  * Created by ELECTRON on 08/13/2020.

@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Process.ProcessWallet;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Store.StoreMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.User.UserProfile;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class SendMoney extends AppCompatActivity {
     private Button sendMoney;

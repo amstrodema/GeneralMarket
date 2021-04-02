@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blue_gradient2"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.OwnerInsightFragment">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Insight.OwnerInsightFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

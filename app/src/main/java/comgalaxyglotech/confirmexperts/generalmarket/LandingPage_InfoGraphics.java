@@ -17,7 +17,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
-public class MainActivity extends AppCompatActivity {
+public class LandingPage_InfoGraphics extends AppCompatActivity {
     private Button page1Continue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         page1Continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Main8Activity.class);
+                Intent intent = new Intent(LandingPage_InfoGraphics.this, HomePage.class);
                 startActivity(intent);
             }
         });

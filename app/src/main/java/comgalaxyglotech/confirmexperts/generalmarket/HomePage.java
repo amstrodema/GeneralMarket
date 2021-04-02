@@ -43,6 +43,7 @@ import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
 import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.DbHelper;
+import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.SampleWorker;
 import comgalaxyglotech.confirmexperts.generalmarket.ClassPack.TransitionAdvertDisplay;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Account.Account;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Admin.Admin;
@@ -51,10 +52,12 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Login.loginDialo
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Notification.NotificationView;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Settings.SettingsActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.Stocks;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.Trade;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities.splashScreen;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.Wallet;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 
-public class Main8Activity extends AppCompatActivity implements loginDialog.dialogListener {
+public class HomePage extends AppCompatActivity implements loginDialog.dialogListener {
     private Button btnAcct,notification,setting,helpBtn,loan,favey,logOutClick,adminBtn;
     private TextView logInStatus,marque;
     FirebaseAuth firebaseAuth;
@@ -182,24 +185,24 @@ StringBuilder val= new StringBuilder();
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main8Activity.this, Wallet.class));
+                startActivity(new Intent(HomePage.this, Wallet.class));
             }
         });
         trades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!modelClass.userLoggedIn()){
-                    Toast.makeText(Main8Activity.this, "Log In Required!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomePage.this, "Log In Required!", Toast.LENGTH_SHORT).show();
                    // finish();
                 }
                 else
-                startActivity(new Intent(Main8Activity.this, Trade.class));
+                startActivity(new Intent(HomePage.this, Trade.class));
             }
         });
         cartBonus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main8Activity.this, TransitionAdvertDisplay.class);
+                Intent intent = new Intent(HomePage.this, TransitionAdvertDisplay.class);
                 intent.putExtra("Location", "cart");
                 startActivity(intent);
             }
@@ -207,7 +210,7 @@ StringBuilder val= new StringBuilder();
         loan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main8Activity.this, TransitionAdvertDisplay.class);
+                Intent intent = new Intent(HomePage.this, TransitionAdvertDisplay.class);
                 intent.putExtra("Location", "loan");
                 startActivity(intent);
             }
@@ -215,7 +218,7 @@ StringBuilder val= new StringBuilder();
         favey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main8Activity.this, TransitionAdvertDisplay.class);
+                Intent intent = new Intent(HomePage.this, TransitionAdvertDisplay.class);
                 intent.putExtra("Location", "favey");
                 startActivity(intent);
             }
@@ -223,26 +226,26 @@ StringBuilder val= new StringBuilder();
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main8Activity.this, NotificationView.class));
+                startActivity(new Intent(HomePage.this, NotificationView.class));
             }
         });
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main8Activity.this, SettingsActivity.class));
+                startActivity(new Intent(HomePage.this, SettingsActivity.class));
             }
         });
         logOutClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 firebaseAuth.signOut();
-                startActivity(new Intent(Main8Activity.this, Main8Activity.class));
+                startActivity(new Intent(HomePage.this, HomePage.class));
             }
         });
         adminBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main8Activity.this, Admin.class));
+                startActivity(new Intent(HomePage.this, Admin.class));
             }
         });
         btnAcct.setOnClickListener(new View.OnClickListener() {
@@ -250,7 +253,7 @@ StringBuilder val= new StringBuilder();
             public void onClick(View v) {
                 //if not user den proceed to sin-in or create else profile
                 if (modelClass.userLoggedIn()) {
-                    startActivity(new Intent(Main8Activity.this, Account.class));
+                    startActivity(new Intent(HomePage.this, Account.class));
                 } else {
                     openDialog();
                 }
@@ -260,13 +263,13 @@ StringBuilder val= new StringBuilder();
         helpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main8Activity.this, Help.class));
+                startActivity(new Intent(HomePage.this, Help.class));
               }
         });
         archiveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main8Activity.this, TransitionAdvertDisplay.class);
+                Intent intent = new Intent(HomePage.this, TransitionAdvertDisplay.class);
                 intent.putExtra("Location", "Archive_Transition");
                 startActivity(intent);
             }
@@ -282,7 +285,7 @@ StringBuilder val= new StringBuilder();
         farmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main8Activity.this, TransitionAdvertDisplay.class);
+                Intent intent = new Intent(HomePage.this, TransitionAdvertDisplay.class);
                 intent.putExtra("Location", "Farm_Transition");
                 startActivity(intent);
             }
@@ -290,7 +293,7 @@ StringBuilder val= new StringBuilder();
         marktBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main8Activity.this, TransitionAdvertDisplay.class);
+                Intent intent = new Intent(HomePage.this, TransitionAdvertDisplay.class);
                 intent.putExtra("Location", "Market_Transition");
                 startActivity(intent);
             }
@@ -298,14 +301,14 @@ StringBuilder val= new StringBuilder();
         stocksBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Main8Activity.this, Stocks.class));
+                startActivity(new Intent(HomePage.this, Stocks.class));
             }
         });
         //store btn and smart store btn does d same tin. adjust bot wen need arises.
         storeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main8Activity.this, TransitionAdvertDisplay.class);
+                Intent intent = new Intent(HomePage.this, TransitionAdvertDisplay.class);
                 intent.putExtra("Location", "Store_Transition");
                 startActivity(intent);
             }
@@ -333,7 +336,7 @@ StringBuilder val= new StringBuilder();
                 }
                 else {
                     progressDialog.dismiss();
-                    Toast.makeText(Main8Activity.this,"Log In Not Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomePage.this,"Log In Not Successful", Toast.LENGTH_SHORT).show();
                     counter --;
                 }
             }
@@ -346,12 +349,12 @@ StringBuilder val= new StringBuilder();
         progressDialog.dismiss();
         if(emailFlag){
             finish();
-            startActivity(new Intent(Main8Activity.this, Main8Activity.class));
-            Toast.makeText(Main8Activity.this,"Log In Successful", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(HomePage.this, HomePage.class));
+            Toast.makeText(HomePage.this,"Log In Successful", Toast.LENGTH_SHORT).show();
         }
         else{
             firebaseUser.sendEmailVerification();
-            Toast.makeText(Main8Activity.this,"Verify your email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomePage.this,"Verify your email", Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();
         }
     }

@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -42,6 +42,8 @@ import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.HomePage;
+import comgalaxyglotech.confirmexperts.generalmarket.R;
 
 public class Main6Activity extends AppCompatActivity {
     private String  commonNameId,metricLabel;
@@ -169,7 +171,7 @@ public class Main6Activity extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main8Activity.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 finish();
                 startActivity(intent);

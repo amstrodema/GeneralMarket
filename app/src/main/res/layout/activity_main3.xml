@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#333"
-    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Main3Activity">
+    tools:context="comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main3Activity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
