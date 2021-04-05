@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStockStore;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.FragStockStore;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;
 import comgalaxyglotech.confirmexperts.generalmarket.R;
 

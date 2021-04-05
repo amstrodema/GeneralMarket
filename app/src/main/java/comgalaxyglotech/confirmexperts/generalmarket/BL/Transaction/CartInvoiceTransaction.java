@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartInvoiceModel;
-import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.FragStockStore;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock.FragStockStore;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Transaction.Model_Transaction;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockMainModel;

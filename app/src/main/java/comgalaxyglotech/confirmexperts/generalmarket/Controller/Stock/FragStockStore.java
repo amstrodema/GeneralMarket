@@ -1,4 +1,4 @@
-package comgalaxyglotech.confirmexperts.generalmarket.Controller.Store;
+package comgalaxyglotech.confirmexperts.generalmarket.Controller.Stock;
 
 
 import android.app.Activity;
@@ -39,6 +39,7 @@ import java.util.Map;
 
 import comgalaxyglotech.confirmexperts.generalmarket.BL.Stock.NewStock_StoreAdapter;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Cart.CartPurchaseQuantityDialogue;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Cart.CartModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Setting.SettingsVModel;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Model.Stock.NewStockDisplayModel;
