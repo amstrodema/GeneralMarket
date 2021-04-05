@@ -175,5 +175,8 @@
         <item>3</item>
     </string-array>
     <string-array name="multi_select_list_preference_default_value" />
+    <string name="title_activity_stock_view">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

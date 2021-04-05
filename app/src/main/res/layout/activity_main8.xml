@@ -393,7 +393,7 @@
                         android:textAlignment="center"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:background="#fff"
+                        android:background="@drawable/circle_half_gray_white_fill"
                         android:layout_marginTop="8dp"
                         android:text="Wallet"
                         android:layout_below="@id/img"

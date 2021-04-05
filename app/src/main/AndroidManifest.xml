@@ -14,10 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.Payment.Payment_Loader"
+        <activity
+            android:name=".StockView"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_stock_view"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name=".Controller.Payment.Payment_Loader"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <meta-data
             android:name="co.paystack.android.PublicKey"
