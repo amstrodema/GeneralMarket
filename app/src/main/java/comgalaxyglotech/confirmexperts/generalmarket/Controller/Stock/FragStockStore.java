@@ -375,16 +375,17 @@ public class FragStockStore extends Fragment{
 
             @Override
             public void onItemClick(int position) {
-
+                OpenStockView(position);
             }
 
             @Override
             public void onStoreMetaClick(int position) {
-                StoreItems.EditReference = storeItemKeep.get(position);
+                OpenStockView(position);
+              /*  StoreItems.EditReference = storeItemKeep.get(position);
                     Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreView");
                     intent.putExtra("storeId",storeList.get(position).getStoreId());
                     //intent.putExtra("metric",metricLabel);
-                    startActivity(intent);
+                    startActivity(intent);*/
 
             }
 
@@ -485,6 +486,11 @@ public class FragStockStore extends Fragment{
             }
         });
         searchOperandi();
+    }
+    private void OpenStockView(int position){
+        StoreItems.EditReference = storeItemKeep.get(position);
+        Intent intent =new Intent(getContext(), StockView.class);
+        startActivity(intent);
     }
     private void searchOperandi(){
         searchStringField.addTextChangedListener(new TextWatcher() {

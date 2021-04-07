@@ -217,7 +217,7 @@ public class FragmentStoreHome extends Fragment {
             public void onClick(View v) {
                 progressDialog.setMessage("Please Wait");
                 progressDialog.show();
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreItems");
+                Intent intent = new Intent(getContext(), StoreItems.class);
                 intent.putExtra("storeId",storeId);
                 intent.putExtra("farmClick","False");
                 //  gets data from datamodel class and then dataclass which then moves the activity

@@ -369,7 +369,7 @@ private void reloadData(){
         mAdapter.setOnItemClickListener(new StoreAdapter.OnStoreItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreView");
+                Intent intent = new Intent(StoreActivity.this, StoreView.class);
                 intent.putExtra("storeId",storeList.get(position).getId());
                 intent.putExtra("creator",storeList.get(position).getCreatorId());
                 startActivity(intent);

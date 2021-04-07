@@ -16,8 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -25,19 +24,19 @@
                 android:text="Store Items"
                 android:drawableTop="@drawable/itemicon"
                 android:textAlignment="center"
-                android:layout_marginHorizontal="5dp"
                 android:textColor="#000"
                     android:onClick="listeners"
                     android:singleLine="true"
                 android:hint="All"
                 android:paddingVertical="15dp"
                 android:drawablePadding="10dp"
-                android:background="@drawable/btn_effect_curved_square"/>
+                android:background="#fff"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="5dp">
+                android:layout_marginVertical="3dp"
+                android:background="#fff">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -46,11 +45,9 @@
                     android:textAlignment="center"
                     android:onClick="farmListeners"
                     android:hint="Farm Products"
-                    android:layout_marginRight="3dp"
                     android:textColor="#000"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
                     android:layout_weight="1"/>
                 <TextView
                     android:layout_width="0dp"
@@ -65,8 +62,6 @@
                     android:hint="General Foodstuffs"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
-                    android:layout_marginLeft="3dp"
                     android:layout_weight="1"/>
             </LinearLayout>
             <ImageView
@@ -166,7 +161,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="5dp">
+            android:background="#fff"
+            android:layout_marginVertical="3dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -179,7 +175,6 @@
                 android:hint="Beauty Products"
                 android:paddingVertical="15dp"
                 android:drawablePadding="10dp"
-                android:background="@drawable/btn_effect_curved_square"
                 android:layout_marginLeft="3dp"
                 android:layout_weight="1"/>
             <TextView
@@ -190,7 +185,6 @@
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:padding="15dp"
-                android:background="@drawable/btn_effect_curved_square"
                 android:drawablePadding="10dp"
                 android:hint="Books and Stationery"
                     android:onClick="listeners"
@@ -202,7 +196,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="5dp">
+            android:background="#fff">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -211,9 +205,8 @@
                 android:textColor="#000"
                 android:padding="15dp"
                 android:drawablePadding="10dp"
-                android:background="@drawable/btn_effect_curved_square"
-                    android:onClick="listeners"
-                    android:singleLine="true"
+                android:onClick="listeners"
+                android:singleLine="true"
                 android:hint="Condiments and Garnishes"
                 android:layout_marginLeft="3dp"
                 android:text="Condiments and Garnishes"
@@ -227,10 +220,8 @@
                 android:textColor="#000"
                 android:padding="15dp"
                 android:drawablePadding="10dp"
-                android:background="@drawable/btn_effect_curved_square"
-                    android:onClick="listeners"
-                    android:singleLine="true"
-                
+                android:onClick="listeners"
+                android:singleLine="true"
                 android:hint="Drugs and Supplements"
                 android:layout_marginLeft="3dp"
                 android:layout_weight="1"/>
@@ -267,7 +258,7 @@
                     android:layout_weight="1"/>
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="94dp"
                     android:text="Food and Snacks"
                     android:drawableTop="@drawable/rest2"
                     android:textAlignment="center"
@@ -292,11 +283,10 @@
                 android:layout_margin="5dp">
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="94dp"
                     android:text="Fruits and Vegetables"
                     android:onClick="listeners"
                     android:singleLine="true"
-                    
                     android:hint="Fruits and Vegetables"
                     android:background="@drawable/btn_effect_curved_square_plain"
                     android:drawableTop="@drawable/grain"
@@ -328,7 +318,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="5dp">
+                android:background="#fff"
+                android:layout_marginVertical="3dp">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -341,8 +332,6 @@
                     android:hint="Maternity and Child Care"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
-                    android:layout_marginLeft="3dp"
                     android:layout_weight="1"/>
                 <TextView
                     android:layout_width="0dp"
@@ -356,8 +345,6 @@
                     android:hint="Subscriptions and Tickets"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
-                    android:layout_marginLeft="3dp"
                     android:layout_weight="1"/>
 
             </LinearLayout>
@@ -366,7 +353,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="5dp">
+                android:background="#fff">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -379,7 +366,6 @@
                     android:hint="Pets and Vet Care"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"/>
                 <TextView
@@ -394,7 +380,6 @@
                     android:hint="Softwares and Games"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"/>
 
@@ -406,6 +391,10 @@
                 android:id="@+id/advert3"
                 android:paddingVertical="10dp"
                 android:src="@drawable/item3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fff"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -413,48 +402,52 @@
                 android:layout_margin="5dp">
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="94dp"
                     android:text="Vehicles and Implements"
                     android:drawableTop="@drawable/plant"
                     android:textAlignment="center"
-                    android:textColor="#000"
+                    android:textColor="#fff"
                     android:onClick="listeners"
                     android:singleLine="true"
                     android:hint="Vehicles and Implements"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
+                    android:background="@drawable/btn_effect_curved_square_plain"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"/>
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="94dp"
                     android:text="Others(Consumables)"
                     android:drawableTop="@drawable/pets"
                     android:textAlignment="center"
-                    android:textColor="#000"
+                    android:textColor="#fff"
                     android:onClick="listeners"
                     android:singleLine="true"
                     android:hint="Others(Consumables)"
                     android:paddingVertical="15dp"
                     android:drawablePadding="10dp"
-                    android:background="@drawable/btn_effect_curved_square"
+                    android:background="@drawable/btn_effect_curved_square_plain"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"/>
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fff"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Others (Non Consumables)"
                 android:drawableTop="@drawable/stock"
                 android:textAlignment="center"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:onClick="listeners"
                 android:singleLine="true"
                 android:hint="Others (Non Consumables)"
                 android:paddingVertical="15dp"
                 android:drawablePadding="10dp"
-                android:background="@drawable/btn_effect_curved_square"
+                android:background="@drawable/btn_effect_curved_square_plain"
                 />
             <ImageView
                 android:layout_width="match_parent"
