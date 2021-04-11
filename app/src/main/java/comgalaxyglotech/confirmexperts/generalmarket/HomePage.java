@@ -56,6 +56,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Transaction.Trad
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Utilities.splashScreen;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Wallet.Wallet;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.ModelClass;
+import comgalaxyglotech.confirmexperts.generalmarket.Services.APIConnection;
 
 public class HomePage extends AppCompatActivity implements loginDialog.dialogListener {
     private Button btnAcct,notification,setting,helpBtn,loan,favey,logOutClick,adminBtn;
@@ -75,6 +76,7 @@ public class HomePage extends AppCompatActivity implements loginDialog.dialogLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main8);
+        APIConnection.MakeRequest(this,"https://gm-project-2e19d.firebaseio.com/Market.json","test");
       //  dbHelper = new DbHelper(this);
         //icon_manager = new Icon_Manager();
         //((TextView)findViewById(R.id.frontLabel)).setTypeface(icon_manager.get_icons("fonts/ionicons.ttf",this));
