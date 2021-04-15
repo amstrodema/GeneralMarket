@@ -76,7 +76,7 @@ public class HomePage extends AppCompatActivity implements loginDialog.dialogLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main8);
-        APIConnection.MakeRequest(this,"https://gm-project-2e19d.firebaseio.com/Market.json","test");
+       // APIConnection.MakeRequest(this,"https://gm-project-2e19d.firebaseio.com/Market.json","test");
       //  dbHelper = new DbHelper(this);
         //icon_manager = new Icon_Manager();
         //((TextView)findViewById(R.id.frontLabel)).setTypeface(icon_manager.get_icons("fonts/ionicons.ttf",this));

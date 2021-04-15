@@ -453,7 +453,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:id="@+id/advert4"
-                android:background="@drawable/blue_gradient2"
+                android:background="#fff"
                 android:paddingVertical="10dp"
                 android:src="@drawable/item2"/>
         </LinearLayout>
