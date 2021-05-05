@@ -14,6 +14,7 @@ import comgalaxyglotech.confirmexperts.generalmarket.Controller.Favorite.Favey;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Bonus.Bonus;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Farm.Farm;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Loan.Loans;
+import comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main2Activity;
 import comgalaxyglotech.confirmexperts.generalmarket.Controller.Store.StoreActivity;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataClass;
 import comgalaxyglotech.confirmexperts.generalmarket.DAL.Repository.DataStock;
@@ -46,7 +47,7 @@ public class TransitionAdvertDisplay extends AppCompatActivity {
             @Override
             public void run() {
                 if(location.equals("Market_Transition")){
-                    Intent intent = new Intent("comgalaxyglotech.confirmexperts.generalmarket.Controller.Market.Main2Activity");
+                    Intent intent = new Intent(TransitionAdvertDisplay.this, Main2Activity.class);
                     startActivity(intent);
                     TransitionAdvertDisplay.this.finish();
                 }

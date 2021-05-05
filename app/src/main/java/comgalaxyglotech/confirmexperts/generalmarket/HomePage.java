@@ -66,7 +66,7 @@ public class HomePage extends AppCompatActivity implements loginDialog.dialogLis
     private ImageView advert2, advert3,storeBtn,marktBtn,farmBtn,archiveBtn,cartBonus,wallet;
     private ModelClass modelClass = new ModelClass();
     ProgressDialog progressDialog;
-    private RelativeLayout adminPanel,logOutPanel;
+    private RelativeLayout adminPanel;
     private long UPDATE_INTERVAL = 60 * 1000;  /* 60 secs */
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
     int counter =3;
@@ -110,7 +110,7 @@ StringBuilder val= new StringBuilder();
         else
             ModelClass.admin =false;
         if(stat.equals("Guest")){
-            logOutPanel.setVisibility(View.GONE);
+           // logOutPanel.setVisibility(View.GONE);
             adminPanel.setVisibility(View.GONE);
         }
         stat ="Logged in as: "+stat;
@@ -137,7 +137,7 @@ StringBuilder val= new StringBuilder();
         startLocationUpdates();
     }
     private void setup(){
-        logOutPanel = findViewById(R.id.logOutPanel);
+    //   logOutPanel = findViewById(R.id.logOutPanel);
         adminPanel = findViewById(R.id.adminPanel);
         wallet = findViewById(R.id.wallet);
         trades = findViewById(R.id.trades);
